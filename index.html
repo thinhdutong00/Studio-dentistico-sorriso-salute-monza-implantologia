@@ -613,21 +613,24 @@
     .form-head h2 { margin-bottom: 0; }
 
     .progress {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: .45rem;
-      margin-bottom: 1rem;
-    }
-
-    .progress span {
+      --progress: 16.666%;
+      position: relative;
       height: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
       border-radius: 999px;
       background: rgba(30, 132, 181, .16);
     }
 
-    .progress span.is-active {
+    .progress::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--progress);
+      border-radius: inherit;
       background: var(--accent);
       box-shadow: 0 0 0 4px rgba(30, 132, 181, .1);
+      transition: width .24s ease;
     }
 
     .form-step { display: none; }
@@ -1516,80 +1519,114 @@
     }
 
     .booking-modal {
-      width: min(860px, calc(100% - 32px));
-      max-height: min(88vh, 900px);
+      inset: 0;
+      width: 100vw;
+      max-width: none;
+      height: 100vh;
+      height: 100dvh;
+      max-height: none;
+      margin: 0;
       padding: 0;
       border: 0;
-      border-radius: 8px;
-      background: transparent;
+      border-radius: 0;
+      background: var(--white);
       color: var(--primary);
-      overflow: visible;
+      overflow: hidden;
     }
 
     .booking-modal::backdrop {
-      background: rgba(9, 40, 56, .58);
-      backdrop-filter: blur(10px);
+      background: var(--white);
+    }
+
+    .modal-screen {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: var(--white);
+    }
+
+    .modal-topbar {
+      display: flex;
+      align-items: end;
+      min-height: clamp(78px, 12svh, 112px);
+      padding: calc(.85rem + env(safe-area-inset-top)) clamp(1rem, 4vw, 2.4rem) 1rem;
+      background: #0B4A9E;
+      color: var(--white);
     }
 
     .modal-card {
       position: relative;
-      max-height: min(88vh, 900px);
+      min-height: 0;
+      height: 100%;
       overflow: auto;
       padding: 0;
       border: 0;
-      border-radius: 8px;
-      background: transparent;
+      border-radius: 0;
+      background: var(--white);
       box-shadow: none;
       backdrop-filter: none;
+      overscroll-behavior: contain;
     }
 
     .modal-card .glass-form {
-      width: 100%;
-      min-height: 100%;
-      padding: clamp(1.2rem, 2.2vw, 1.7rem);
-      border: 1px solid rgba(255, 255, 255, .62);
-      background: rgba(249, 252, 255, .94);
-      box-shadow: 0 28px 90px rgba(0, 0, 0, .28);
+      width: min(820px, 100%);
+      min-height: auto;
+      margin: 0 auto;
+      padding: clamp(1.75rem, 4.4vw, 3.4rem) clamp(1.15rem, 4vw, 3rem) calc(2rem + env(safe-area-inset-bottom));
+      border: 0;
+      border-radius: 0;
+      background: var(--white);
+      box-shadow: none;
+      backdrop-filter: none;
       outline: 0;
     }
 
     .modal-card .glass-form::before {
-      display: block;
-      background:
-        radial-gradient(circle at 90% 8%, rgba(30,132,181,.09), transparent 13rem),
-        linear-gradient(135deg, rgba(255,255,255,.72), rgba(30,132,181,.05));
+      display: none;
     }
 
     .modal-close {
-      position: absolute;
-      top: clamp(1rem, 2.2vw, 1.35rem);
-      right: clamp(1rem, 2.2vw, 1.35rem);
-      z-index: 3;
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      gap: .72rem;
+      min-height: 44px;
       margin: 0;
-      border: 1px solid rgba(14, 56, 76, .22);
-      border-radius: 8px;
-      background: var(--white);
-      color: var(--primary);
-      font-size: 1.35rem;
-      font-weight: 900;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+      font-weight: 500;
       line-height: 1;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(14, 56, 76, .12);
+      box-shadow: none;
+    }
+
+    .modal-close-icon {
+      width: .72em;
+      height: .72em;
+      border-left: 4px solid currentColor;
+      border-bottom: 4px solid currentColor;
+      transform: rotate(45deg);
     }
 
     .modal-card .form-head {
-      min-height: 44px;
-      padding-right: 3.4rem;
+      min-height: 0;
+      padding-right: 0;
+    }
+
+    .modal-card .form-head h2 {
+      color: #111111;
+      font-size: clamp(2rem, 5.6vw, 3.55rem);
+      line-height: 1.05;
     }
 
     .modal-close:hover,
     .modal-close:focus-visible {
-      border-color: var(--accent);
-      color: var(--accent);
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: .18em;
     }
 
     body.modal-open { overflow: hidden; }
@@ -1702,11 +1739,8 @@
         line-height: 1.06;
       }
       .progress {
-        gap: .32rem;
-        margin-bottom: .68rem;
-      }
-      .progress span {
         height: 5px;
+        margin-bottom: .68rem;
       }
       .form-step.is-active {
         gap: .48rem;
@@ -1820,29 +1854,36 @@
         flex-basis: auto;
       }
       .booking-modal {
-        width: calc(100% - 10px);
-        max-height: calc(100svh - 10px);
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        max-height: none;
+      }
+      .modal-topbar {
+        min-height: 96px;
+        padding-inline: 1rem;
+        padding-bottom: 1.08rem;
       }
       .modal-card {
-        max-height: calc(100svh - 10px);
+        max-height: none;
       }
       .modal-card .glass-form {
-        padding: .96rem .92rem .92rem;
+        width: 100%;
+        padding: clamp(1.55rem, 7vw, 2.25rem) 1.05rem calc(1.25rem + env(safe-area-inset-bottom));
       }
       .modal-close {
-        top: .9rem;
-        right: .9rem;
-        width: 40px;
-        height: 40px;
+        width: auto;
+        height: auto;
+        min-height: 42px;
+        font-size: clamp(1.35rem, 7vw, 1.75rem);
       }
       .modal-card .form-head {
-        min-height: 42px;
         margin-bottom: .76rem;
-        padding-right: 3.15rem;
+        padding-right: 0;
       }
       .modal-card .form-head h2 {
-        font-size: clamp(1.48rem, 7.4vw, 1.72rem);
-        line-height: 1.03;
+        font-size: clamp(2rem, 10.4vw, 2.85rem);
+        line-height: 1.04;
       }
       .modal-card .quiz-title {
         font-size: clamp(1.22rem, 6vw, 1.48rem);
@@ -1938,10 +1979,10 @@
         height: 12px;
       }
       .modal-close {
-        width: 34px;
-        height: 34px;
-        top: .62rem;
-        right: .62rem;
+        width: auto;
+        height: auto;
+        min-height: 38px;
+        font-size: 1.24rem;
       }
     }
 
@@ -2140,14 +2181,7 @@
               <h2>Prenota una valutazione implantologica</h2>
             </div>
           </div>
-          <div class="progress" aria-hidden="true">
-            <span class="is-active"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"></div>
 
           <div class="form-step is-active" data-step="1">
             <p class="quiz-kicker">Inquadramento clinico</p>
@@ -2500,9 +2534,16 @@
   </div>
 
   <dialog class="booking-modal" id="prenota-popup" aria-label="Prenota una valutazione implantologica">
-    <div class="modal-card">
-      <button class="modal-close" type="button" data-close-booking aria-label="Chiudi pop-up">×</button>
+    <div class="modal-screen">
+      <div class="modal-topbar">
+        <button class="modal-close" type="button" data-close-booking aria-label="Torna indietro e chiudi prenotazione">
+          <span class="modal-close-icon" aria-hidden="true"></span>
+          Indietro
+        </button>
+      </div>
+      <div class="modal-card">
       <div data-modal-form-mount></div>
+      </div>
     </div>
   </dialog>
 
@@ -2714,7 +2755,7 @@
 
       const initBookingForm = (form, sourceLabel) => {
         const steps = [...form.querySelectorAll(".form-step")];
-        const bars = [...form.querySelectorAll(".progress span")];
+        const progress = form.querySelector(".progress");
         const prevBtn = form.querySelector("[data-prev-step]");
         const nextBtn = form.querySelector("[data-next-step]");
         const submitBtn = form.querySelector("[data-submit-step]");
@@ -2759,7 +2800,8 @@
         const showStep = (step) => {
           currentStep = step;
           steps.forEach((item) => item.classList.toggle("is-active", Number(item.dataset.step) === step));
-          bars.forEach((bar, index) => bar.classList.toggle("is-active", index < step));
+          progress?.style.setProperty("--progress", `${(step / totalSteps) * 100}%`);
+          progress?.setAttribute("aria-valuenow", String(step));
           prevBtn.hidden = step === 1;
           nextBtn.hidden = step !== 5;
           submitBtn.hidden = step !== totalSteps;
@@ -2958,6 +3000,7 @@
       const openBookingModal = (trigger) => {
         lastModalTrigger = trigger;
         modalController.reset();
+        bookingModal.querySelector(".modal-card")?.scrollTo({ top: 0 });
         if (typeof bookingModal.showModal === "function") {
           bookingModal.showModal();
         } else {
