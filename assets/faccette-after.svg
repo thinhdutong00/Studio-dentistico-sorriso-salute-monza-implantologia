@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1022" viewBox="0 0 1100 1022" role="img" aria-labelledby="title desc">
+  <title id="title">Sorriso dopo il trattamento con faccette</title>
+  <desc id="desc">Illustrazione di un sorriso armonico, luminoso e proporzionato dopo un percorso con faccette dentali.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0E384C"/>
+      <stop offset="1" stop-color="#1E84B5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="36%" r="62%">
+      <stop offset="0" stop-color="#E8F5FB" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#E8F5FB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#092838" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="1022" fill="url(#bg)"/>
+  <rect width="1100" height="1022" fill="url(#glow)"/>
+  <g opacity=".12" stroke="#E8F5FB" stroke-width="3">
+    <path d="M0 170h1100M0 310h1100M0 450h1100M0 590h1100M0 730h1100M0 870h1100"/>
+    <path d="M130 0v1022M270 0v1022M410 0v1022M550 0v1022M690 0v1022M830 0v1022M970 0v1022"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M191 479c34-143 179-246 365-244 184 3 323 107 350 247 15 79-16 167-88 226-71 60-180 94-309 88-125-6-228-50-289-113-61-62-82-139-29-204Z" fill="#F28D99"/>
+    <path d="M214 505c21-104 146-196 338-195 189 1 312 91 330 193 17 100-107 214-330 214-220 0-373-108-338-212Z" fill="#EC6F82"/>
+    <path d="M279 455c75 34 158 51 249 52 96 1 193-17 289-56 15-6 31 4 33 20 3 36-14 83-51 123-55 59-153 92-279 87-123-5-218-44-268-103-30-35-41-72-34-104 4-17 24-27 41-20Z" fill="#FFFBF6"/>
+    <g stroke="#E4E9EA" stroke-width="4" stroke-linejoin="round">
+      <path d="M274 452c-5 47 3 89 26 118 21 26 59 22 69-9 12-37 11-80 4-124-27-4-51-10-73-18-14 8-23 18-26 33Z" fill="#FFFFFF"/>
+      <path d="M371 433c-8 56-5 106 13 138 19 33 64 32 80-4 15-35 13-88 4-142-33-2-65-6-97-12Z" fill="#FFFFFF"/>
+      <path d="M468 423c-7 60-2 113 17 145 21 35 70 35 88-1 18-36 16-92 5-151-37 2-74 2-111 0Z" fill="#FFFFFF"/>
+      <path d="M580 414c-8 59-2 113 17 145 22 36 72 36 90 0 18-36 13-91 1-149-38 5-76 8-114 10Z" fill="#FFFFFF"/>
+      <path d="M688 409c-7 54 1 103 20 130 21 30 64 26 79-8 14-33 9-80-3-128-35 9-70 16-105 22Z" fill="#FFFFFF"/>
+      <path d="M785 396c-3 46 8 84 29 105 21 21 55 12 64-16 9-27 3-63-8-101-30 11-60 20-90 27Z" fill="#FFFFFF"/>
+    </g>
+    <g opacity=".72" fill="#E8F5FB">
+      <path d="M319 440c28 18 58 29 89 34-35 11-71 9-106-5-8-3-8-15 0-19Z"/>
+      <path d="M610 415c45-1 88-8 129-21-35 28-78 44-129 48-11 1-13-25 0-27Z"/>
+    </g>
+  </g>
+</svg>
