@@ -1919,6 +1919,176 @@
         font-size: .84rem;
         line-height: 1.26;
       }
+      .hero .glass-form,
+      .modal-card .glass-form {
+        display: grid;
+        grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+        overflow: hidden;
+      }
+      .hero .glass-form {
+        min-height: min(640px, calc(100svh - 24px));
+      }
+      .modal-topbar {
+        min-height: 72px;
+        padding-bottom: .78rem;
+      }
+      .modal-card {
+        overflow: hidden;
+      }
+      .modal-card .glass-form {
+        height: 100%;
+        min-height: 0;
+        padding: .82rem .95rem calc(.82rem + env(safe-area-inset-bottom));
+      }
+      .form-head,
+      .modal-card .form-head {
+        margin-bottom: .44rem;
+      }
+      .modal-card .form-head h2 {
+        font-size: clamp(1.46rem, 7.4vw, 2.05rem);
+        line-height: 1.02;
+      }
+      .progress {
+        height: 4px;
+        margin-bottom: .44rem;
+      }
+      .form-step.is-active {
+        min-height: 0;
+        align-content: start;
+        gap: .34rem;
+        overflow: hidden;
+      }
+      .quiz-kicker {
+        margin-bottom: -.22rem;
+        font-size: .6rem;
+      }
+      .quiz-title,
+      .modal-card .quiz-title {
+        margin-bottom: 0;
+        font-size: clamp(1rem, 5vw, 1.2rem);
+        line-height: 1.08;
+      }
+      .quiz-copy,
+      .muted,
+      .modal-card .quiz-copy,
+      .modal-card .muted {
+        margin-bottom: 0;
+        font-size: .76rem;
+        line-height: 1.28;
+      }
+      .quiz-options,
+      .modal-card .quiz-options {
+        gap: .38rem;
+      }
+      .choice-btn,
+      .modal-card .choice-btn {
+        min-height: 50px;
+        padding: .45rem 2.72rem .45rem .72rem;
+      }
+      .choice-btn::before,
+      .modal-card .choice-btn::before {
+        right: .66rem;
+        width: 24px;
+        height: 24px;
+        border-width: 3px;
+      }
+      .choice-btn::after,
+      .modal-card .choice-btn::after {
+        right: calc(.66rem + 6px);
+        width: 12px;
+        height: 12px;
+      }
+      .choice-btn strong,
+      .modal-card .choice-btn strong {
+        font-size: .84rem;
+        line-height: 1.1;
+      }
+      .choice-btn span,
+      .modal-card .choice-btn span {
+        font-size: .7rem;
+        line-height: 1.14;
+      }
+      label {
+        gap: .18rem;
+        font-size: .82rem;
+      }
+      .field-grid {
+        gap: .38rem;
+      }
+      input,
+      textarea {
+        min-height: 36px;
+        padding: .48rem .58rem;
+        font-size: .86rem;
+      }
+      textarea {
+        min-height: 52px;
+        max-height: 52px;
+        resize: none;
+      }
+      .calendar-head {
+        gap: .35rem;
+        margin-bottom: .24rem;
+        padding: .42rem;
+      }
+      .calendar-title {
+        font-size: .88rem;
+      }
+      .calendar-nav button {
+        width: 32px;
+        height: 32px;
+      }
+      .calendar-grid {
+        max-height: min(300px, 42svh);
+        overflow: auto;
+        gap: .2rem;
+        padding-right: .12rem;
+        overscroll-behavior: contain;
+      }
+      .date-btn {
+        min-height: 32px;
+        padding: .28rem .16rem;
+        font-size: .75rem;
+      }
+      .date-btn small {
+        font-size: .55rem;
+      }
+      .slot-grid {
+        max-height: min(310px, 44svh);
+        overflow: auto;
+        gap: .38rem;
+        padding-right: .12rem;
+        overscroll-behavior: contain;
+      }
+      .slot-btn {
+        min-height: 36px;
+        padding: .44rem .3rem;
+        font-size: .82rem;
+      }
+      .summary-box {
+        gap: .22rem;
+        padding: .54rem;
+        font-size: .78rem;
+        line-height: 1.22;
+      }
+      .summary-box .summary-line {
+        gap: .02rem;
+        padding-bottom: .24rem;
+      }
+      .form-error {
+        min-height: 14px;
+        margin: 0;
+        font-size: .72rem;
+        line-height: 1.2;
+      }
+      .form-actions {
+        gap: .34rem;
+        margin-top: .3rem;
+      }
+      .form-actions .btn {
+        min-height: 40px;
+        padding: .56rem .8rem;
+      }
     }
 
     @media (max-width: 620px) and (max-height: 720px) {
@@ -1983,6 +2153,31 @@
         height: auto;
         min-height: 38px;
         font-size: 1.24rem;
+      }
+      .modal-topbar {
+        min-height: 58px;
+        padding-bottom: .54rem;
+      }
+      .modal-card .glass-form {
+        padding: .55rem .68rem calc(.55rem + env(safe-area-inset-bottom));
+      }
+      .modal-card .form-head h2 {
+        font-size: 1.34rem;
+      }
+      .choice-btn,
+      .modal-card .choice-btn {
+        min-height: 42px;
+        padding-block: .42rem;
+      }
+      .choice-btn span,
+      .modal-card .choice-btn span {
+        display: none;
+      }
+      .calendar-grid {
+        max-height: 240px;
+      }
+      .slot-grid {
+        max-height: 230px;
       }
     }
 
