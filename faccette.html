@@ -605,38 +605,86 @@
       align-items: center;
       justify-content: space-between;
       gap: .8rem;
-      margin-bottom: .55rem;
+      margin-bottom: .38rem;
+      padding: .36rem .62rem;
+      border: 1px solid rgba(255,255,255,.68);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(232,247,252,.48));
+      box-shadow: 0 18px 48px rgba(14,56,76,.12), inset 0 1px 0 rgba(255,255,255,.82);
+      backdrop-filter: blur(18px) saturate(165%);
     }
 
-    .review-carousel-title {
-      margin: 0;
-      color: var(--accent);
-      font-size: .8rem;
-      font-weight: 950;
-      letter-spacing: 0;
-      text-transform: uppercase;
+    .review-google-logo {
+      display: block;
+      width: clamp(96px, 9vw, 108px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(14,56,76,.1));
     }
 
-    .review-carousel-rating {
-      flex: 0 0 auto;
-      padding: .28rem .52rem;
-      border: 1px solid rgba(30,132,181,.18);
-      border-radius: 999px;
-      background: rgba(255,255,255,.86);
+    .review-score {
+      display: grid;
+      justify-items: end;
+      gap: .1rem;
+      min-width: 0;
+      line-height: 1;
+    }
+
+    .review-score-main {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: .42rem;
+      min-width: 0;
+    }
+
+    .review-score-value {
       color: var(--primary);
-      font-size: .78rem;
-      font-weight: 900;
+      font-size: 1.32rem;
+      font-weight: 950;
+    }
+
+    .review-stars {
+      color: #fbbc04;
+      font-size: .95rem;
+      letter-spacing: 0;
+      white-space: nowrap;
+      text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    }
+
+    .review-score-label {
+      color: var(--body);
+      font-size: .72rem;
+      font-weight: 850;
+      white-space: nowrap;
     }
 
     .review-viewport {
+      position: relative;
       overflow: hidden;
-      border: 1px solid rgba(14,56,76,.12);
+      border: 1px solid rgba(255,255,255,.72);
       border-radius: 8px;
-      background: rgba(255,255,255,.9);
-      box-shadow: 0 16px 42px rgba(14,56,76,.11);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.82), rgba(235,248,252,.54)),
+        rgba(255,255,255,.64);
+      box-shadow: 0 24px 64px rgba(14,56,76,.14), inset 0 1px 0 rgba(255,255,255,.9);
+      backdrop-filter: blur(22px) saturate(170%);
+    }
+
+    .review-viewport::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 14% 0%, rgba(30,132,181,.18), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.56), transparent 42%);
     }
 
     .review-track {
+      position: relative;
+      z-index: 2;
       display: flex;
       transition: transform .48s cubic-bezier(.2,.8,.2,1);
       will-change: transform;
@@ -644,33 +692,64 @@
 
     .review-card {
       display: grid;
-      grid-template-rows: 1fr auto;
+      grid-template-rows: auto auto;
       flex: 0 0 100%;
-      min-height: 178px;
+      min-height: 170px;
       padding: 1rem;
       cursor: pointer;
     }
 
     .review-card blockquote {
+      order: 2;
+      position: relative;
       margin: 0;
+      padding-top: .12rem;
       color: var(--ink);
       font-size: clamp(.98rem, 1.35vw, 1.08rem);
       font-weight: 760;
-      line-height: 1.36;
+      line-height: 1.38;
+    }
+
+    .review-card blockquote::before {
+      content: "\201C";
+      position: absolute;
+      top: -.68rem;
+      right: .08rem;
+      color: rgba(30,132,181,.14);
+      font-family: Georgia, serif;
+      font-size: 4.3rem;
+      line-height: 1;
     }
 
     .review-card blockquote p {
+      position: relative;
       margin: 0;
     }
 
     .review-meta {
+      order: 1;
       display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: .85rem;
-      margin-top: .9rem;
+      align-items: center;
+      justify-content: flex-start;
+      gap: .72rem;
+      margin: 0 0 .78rem;
       color: var(--body-strong);
       font-size: .88rem;
+    }
+
+    .review-avatar {
+      display: inline-grid;
+      flex: 0 0 auto;
+      place-items: center;
+      width: 44px;
+      aspect-ratio: 1;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.72);
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: 0 10px 24px rgba(14,56,76,.18), inset 0 1px 0 rgba(255,255,255,.3);
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 950;
     }
 
     .review-meta cite {
@@ -679,14 +758,6 @@
       font-style: normal;
       font-weight: 950;
       line-height: 1.2;
-    }
-
-    .review-tag {
-      flex: 0 0 auto;
-      color: var(--accent);
-      font-size: .78rem;
-      font-weight: 920;
-      text-align: right;
     }
 
     .review-controls {
@@ -702,9 +773,11 @@
       place-items: center;
       width: 36px;
       aspect-ratio: 1;
-      border: 1px solid rgba(14,56,76,.14);
+      border: 1px solid rgba(255,255,255,.7);
       border-radius: 8px;
-      background: rgba(255,255,255,.86);
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 10px 26px rgba(14,56,76,.11);
+      backdrop-filter: blur(14px);
       color: var(--primary);
       cursor: pointer;
       font-size: 1.32rem;
@@ -1929,7 +2002,6 @@
       color: var(--accent-bright);
     }
 
-    .review-carousel-rating,
     .review-arrow,
     .calendar-head,
     .date-btn,
@@ -2188,24 +2260,41 @@
         margin-top: .85rem;
       }
       .review-carousel-head {
-        align-items: start;
+        align-items: center;
+        gap: .62rem;
+        padding: .62rem;
+      }
+      .review-google-logo {
+        width: min(112px, 40vw);
+      }
+      .review-score-main {
+        gap: .3rem;
+      }
+      .review-score-value {
+        font-size: 1.14rem;
+      }
+      .review-stars {
+        font-size: .76rem;
+      }
+      .review-score-label {
+        font-size: .66rem;
       }
       .review-card {
-        min-height: 224px;
-        padding: .92rem;
+        min-height: 208px;
+        padding: 1rem;
       }
       .review-card blockquote {
         font-size: .96rem;
         line-height: 1.34;
       }
       .review-meta {
-        align-items: start;
-        flex-direction: column;
-        gap: .32rem;
-        margin-top: .72rem;
+        align-items: center;
+        flex-direction: row;
+        gap: .62rem;
+        margin: 0 0 .68rem;
       }
-      .review-tag {
-        text-align: left;
+      .review-avatar {
+        width: 40px;
       }
       .review-controls {
         margin-top: .55rem;
@@ -2894,38 +2983,44 @@
           </div>
           <div class="review-carousel" data-review-carousel data-interval="5200" aria-label="Recensioni dei pazienti su estetica del sorriso">
             <div class="review-carousel-head">
-              <p class="review-carousel-title">Recensioni pazienti</p>
-              <span class="review-carousel-rating" aria-label="Valutazione 5 su 5">Google 5/5</span>
+              <img class="review-google-logo" src="/assets/google-reviews.png" width="840" height="430" alt="Google Reviews">
+              <div class="review-score" aria-label="Valutazione media Google 4,8 su 5">
+                <div class="review-score-main">
+                  <span class="review-score-value">4,8</span>
+                  <span class="review-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <span class="review-score-label">valutazione media</span>
+              </div>
             </div>
             <div class="review-viewport">
               <div class="review-track" data-review-track>
                 <article class="review-card" aria-label="Recensione di Emanuele AiTube">
                   <blockquote><p>Sono molto soddisfatto del risultato che mi ha permesso di tornare a sorridere. Problema risolto dopo anni.</p></blockquote>
-                  <div class="review-meta"><cite>Emanuele AiTube</cite><span class="review-tag">Sorriso</span></div>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">EA</span><cite>Emanuele AiTube</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Valentina Poloni">
                   <blockquote><p>Ho effettuato lavori importanti: professionali, gentili e disponibili a ogni chiarimento ed esigenza.</p></blockquote>
-                  <div class="review-meta"><cite>Valentina Poloni</cite><span class="review-tag">Lavori importanti</span></div>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">VP</span><cite>Valentina Poloni</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Linda Boraso">
-                  <blockquote><p>Prima esperienza molto positiva. Tornerò per un lavoro importante nella parte superiore e per la soluzione del problema.</p></blockquote>
-                  <div class="review-meta"><cite>Linda Boraso</cite><span class="review-tag">Arcata superiore</span></div>
+                  <blockquote><p>Prima esperienza molto positiva. Tornerò per un lavoro importante e per completare la soluzione del problema.</p></blockquote>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">LB</span><cite>Linda Boraso</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Tommaso">
-                  <blockquote><p>Percorso di cura serio e affidabile, con spiegazioni chiare, professionalità e attenzione verso i pazienti.</p></blockquote>
-                  <div class="review-meta"><cite>Tommaso</cite><span class="review-tag">Percorso di cura</span></div>
+                  <blockquote><p>Cure serie e affidabili, con spiegazioni chiare, professionalità e attenzione verso i pazienti.</p></blockquote>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">T</span><cite>Tommaso</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Sofia Diliberto">
                   <blockquote><p>I miei problemi sono stati risolti brillantemente e velocemente. Competenza, professionalità, cordialità e gentilezza.</p></blockquote>
-                  <div class="review-meta"><cite>Sofia Diliberto</cite><span class="review-tag">Risultato</span></div>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">SD</span><cite>Sofia Diliberto</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Serafina Bernasconi">
                   <blockquote><p>Ho valutato specializzazioni e team prima della visita: esperienza personale ottima, ambulatorio di livello superiore.</p></blockquote>
-                  <div class="review-meta"><cite>Serafina Bernasconi</cite><span class="review-tag">Estetica</span></div>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">SB</span><cite>Serafina Bernasconi</cite></div>
                 </article>
                 <article class="review-card" aria-label="Recensione di Paolo Fisicaro">
-                  <blockquote><p>Personale professionale e cordiale, ambienti puliti e moderni, attrezzature all'avanguardia.</p></blockquote>
-                  <div class="review-meta"><cite>Paolo Fisicaro</cite><span class="review-tag">Tecnologie</span></div>
+                  <blockquote><p>Personale professionale e cordiale, ambienti puliti e moderni, esperienza molto positiva.</p></blockquote>
+                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">PF</span><cite>Paolo Fisicaro</cite></div>
                 </article>
               </div>
             </div>
