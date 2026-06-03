@@ -500,9 +500,9 @@
       display: grid;
       grid-template-columns: minmax(0, .92fr) minmax(520px, .68fr);
       gap: clamp(1.5rem, 2.8vw, 2.8rem);
-      align-items: center;
-      min-height: min(650px, calc(100svh - 128px));
-      padding-block: clamp(34px, 5vh, 54px) 34px;
+      align-items: start;
+      min-height: min(610px, calc(100svh - 128px));
+      padding-block: clamp(22px, 3.6vh, 34px) 30px;
     }
 
     .eyebrow {
@@ -598,21 +598,24 @@
 
     .review-carousel {
       max-width: 760px;
-      margin-top: 1rem;
+      margin-top: 1.45rem;
       color: var(--primary);
     }
 
     .review-carousel-head {
+      position: relative;
+      z-index: 2;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: .8rem;
-      margin-bottom: .5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: .55rem;
+      min-width: 0;
     }
 
     .review-google-logo {
       display: block;
-      width: clamp(96px, 9vw, 108px);
+      width: clamp(118px, 12vw, 148px);
       height: auto;
       object-fit: contain;
       filter: drop-shadow(0 8px 16px rgba(14,56,76,.1));
@@ -620,7 +623,7 @@
 
     .review-score {
       display: grid;
-      justify-items: end;
+      justify-items: start;
       gap: .1rem;
       min-width: 0;
       line-height: 1;
@@ -629,7 +632,7 @@
     .review-score-main {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
       gap: .42rem;
       min-width: 0;
     }
@@ -657,7 +660,13 @@
 
     .review-viewport {
       position: relative;
+      display: grid;
+      grid-template-columns: minmax(132px, 170px) minmax(0, 1fr);
+      align-items: center;
+      gap: 1.05rem;
       overflow: hidden;
+      min-height: 218px;
+      padding: 1.08rem;
       border: 1px solid rgba(255,255,255,.72);
       border-radius: var(--radius-card);
       background:
@@ -678,11 +687,29 @@
         linear-gradient(135deg, rgba(255,255,255,.56), transparent 42%);
     }
 
+    .review-content-area {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      gap: .8rem;
+      min-width: 0;
+      align-self: stretch;
+    }
+
+    .review-track-window {
+      overflow: hidden;
+      min-width: 0;
+      height: 142px;
+    }
+
     .review-track {
       position: relative;
       z-index: 2;
       display: flex;
-      transition: transform .48s cubic-bezier(.2,.8,.2,1);
+      flex-direction: column;
+      height: 100%;
+      transition: transform .58s cubic-bezier(.22,1,.36,1);
       will-change: transform;
     }
 
@@ -690,8 +717,9 @@
       display: grid;
       grid-template-rows: auto auto;
       flex: 0 0 100%;
-      min-height: 170px;
-      padding: 1rem;
+      height: 100%;
+      min-height: 142px;
+      padding: .05rem .1rem 0;
       cursor: pointer;
     }
 
@@ -760,7 +788,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: .7rem;
+      margin-top: 0;
     }
 
     .review-dots {
@@ -1877,6 +1905,7 @@
 
     .hero {
       position: relative;
+      padding-block: 0;
       background:
         linear-gradient(116deg, rgba(255,255,255,.98) 0%, rgba(250,253,255,.94) 42%, rgba(221,244,252,.9) 72%, rgba(196,231,246,.78) 100%),
         var(--secondary);
@@ -2133,7 +2162,7 @@
       }
       .hero .wrap {
         min-height: auto;
-        padding-block: 18px 42px;
+        padding-block: 14px 36px;
       }
       .hero .wrap > * {
         min-width: 0;
@@ -2203,7 +2232,7 @@
         height: 39px;
       }
       .hero .wrap {
-        padding-block: 24px 24px;
+        padding-block: 14px 22px;
       }
       .hero .reveal,
       .hero h1,
@@ -2227,16 +2256,29 @@
         overflow-wrap: anywhere;
       }
       .review-carousel {
-        margin-top: .85rem;
+        margin-top: 1.15rem;
+      }
+      .review-viewport {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: .9rem;
+        min-height: 0;
+        padding: 1rem;
       }
       .review-carousel-head {
         align-items: center;
-        gap: .62rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: .8rem;
       }
       .review-google-logo {
         width: min(112px, 40vw);
       }
+      .review-score {
+        justify-items: end;
+      }
       .review-score-main {
+        justify-content: flex-end;
         gap: .3rem;
       }
       .review-score-value {
@@ -2249,8 +2291,11 @@
         font-size: .66rem;
       }
       .review-card {
-        min-height: 208px;
-        padding: 1rem;
+        min-height: 184px;
+        padding: 0;
+      }
+      .review-track-window {
+        height: 184px;
       }
       .review-card blockquote {
         font-size: .96rem;
@@ -2491,7 +2536,7 @@
         overflow: visible;
       }
       .hero .glass-form {
-        min-height: clamp(680px, calc(100svh - 92px), 760px);
+        min-height: clamp(650px, calc(100svh - 92px), 730px);
         padding: 1.26rem 1rem 1.34rem;
       }
       .modal-screen {
@@ -2940,7 +2985,6 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="reveal">
-          <p class="eyebrow"><span class="dot"></span> Implantologia dentale a Monza</p>
           <h1 id="hero-title">Implantologia Dentale Avanzata a Monza: <span class="hero-title-accent">Ripristina la Funzionalità del Sorriso</span></h1>
           <p class="lead">Tecnologie digitali computer-guidate per il reinserimento di elementi dentali fissi, riducendo l'invasività chirurgica e ottimizzando i tempi di guarigione nei casi clinicamente idonei.</p>
           <div class="cta-row">
@@ -2948,57 +2992,61 @@
             <a class="btn btn-ghost" href="https://wa.me/393892490181">Per informazioni specifiche scrivici su Whatsapp</a>
           </div>
           <div class="review-carousel" data-review-carousel data-interval="5200" aria-label="Recensioni dei pazienti su implantologia">
-            <div class="review-carousel-head">
-              <img class="review-google-logo" src="/assets/google-reviews.png" width="840" height="430" alt="Google Reviews">
-              <div class="review-score" aria-label="Valutazione media Google 4,8 su 5">
-                <div class="review-score-main">
-                  <span class="review-score-value">4,8</span>
-                  <span class="review-stars" aria-hidden="true">★★★★★</span>
-                </div>
-                <span class="review-score-label">valutazione media</span>
-              </div>
-            </div>
             <div class="review-viewport">
-              <div class="review-track" data-review-track>
-                <article class="review-card" aria-label="Recensione di Marialuisa Mariani">
-                  <blockquote><p>Trattamento di impianti dentali: intervento impeccabile e risultato finale perfetto. Studio moderno, personale gentile e medico professionale.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">MM</span><cite>Marialuisa Mariani</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Giuseppe Consolandi">
-                  <blockquote><p>Ci sono stato per fare un impianto, devo ringraziare il dottore e le assistenti: persone gentilissime e molto preparate.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">GC</span><cite>Giuseppe Consolandi</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Alex Oggiano">
-                  <blockquote><p>Ho effettuato un intervento con impianti: tutto perfetto. Bravi e attenti, ne è valsa la pena.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">AO</span><cite>Alex Oggiano</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Raffaele D'Angelo">
-                  <blockquote><p>Consigliato a chi teme interventi invasivi: fanno in modo che il paziente non senta assolutamente nulla.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">RD</span><cite>Raffaele D'Angelo</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Luca Giovanetti">
-                  <blockquote><p>Intervento impegnativo e invasivo concluso più che positivamente. Mi hanno sempre rassicurato e fatto sentire a mio agio.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">LG</span><cite>Luca Giovanetti</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Francesco Assentato">
-                  <blockquote><p>Ho trovato la soluzione ai problemi dei miei denti con cure attente, moderne ed efficaci.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">FA</span><cite>Francesco Assentato</cite></div>
-                </article>
-                <article class="review-card" aria-label="Recensione di Lavinia Scolari">
-                  <blockquote><p>Studio moderno, pulito e accogliente. Ho apprezzato l'attenzione ricevuta e le cure indolori.</p></blockquote>
-                  <div class="review-meta"><span class="review-avatar" aria-hidden="true">LS</span><cite>Lavinia Scolari</cite></div>
-                </article>
+              <div class="review-carousel-head">
+                <img class="review-google-logo" src="/assets/google-reviews.png" width="840" height="430" alt="Google Reviews">
+                <div class="review-score" aria-label="Valutazione media Google 4,8 su 5">
+                  <div class="review-score-main">
+                    <span class="review-score-value">4,8</span>
+                    <span class="review-stars" aria-hidden="true">★★★★★</span>
+                  </div>
+                  <span class="review-score-label">valutazione media</span>
+                </div>
               </div>
-            </div>
-            <div class="review-controls" aria-label="Scegli recensione">
-              <div class="review-dots" role="tablist" aria-label="Scegli recensione">
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 1" aria-current="true"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 2" aria-current="false"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 3" aria-current="false"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 4" aria-current="false"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 5" aria-current="false"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 6" aria-current="false"></button>
-                <button class="review-dot" type="button" data-review-dot aria-label="Recensione 7" aria-current="false"></button>
+              <div class="review-content-area">
+                <div class="review-track-window">
+                  <div class="review-track" data-review-track>
+                    <article class="review-card" aria-label="Recensione di Marialuisa Mariani">
+                      <blockquote><p>Trattamento di impianti dentali: intervento impeccabile e risultato finale perfetto. Studio moderno, personale gentile e medico professionale.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">MM</span><cite>Marialuisa Mariani</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Giuseppe Consolandi">
+                      <blockquote><p>Ci sono stato per fare un impianto, devo ringraziare il dottore e le assistenti: persone gentilissime e molto preparate.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">GC</span><cite>Giuseppe Consolandi</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Alex Oggiano">
+                      <blockquote><p>Ho effettuato un intervento con impianti: tutto perfetto. Bravi e attenti, ne è valsa la pena.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">AO</span><cite>Alex Oggiano</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Raffaele D'Angelo">
+                      <blockquote><p>Consigliato a chi teme interventi invasivi: fanno in modo che il paziente non senta assolutamente nulla.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">RD</span><cite>Raffaele D'Angelo</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Luca Giovanetti">
+                      <blockquote><p>Intervento impegnativo e invasivo concluso più che positivamente. Mi hanno sempre rassicurato e fatto sentire a mio agio.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">LG</span><cite>Luca Giovanetti</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Francesco Assentato">
+                      <blockquote><p>Ho trovato la soluzione ai problemi dei miei denti con cure attente, moderne ed efficaci.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">FA</span><cite>Francesco Assentato</cite></div>
+                    </article>
+                    <article class="review-card" aria-label="Recensione di Lavinia Scolari">
+                      <blockquote><p>Studio moderno, pulito e accogliente. Ho apprezzato l'attenzione ricevuta e le cure indolori.</p></blockquote>
+                      <div class="review-meta"><span class="review-avatar" aria-hidden="true">LS</span><cite>Lavinia Scolari</cite></div>
+                    </article>
+                  </div>
+                </div>
+                <div class="review-controls" aria-label="Scegli recensione">
+                  <div class="review-dots" role="tablist" aria-label="Scegli recensione">
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 1" aria-current="true"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 2" aria-current="false"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 3" aria-current="false"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 4" aria-current="false"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 5" aria-current="false"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 6" aria-current="false"></button>
+                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 7" aria-current="false"></button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3584,7 +3632,7 @@
           };
 
           const update = () => {
-            track.style.transform = `translateX(-${activeIndex * 100}%)`;
+            track.style.transform = `translateY(-${activeIndex * 100}%)`;
             slides.forEach((slide, index) => {
               slide.setAttribute("aria-hidden", String(index !== activeIndex));
             });
