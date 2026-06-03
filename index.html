@@ -43,6 +43,8 @@
       --warning: #9A4D14;
       --shadow: 0 22px 70px rgba(14, 56, 76, .16);
       --glass-shadow: 0 22px 64px rgba(14, 56, 76, .12), inset 0 1px 0 rgba(255, 255, 255, .82);
+      --radius-card: 16px;
+      --radius-control: 14px;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -180,7 +182,7 @@
       left: 1rem;
       z-index: 30;
       padding: .7rem 1rem;
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: var(--primary);
       color: var(--white);
       transition: top .2s ease;
@@ -267,7 +269,7 @@
       width: 46px;
       height: 46px;
       border: 1px solid rgba(14, 56, 76, .18);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: var(--white);
       color: var(--primary);
       cursor: pointer;
@@ -373,7 +375,7 @@
 
     .mobile-menu-actions .btn {
       min-height: 70px;
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       font-size: clamp(1rem, 4vw, 1.28rem);
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -400,7 +402,7 @@
       min-height: 46px;
       padding: .85rem 1.08rem;
       border: 1px solid transparent;
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: transparent;
       color: var(--btn-fg, var(--primary));
       font-weight: 900;
@@ -582,7 +584,7 @@
     .faq details,
     .glass-form {
       border: 1px solid var(--divider);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background: rgba(255, 255, 255, .88);
     }
 
@@ -605,13 +607,7 @@
       align-items: center;
       justify-content: space-between;
       gap: .8rem;
-      margin-bottom: .38rem;
-      padding: .36rem .62rem;
-      border: 1px solid rgba(255,255,255,.68);
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(232,247,252,.48));
-      box-shadow: 0 18px 48px rgba(14,56,76,.12), inset 0 1px 0 rgba(255,255,255,.82);
-      backdrop-filter: blur(18px) saturate(165%);
+      margin-bottom: .5rem;
     }
 
     .review-google-logo {
@@ -663,7 +659,7 @@
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,.72);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background:
         linear-gradient(135deg, rgba(255,255,255,.82), rgba(235,248,252,.54)),
         rgba(255,255,255,.64);
@@ -763,33 +759,8 @@
     .review-controls {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: .7rem;
-      margin-top: .65rem;
-    }
-
-    .review-arrow {
-      display: inline-grid;
-      place-items: center;
-      width: 36px;
-      aspect-ratio: 1;
-      border: 1px solid rgba(255,255,255,.7);
-      border-radius: 8px;
-      background: rgba(255,255,255,.68);
-      box-shadow: 0 10px 26px rgba(14,56,76,.11);
-      backdrop-filter: blur(14px);
-      color: var(--primary);
-      cursor: pointer;
-      font-size: 1.32rem;
-      line-height: 1;
-      transition: border-color .2s ease, color .2s ease, transform .2s ease;
-    }
-
-    .review-arrow:hover,
-    .review-arrow:focus-visible {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
+      justify-content: center;
+      margin-top: .7rem;
     }
 
     .review-dots {
@@ -910,7 +881,7 @@
       width: 100%;
       min-height: 62px;
       border: 1px solid rgba(14, 56, 76, .13);
-      border-radius: 999px;
+      border-radius: var(--radius-control);
       padding: .78rem 3.45rem .78rem 1rem;
       background: rgba(255,255,255,.96);
       color: var(--primary);
@@ -1009,7 +980,7 @@
       width: 100%;
       min-height: 46px;
       border: 1px solid rgba(14, 56, 76, .22);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       padding: .75rem .85rem;
       background: rgba(255,255,255,.92);
       color: var(--primary);
@@ -1029,7 +1000,7 @@
       gap: .75rem;
       padding: .75rem;
       border: 1px solid rgba(14, 56, 76, .12);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: rgba(249,252,255,.82);
     }
 
@@ -1052,7 +1023,7 @@
       width: 38px;
       height: 38px;
       border: 1px solid rgba(14,56,76,.18);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: var(--white);
       color: var(--primary);
       cursor: pointer;
@@ -1088,7 +1059,7 @@
     .slot-btn {
       min-height: 48px;
       border: 1px solid rgba(14, 56, 76, .18);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: rgba(255,255,255,.9);
       color: var(--primary);
       cursor: pointer;
@@ -1143,7 +1114,7 @@
       gap: .42rem;
       padding: .9rem;
       border: 1px solid rgba(14,56,76,.16);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: rgba(249,252,255,.9);
       color: var(--body-strong);
       font-weight: 720;
@@ -1242,7 +1213,7 @@
       overflow: hidden;
       margin: 0;
       border: 1px solid rgba(30,132,181,.16);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background:
         radial-gradient(circle at 50% 22%, rgba(255,255,255,.92), transparent 11rem),
         radial-gradient(circle at 50% 80%, rgba(30,132,181,.16), transparent 16rem),
@@ -1457,7 +1428,7 @@
     .staff-card {
       overflow: hidden;
       border: 1px solid var(--divider);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background: var(--white);
       box-shadow: 0 14px 34px rgba(14, 56, 76, .07);
     }
@@ -1509,7 +1480,7 @@
       min-height: 158px;
       padding: 1.25rem;
       border: 1px solid var(--divider);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background:
         radial-gradient(circle at 92% 12%, rgba(30,132,181,.12), transparent 12rem),
         var(--secondary);
@@ -1521,7 +1492,7 @@
       place-items: center;
       min-height: 96px;
       padding: .9rem;
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: var(--white);
       border: 1px solid var(--divider);
     }
@@ -1545,7 +1516,7 @@
 
     .contact-panel {
       padding: 1.25rem;
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background: var(--white);
       color: var(--primary);
       box-shadow: var(--shadow);
@@ -1648,7 +1619,7 @@
       height: 38px;
       padding-inline: .62rem;
       border: 1px solid rgba(255,255,255,.18);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: rgba(255,255,255,.06);
     }
 
@@ -1687,7 +1658,7 @@
       gap: .78rem;
       padding: 1.2rem;
       border: 1px solid rgba(14, 56, 76, .12);
-      border-radius: 8px;
+      border-radius: var(--radius-card);
       background: rgba(255, 255, 255, .98);
       box-shadow: 0 24px 70px rgba(9, 40, 56, .2);
     }
@@ -1728,7 +1699,7 @@
       width: 34px;
       height: 34px;
       border: 1px solid rgba(14, 56, 76, .14);
-      border-radius: 8px;
+      border-radius: var(--radius-control);
       background: var(--secondary);
       color: var(--primary);
       cursor: pointer;
@@ -2002,7 +1973,6 @@
       color: var(--accent-bright);
     }
 
-    .review-arrow,
     .calendar-head,
     .date-btn,
     .slot-btn,
@@ -2262,7 +2232,6 @@
       .review-carousel-head {
         align-items: center;
         gap: .62rem;
-        padding: .62rem;
       }
       .review-google-logo {
         width: min(112px, 40vw);
@@ -2298,9 +2267,6 @@
       }
       .review-controls {
         margin-top: .55rem;
-      }
-      .review-arrow {
-        width: 34px;
       }
       .hero-desktop-label {
         display: none;
@@ -3024,8 +2990,7 @@
                 </article>
               </div>
             </div>
-            <div class="review-controls" aria-label="Controlli recensioni">
-              <button class="review-arrow" type="button" data-review-prev aria-label="Recensione precedente">‹</button>
+            <div class="review-controls" aria-label="Scegli recensione">
               <div class="review-dots" role="tablist" aria-label="Scegli recensione">
                 <button class="review-dot" type="button" data-review-dot aria-label="Recensione 1" aria-current="true"></button>
                 <button class="review-dot" type="button" data-review-dot aria-label="Recensione 2" aria-current="false"></button>
@@ -3035,7 +3000,6 @@
                 <button class="review-dot" type="button" data-review-dot aria-label="Recensione 6" aria-current="false"></button>
                 <button class="review-dot" type="button" data-review-dot aria-label="Recensione 7" aria-current="false"></button>
               </div>
-              <button class="review-arrow" type="button" data-review-next aria-label="Recensione successiva">›</button>
             </div>
           </div>
         </div>
@@ -3607,8 +3571,6 @@
           const track = carousel.querySelector("[data-review-track]");
           const slides = [...carousel.querySelectorAll(".review-card")];
           const dots = [...carousel.querySelectorAll("[data-review-dot]")];
-          const prev = carousel.querySelector("[data-review-prev]");
-          const next = carousel.querySelector("[data-review-next]");
           const interval = Number(carousel.dataset.interval) || 5200;
           let activeIndex = 0;
           let timer = null;
@@ -3643,16 +3605,6 @@
             carousel.classList.remove("is-paused");
             timer = window.setInterval(() => goTo(activeIndex + 1), interval);
           };
-
-          prev?.addEventListener("click", (event) => {
-            event.stopPropagation();
-            goTo(activeIndex - 1, true);
-          });
-
-          next?.addEventListener("click", (event) => {
-            event.stopPropagation();
-            goTo(activeIndex + 1, true);
-          });
 
           dots.forEach((dot, index) => {
             dot.addEventListener("click", (event) => {
