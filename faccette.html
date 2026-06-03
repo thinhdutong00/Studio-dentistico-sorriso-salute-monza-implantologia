@@ -691,8 +691,7 @@
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-rows: minmax(0, 1fr) auto;
-      gap: .8rem;
+      grid-template-rows: minmax(0, 1fr);
       min-width: 0;
       align-self: stretch;
     }
@@ -782,37 +781,6 @@
       font-style: normal;
       font-weight: 950;
       line-height: 1.2;
-    }
-
-    .review-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0;
-    }
-
-    .review-dots {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .42rem;
-      min-width: 0;
-    }
-
-    .review-dot {
-      width: 9px;
-      height: 9px;
-      padding: 0;
-      border: 0;
-      border-radius: 999px;
-      background: rgba(14,56,76,.22);
-      cursor: pointer;
-      transition: width .24s ease, background .24s ease;
-    }
-
-    .review-dot[aria-current="true"] {
-      width: 24px;
-      background: var(--accent);
     }
 
     .glass-form {
@@ -2142,6 +2110,61 @@
       backdrop-filter: blur(18px) saturate(155%);
     }
 
+    @media (min-width: 981px) {
+      .hero .wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(2.2rem, 4vw, 4.4rem);
+        align-items: start;
+        min-height: auto;
+        padding-block: clamp(42px, 5.2vh, 62px) 56px;
+      }
+
+      .hero .wrap > .reveal {
+        display: grid;
+        align-content: start;
+      }
+
+      .hero .cta-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        max-width: 100%;
+      }
+
+      .hero .cta-row .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 58px;
+        padding-inline: .82rem;
+        font-size: .92rem;
+        line-height: 1.16;
+        white-space: normal;
+      }
+
+      .hero .review-carousel {
+        max-width: 100%;
+        margin-top: 1.28rem;
+      }
+
+      .hero .review-viewport {
+        grid-template-columns: minmax(124px, 160px) minmax(0, 1fr);
+        min-height: 190px;
+        padding: 1rem;
+      }
+
+      .hero .review-track-window {
+        height: 126px;
+      }
+
+      .hero .review-card {
+        min-height: 126px;
+      }
+
+      .hero .review-card blockquote {
+        font-size: clamp(.94rem, 1.1vw, 1.02rem);
+      }
+    }
+
     @media (max-width: 980px) {
       .navlinks { display: none; }
       .menu-toggle { display: inline-grid; place-items: center; }
@@ -2309,9 +2332,6 @@
       }
       .review-avatar {
         width: 40px;
-      }
-      .review-controls {
-        margin-top: .55rem;
       }
       .hero-desktop-label {
         display: none;
@@ -3036,17 +3056,6 @@
                     </article>
                   </div>
                 </div>
-                <div class="review-controls" aria-label="Scegli recensione">
-                  <div class="review-dots" role="tablist" aria-label="Scegli recensione">
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 1" aria-current="true"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 2" aria-current="false"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 3" aria-current="false"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 4" aria-current="false"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 5" aria-current="false"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 6" aria-current="false"></button>
-                    <button class="review-dot" type="button" data-review-dot aria-label="Recensione 7" aria-current="false"></button>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -3618,7 +3627,6 @@
         carousels.forEach((carousel) => {
           const track = carousel.querySelector("[data-review-track]");
           const slides = [...carousel.querySelectorAll(".review-card")];
-          const dots = [...carousel.querySelectorAll("[data-review-dot]")];
           const interval = Number(carousel.dataset.interval) || 5200;
           let activeIndex = 0;
           let timer = null;
@@ -3636,9 +3644,6 @@
             slides.forEach((slide, index) => {
               slide.setAttribute("aria-hidden", String(index !== activeIndex));
             });
-            dots.forEach((dot, index) => {
-              dot.setAttribute("aria-current", String(index === activeIndex));
-            });
           };
 
           const goTo = (index, shouldResume = false) => {
@@ -3653,13 +3658,6 @@
             carousel.classList.remove("is-paused");
             timer = window.setInterval(() => goTo(activeIndex + 1), interval);
           };
-
-          dots.forEach((dot, index) => {
-            dot.addEventListener("click", (event) => {
-              event.stopPropagation();
-              goTo(index, true);
-            });
-          });
 
           carousel.addEventListener("click", (event) => {
             if (event.target.closest("button, a")) return;
