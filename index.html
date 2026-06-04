@@ -1355,19 +1355,6 @@
       border-bottom: 1px solid var(--divider);
     }
 
-    .faq-head {
-      grid-template-columns: 1fr;
-      gap: .72rem;
-      max-width: 1080px;
-    }
-
-    .faq-head p {
-      max-width: 760px;
-      margin: 0;
-      font-size: clamp(1rem, 1.18vw, 1.12rem);
-      line-height: 1.55;
-    }
-
     .faq-list {
       display: grid;
       grid-auto-flow: column;
@@ -1939,6 +1926,14 @@
     .lead,
     .btn {
       overflow-wrap: break-word;
+    }
+
+    .hero-title-accent {
+      color: var(--accent);
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .proof-item,
@@ -3336,12 +3331,12 @@
 
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head faq-head reveal">
+        <div class="section-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> FAQ implantologia</p>
             <h2 id="faq-title">Domande Frequenti sull'Implantologia</h2>
-            <p>Dubbi frequenti su dolore, tempi, quantità d'osso e durata degli impianti: risposte chiare per arrivare alla prima valutazione con aspettative realistiche.</p>
           </div>
+          <p>Risposte utili per chi sta valutando un percorso implantologico e vuole arrivare alla prima visita con più consapevolezza.</p>
         </div>
         <div class="faq-list reveal delay-1">
           <details>
