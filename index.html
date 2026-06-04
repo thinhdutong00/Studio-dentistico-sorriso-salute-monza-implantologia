@@ -713,14 +713,17 @@
       height: 100%;
       min-height: 142px;
       padding: .05rem .1rem 0;
+      overflow: hidden;
       cursor: pointer;
     }
 
     .review-card blockquote {
       order: 2;
       position: relative;
+      min-height: 0;
       margin: 0;
       padding-top: .12rem;
+      overflow: hidden;
       color: var(--ink);
       font-size: clamp(.98rem, 1.35vw, 1.08rem);
       font-weight: 760;
@@ -739,8 +742,12 @@
     }
 
     .review-card blockquote p {
+      display: -webkit-box;
       position: relative;
       margin: 0;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
     }
 
     .review-meta {
@@ -2105,6 +2112,19 @@
     }
 
     @media (min-width: 981px) {
+      #approccio .problem-grid {
+        grid-template-columns: minmax(0, .98fr) minmax(320px, 520px);
+      }
+
+      #approccio .problem-media {
+        width: min(100%, 520px);
+        justify-self: end;
+      }
+
+      #approccio .implant-stage {
+        height: clamp(330px, 24vw, 420px);
+      }
+
       .hero .wrap {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(2.2rem, 4vw, 4.4rem);
@@ -2347,6 +2367,9 @@
       .review-card blockquote {
         font-size: .96rem;
         line-height: 1.34;
+      }
+      .review-card blockquote p {
+        -webkit-line-clamp: 5;
       }
       .review-meta {
         align-items: center;
