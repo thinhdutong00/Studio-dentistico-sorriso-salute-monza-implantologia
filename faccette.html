@@ -2108,7 +2108,7 @@
       .hero .wrap {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(2.2rem, 4vw, 4.4rem);
-        align-items: start;
+        align-items: stretch;
         min-height: auto;
         padding-block: clamp(42px, 5.2vh, 62px) 56px;
       }
@@ -2116,6 +2116,20 @@
       .hero .wrap > .reveal {
         display: grid;
         align-content: start;
+      }
+
+      .hero h1 {
+        max-width: 760px;
+        margin-bottom: .72rem;
+        font-size: clamp(3.15rem, 4.65vw, 4.08rem);
+        line-height: 1;
+      }
+
+      .hero .lead {
+        max-width: 640px;
+        margin-bottom: .9rem;
+        font-size: clamp(1.04rem, 1.34vw, 1.13rem);
+        line-height: 1.48;
       }
 
       .hero .cta-row {
@@ -2128,16 +2142,16 @@
       .hero .cta-row .btn {
         width: 100%;
         min-width: 0;
-        min-height: 58px;
-        padding-inline: .82rem;
-        font-size: .92rem;
-        line-height: 1.16;
-        white-space: normal;
+        min-height: 52px;
+        padding: .78rem .7rem;
+        font-size: clamp(.8rem, .95vw, .88rem);
+        line-height: 1;
+        white-space: nowrap;
       }
 
       .hero .review-carousel {
         max-width: 100%;
-        margin-top: 1.28rem;
+        margin-top: 1.12rem;
       }
 
       .hero .review-viewport {
@@ -2156,6 +2170,22 @@
 
       .hero .review-card blockquote {
         font-size: clamp(.94rem, 1.1vw, 1.02rem);
+      }
+
+      .hero .glass-form {
+        align-self: stretch;
+        display: grid;
+        grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+        min-height: 100%;
+      }
+
+      .hero .form-head h2 {
+        font-size: clamp(2.2rem, 3.35vw, 2.9rem);
+        line-height: 1.08;
+      }
+
+      .hero .form-step.is-active {
+        align-content: start;
       }
     }
 
@@ -3000,8 +3030,8 @@
           <h1 id="hero-title">Faccette Dentali a Monza: <span class="hero-title-accent">Armonizza Colore, Forma e Proporzioni del Sorriso</span></h1>
           <p class="lead">Un percorso estetico personalizzato per valorizzare i denti anteriori, correggere discromie, piccole irregolarità e proporzioni del sorriso con un risultato naturale e studiato sul tuo volto.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi una Valutazione Estetica del Sorriso</span><span class="hero-mobile-label">Richiedi valutazione estetica</span></a>
-            <a class="btn btn-ghost" href="https://wa.me/393892490181">Per informazioni specifiche scrivici su Whatsapp</a>
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi una Valutazione Estetica</span><span class="hero-mobile-label">Richiedi valutazione estetica</span></a>
+            <a class="btn btn-ghost" href="https://wa.me/393892490181">Scrivici su Whatsapp</a>
           </div>
           <div class="review-carousel" data-review-carousel data-interval="5200" aria-label="Recensioni dei pazienti su estetica del sorriso">
             <div class="review-viewport">
