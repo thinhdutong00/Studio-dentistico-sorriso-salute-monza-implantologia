@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 152" role="img" aria-labelledby="title">
+  <title id="title">Google Reviews</title>
+  <text x="0" y="70" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#DB4437">o</tspan><tspan fill="#F4B400">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#0F9D58">l</tspan><tspan fill="#DB4437">e</tspan>
+  </text>
+  <text x="2" y="115" fill="#6F7378" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">Reviews</text>
+  <text x="122" y="115" fill="#F4B400" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+</svg>
