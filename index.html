@@ -769,7 +769,7 @@
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.72);
       background: linear-gradient(135deg, var(--accent), var(--primary));
-      box-shadow: 0 10px 24px rgba(14,56,76,.18), inset 0 1px 0 rgba(255,255,255,.3);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
       color: #fff;
       font-size: .82rem;
       font-weight: 950;
@@ -1355,7 +1355,13 @@
       border-bottom: 1px solid var(--divider);
     }
 
-    .faq-list { display: grid; gap: .8rem; }
+    .faq-list {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(3, auto);
+      gap: .8rem 1rem;
+    }
 
     .faq details {
       padding: 1rem 1.1rem;
@@ -2257,9 +2263,16 @@
       .staff-grid,
       .finance-grid,
       .finance-card,
+      .faq-list,
       .quiz-options:not(.quiz-options-single) {
         grid-template-columns: 1fr;
       }
+
+      .faq-list {
+        grid-auto-flow: row;
+        grid-template-rows: none;
+      }
+
       .micro-proof {
         grid-template-columns: 1fr;
       }
@@ -2988,6 +3001,30 @@
               "@type": "Answer",
               "text": "La tecnica è applicabile nella maggior parte dei pazienti adulti, ma richiede quantità d'osso sufficiente e buono stato di salute generale. La prima valutazione serve a verificare requisiti, rischi e alternative."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo serve per avere un dente fisso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dipende dalla situazione clinica. In alcuni casi si può valutare una soluzione provvisoria o un carico immediato, mentre in altri è necessario attendere i tempi biologici di guarigione e osteointegrazione."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cosa succede se ho poco osso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La carenza di osso non esclude automaticamente l'implantologia. La diagnostica 3D permette di valutare volume, qualità ossea e possibili alternative, inclusi eventuali protocolli di rigenerazione quando indicati."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto dura un impianto dentale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un impianto può durare molti anni se viene mantenuto con igiene accurata e controlli periodici. Durata e stabilità dipendono da salute generale, fumo, bruxismo, qualità dei tessuti e manutenzione nel tempo."
+            }
           }
         ]
       }
@@ -3308,6 +3345,18 @@
           <details>
             <summary>Chiunque può sottoporsi a implantologia computer-guidata?</summary>
             <p>La tecnica è applicabile nella maggior parte dei pazienti adulti. Tuttavia, la presenza di una quantità d'osso sufficiente e un buono stato di salute generale, valutando patologie sistemiche o abitudini come il fumo, sono requisiti fondamentali analizzati durante la prima valutazione preliminare.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo serve per avere un dente fisso?</summary>
+            <p>Dipende dalla situazione clinica. In alcuni casi si può valutare una soluzione provvisoria o un carico immediato, mentre in altri è necessario attendere i tempi biologici di guarigione e osteointegrazione prima della protesi definitiva.</p>
+          </details>
+          <details>
+            <summary>Cosa succede se ho poco osso?</summary>
+            <p>La carenza di osso non esclude automaticamente l'implantologia. La diagnostica 3D permette di valutare volume, qualità ossea e possibili alternative, inclusi eventuali protocolli di rigenerazione quando indicati.</p>
+          </details>
+          <details>
+            <summary>Quanto dura un impianto dentale?</summary>
+            <p>Un impianto può durare molti anni se viene mantenuto con igiene accurata e controlli periodici. Durata e stabilità dipendono da salute generale, fumo, bruxismo, qualità dei tessuti e manutenzione nel tempo.</p>
           </details>
         </div>
       </div>
