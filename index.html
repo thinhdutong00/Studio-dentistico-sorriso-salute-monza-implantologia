@@ -1355,6 +1355,19 @@
       border-bottom: 1px solid var(--divider);
     }
 
+    .faq-head {
+      grid-template-columns: 1fr;
+      gap: .72rem;
+      max-width: 1080px;
+    }
+
+    .faq-head p {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(1rem, 1.18vw, 1.12rem);
+      line-height: 1.55;
+    }
+
     .faq-list {
       display: grid;
       grid-auto-flow: column;
@@ -1890,10 +1903,9 @@
       position: relative;
       padding-block: 0;
       background:
-        linear-gradient(90deg, rgba(9,40,56,0) 0%, rgba(112,194,229,.08) 58%, rgba(157,218,239,.22) 100%),
-        linear-gradient(135deg, #092838 0%, var(--primary) 48%, #17698A 100%);
-      border-bottom-color: rgba(255,255,255,.12);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+        linear-gradient(116deg, rgba(255,255,255,.98) 0%, rgba(250,253,255,.94) 42%, rgba(221,244,252,.9) 72%, rgba(196,231,246,.78) 100%),
+        var(--secondary);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9);
     }
 
     .hero::before {
@@ -1902,8 +1914,8 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 46%),
-        linear-gradient(112deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.04) 55%, rgba(255,255,255,.14) 100%);
+        linear-gradient(135deg, rgba(255,255,255,.76) 0%, rgba(255,255,255,.24) 34%, transparent 58%),
+        linear-gradient(90deg, rgba(30,132,181,.1), transparent 44%);
     }
 
     .hero .wrap {
@@ -1927,51 +1939,6 @@
     .lead,
     .btn {
       overflow-wrap: break-word;
-    }
-
-    .hero #hero-title {
-      color: var(--white);
-    }
-
-    .hero #hero-title + .lead {
-      color: #DDEDF4;
-    }
-
-    .hero .eyebrow {
-      color: #DDEDF4;
-    }
-
-    .hero .dot {
-      background: #70C2E5;
-      box-shadow: 0 0 0 5px rgba(255,255,255,.12);
-    }
-
-    .hero .hero-title-accent {
-      color: #BFEFFF;
-      background: linear-gradient(90deg, var(--white) 0%, #C8F2FF 58%, #70C2E5 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero .cta-row .btn-primary {
-      --btn-bg: var(--white);
-      --btn-fg: var(--primary);
-      --btn-border: var(--white);
-      --btn-empty-fg: var(--white);
-      --btn-empty-border: var(--white);
-      --btn-shadow: 0 16px 34px rgba(0, 0, 0, .18);
-      --btn-hover-shadow: 0 14px 30px rgba(0, 0, 0, .18);
-    }
-
-    .hero .cta-row .btn-ghost {
-      --btn-bg: rgba(255, 255, 255, .14);
-      --btn-fg: var(--white);
-      --btn-border: rgba(255,255,255,.34);
-      --btn-empty-fg: var(--white);
-      --btn-empty-border: rgba(255,255,255,.72);
-      --btn-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 14px 30px rgba(0,0,0,.1);
-      --btn-hover-shadow: 0 16px 34px rgba(0,0,0,.16);
     }
 
     .proof-item,
@@ -2056,21 +2023,6 @@
       background:
         linear-gradient(125deg, rgba(255,255,255,.62) 0%, transparent 44%),
         linear-gradient(135deg, rgba(30,132,181,.15), rgba(255,255,255,.08) 46%, rgba(30,132,181,.1));
-    }
-
-    .hero .glass-form {
-      color: var(--primary);
-      border-color: rgba(255,255,255,.52);
-      background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(226,247,253,.54));
-      box-shadow: 0 30px 86px rgba(0, 0, 0, .22), 0 0 0 1px rgba(255,255,255,.18), inset 0 1px 0 rgba(255,255,255,.72);
-      -webkit-backdrop-filter: blur(24px) saturate(165%);
-      backdrop-filter: blur(24px) saturate(165%);
-    }
-
-    .hero .glass-form::before {
-      background:
-        linear-gradient(125deg, rgba(255,255,255,.42) 0%, transparent 44%),
-        linear-gradient(135deg, rgba(255,255,255,.18), rgba(30,132,181,.12) 52%, rgba(255,255,255,.2));
     }
 
     .progress {
@@ -2294,8 +2246,8 @@
       body.mobile-menu-open .mobile-cta { display: none; }
       .hero {
         background:
-          linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 42%),
-          linear-gradient(118deg, #092838 0%, var(--primary) 52%, #17698A 100%);
+          linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(226,247,253,.84) 100%),
+          var(--secondary);
       }
       .hero .wrap,
       .section-head,
@@ -3384,12 +3336,12 @@
 
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head faq-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> FAQ implantologia</p>
             <h2 id="faq-title">Domande Frequenti sull'Implantologia</h2>
+            <p>Dubbi frequenti su dolore, tempi, quantità d'osso e durata degli impianti: risposte chiare per arrivare alla prima valutazione con aspettative realistiche.</p>
           </div>
-          <p>Risposte utili per chi sta valutando un percorso implantologico e vuole arrivare alla prima visita con più consapevolezza.</p>
         </div>
         <div class="faq-list reveal delay-1">
           <details>
