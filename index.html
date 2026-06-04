@@ -1160,6 +1160,15 @@
       flex: 1 1 auto;
     }
 
+    .glass-form.is-prev-only .form-actions [data-prev-step] {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+
+    .glass-form.is-prev-only #prevBtn {
+      flex-basis: 100%;
+    }
+
     section { padding-block: 76px; }
 
     .reveal { opacity: 1; transform: none; }
@@ -3800,6 +3809,7 @@
           prevBtn.hidden = step === 1;
           nextBtn.hidden = step !== 5;
           submitBtn.hidden = step !== totalSteps;
+          form.classList.toggle("is-prev-only", !prevBtn.hidden && nextBtn.hidden && submitBtn.hidden);
           setError();
           updateSummary();
           resetModalScroll();
