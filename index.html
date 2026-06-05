@@ -1992,10 +1992,21 @@
 
     .hero .hero-title-accent {
       color: var(--accent-bright);
-      background: linear-gradient(90deg, #28A4D6 0%, #70C2E5 46%, #1E84B5 100%);
+      background:
+        radial-gradient(circle at 32% 38%, rgba(255,255,255,.9) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 65% 62%, rgba(255,255,255,.48) 0 1.1px, transparent 1.8px),
+        linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,.13) 0 1px, transparent 1px),
+        linear-gradient(135deg, #B7EEFF 0%, #70C2E5 24%, #28A4D6 52%, #1E84B5 78%, #70C2E5 100%);
+      background-size: 12px 12px, 19px 19px, 18px 18px, 18px 18px, 100% 100%;
+      background-position: 0 0, 7px 5px, 0 0, 0 0, 0 0;
+      background-blend-mode: overlay, soft-light, overlay, soft-light, normal;
       -webkit-background-clip: text;
       background-clip: text;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 1px 0 rgba(255,255,255,.12)) drop-shadow(0 10px 22px rgba(30,132,181,.16));
     }
 
     .hero .cta-row .btn-primary {
@@ -3576,7 +3587,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <strong>Studio Dentistico Sorriso & Salute</strong>
-          <p>Cerchi un Dentista in Brianza?<br><a href="https://www.sorrisoesalute.it/convenzioni-dirette">Convenzioni Studio Dentistico Monza Dentista</a></p>
+          <p>Cerchi un Dentista in Brianza?<br><a href="/convenzioni-dirette-studio-dentistico-monza/">Convenzioni Studio Dentistico Monza Dentista</a></p>
           <div class="footer-social" aria-label="Canali social">
             <a href="https://www.facebook.com/sorrisomonza/">Facebook</a>
             <a href="https://www.instagram.com/__studio_sorriso_e_salute__/">Instagram</a>
