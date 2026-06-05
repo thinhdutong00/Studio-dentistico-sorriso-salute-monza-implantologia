@@ -1993,18 +1993,19 @@
     .hero .hero-title-accent {
       color: var(--accent-bright);
       background:
+        linear-gradient(112deg, rgba(255,255,255,.72) 0%, rgba(191,222,235,.28) 15%, rgba(255,255,255,.78) 31%, rgba(86,188,228,.18) 48%, rgba(244,252,255,.62) 64%, rgba(170,203,218,.24) 80%, rgba(255,255,255,.58) 100%),
         url("/assets/hero-title-grain.webp"),
-        linear-gradient(135deg, #B7EEFF 0%, #70C2E5 20%, #28A4D6 48%, #1E84B5 76%, #70C2E5 100%);
-      background-size: 280px 158px, 100% 100%;
-      background-position: 50% 66%, 0 0;
-      background-repeat: repeat, no-repeat;
-      background-blend-mode: multiply, normal;
+        linear-gradient(135deg, #C8F3FF 0%, #7FD3F0 18%, #28A4D6 44%, #1E84B5 72%, #9BE7FF 100%);
+      background-size: 100% 100%, 128px 72px, 100% 100%;
+      background-position: 0 0, 50% 76%, 0 0;
+      background-repeat: no-repeat, repeat, no-repeat;
+      background-blend-mode: screen, normal, normal;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 1px 0 rgba(255,255,255,.12)) drop-shadow(0 10px 22px rgba(30,132,181,.16));
+      filter: brightness(1.14) saturate(1.24) drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.2));
     }
 
     .hero .cta-row .btn-primary {
