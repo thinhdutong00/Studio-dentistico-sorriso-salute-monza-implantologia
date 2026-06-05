@@ -1377,15 +1377,27 @@
 
     .faq-head {
       grid-template-columns: 1fr;
+      justify-items: center;
       gap: .75rem;
       max-width: 1080px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .faq-head > div {
+      display: grid;
+      justify-items: center;
     }
 
     .faq-head .faq-intro {
       max-width: 760px;
-      margin: .42rem 0 0;
+      margin: .42rem auto 0;
       font-size: clamp(1rem, 1.16vw, 1.12rem);
       line-height: 1.55;
+    }
+
+    .faq-kicker {
+      justify-content: center;
     }
 
     .faq-list {
@@ -3419,7 +3431,7 @@
       <div class="wrap">
         <div class="section-head faq-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> FAQ implantologia</p>
+            <p class="eyebrow faq-kicker">FAQ implantologia</p>
             <h2 id="faq-title">Domande Frequenti sugli Impianti Dentali</h2>
             <p class="faq-intro">Risposte chiare per chi sta valutando un percorso con impianti dentali e vuole arrivare alla prima visita con aspettative realistiche.</p>
           </div>
