@@ -1993,10 +1993,10 @@
     .hero .hero-title-accent {
       color: var(--accent-bright);
       background:
-        linear-gradient(105deg, transparent 0%, transparent 39%, rgba(255,255,255,.98) 47%, rgba(190,246,255,.95) 51%, rgba(40,164,214,.28) 56%, transparent 64%, transparent 100%),
-        linear-gradient(135deg, #C8F3FF 0%, #7FD3F0 20%, #28A4D6 48%, #1E84B5 76%, #9BE7FF 100%);
-      background-size: 230% 100%, 100% 100%;
-      background-position: -180% 0, 0 0;
+        linear-gradient(105deg, transparent 0%, transparent 34%, rgba(255,255,255,.16) 39%, rgba(255,255,255,.92) 45%, rgba(210,250,255,.98) 49%, rgba(255,255,255,.68) 53%, rgba(40,164,214,.22) 59%, transparent 67%, transparent 100%),
+        linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
+      background-size: 190% 100%, 100% 100%;
+      background-position: -160% 0, 0 0;
       background-repeat: no-repeat;
       background-blend-mode: screen, normal;
       -webkit-background-clip: text;
@@ -2008,18 +2008,18 @@
     }
 
     html:not(.loader-active).reveal-ready .reveal.is-visible .hero-title-accent {
-      animation: heroAccentAppear .72s cubic-bezier(.22,1,.36,1) .18s both, heroAccentShine 1.35s cubic-bezier(.22,1,.36,1) .38s both;
+      animation: heroAccentAppear .54s cubic-bezier(.22,1,.36,1) .12s both, heroAccentShine 1.75s cubic-bezier(.22,1,.36,1) .32s both;
     }
 
     @keyframes heroAccentAppear {
       0% {
         opacity: 0;
-        transform: translateX(-.18em);
-        filter: blur(5px) brightness(1.55) drop-shadow(0 0 18px rgba(155,231,255,.42));
+        transform: translateX(-.1em);
+        filter: blur(2px) brightness(1.22) drop-shadow(0 0 14px rgba(155,231,255,.28));
       }
-      58% {
+      62% {
         opacity: 1;
-        filter: blur(.6px) brightness(1.18) drop-shadow(0 0 18px rgba(155,231,255,.34));
+        filter: blur(.3px) brightness(1.08) drop-shadow(0 0 14px rgba(155,231,255,.22));
       }
       100% {
         opacity: 1;
@@ -2029,9 +2029,9 @@
     }
 
     @keyframes heroAccentShine {
-      0% { background-position: -180% 0, 0 0; }
-      70% { background-position: 84% 0, 0 0; }
-      100% { background-position: 220% 0, 0 0; }
+      0% { background-position: -160% 0, 0 0; }
+      68% { background-position: 72% 0, 0 0; }
+      100% { background-position: 190% 0, 0 0; }
     }
 
     .hero .cta-row .btn-primary {
@@ -3054,7 +3054,7 @@
       }
       .hero .hero-title-accent {
         animation: none !important;
-        background: linear-gradient(135deg, #C8F3FF 0%, #7FD3F0 20%, #28A4D6 48%, #1E84B5 76%, #9BE7FF 100%);
+        background: linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
         -webkit-background-clip: text;
         background-clip: text;
         filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
