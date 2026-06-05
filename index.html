@@ -1993,14 +1993,12 @@
     .hero .hero-title-accent {
       color: var(--accent-bright);
       background:
-        radial-gradient(circle at 32% 38%, rgba(255,255,255,.9) 0 1px, transparent 1.7px),
-        radial-gradient(circle at 65% 62%, rgba(255,255,255,.48) 0 1.1px, transparent 1.8px),
-        linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px),
-        linear-gradient(0deg, rgba(255,255,255,.13) 0 1px, transparent 1px),
-        linear-gradient(135deg, #B7EEFF 0%, #70C2E5 24%, #28A4D6 52%, #1E84B5 78%, #70C2E5 100%);
-      background-size: 12px 12px, 19px 19px, 18px 18px, 18px 18px, 100% 100%;
-      background-position: 0 0, 7px 5px, 0 0, 0 0, 0 0;
-      background-blend-mode: overlay, soft-light, overlay, soft-light, normal;
+        url("/assets/hero-title-grain.webp"),
+        linear-gradient(135deg, #B7EEFF 0%, #70C2E5 20%, #28A4D6 48%, #1E84B5 76%, #70C2E5 100%);
+      background-size: 280px 158px, 100% 100%;
+      background-position: 50% 66%, 0 0;
+      background-repeat: repeat, no-repeat;
+      background-blend-mode: multiply, normal;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-box-decoration-break: clone;
