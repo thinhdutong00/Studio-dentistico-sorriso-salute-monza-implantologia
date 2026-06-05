@@ -1194,6 +1194,26 @@
     .section-head p,
     .muted { color: var(--text); }
 
+    .digital-head {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 1rem;
+      max-width: 940px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .digital-head h2 {
+      max-width: 900px;
+    }
+
+    .digital-head > p {
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: clamp(1.02rem, 1.18vw, 1.16rem);
+      line-height: 1.58;
+    }
+
     .soft {
       background:
         radial-gradient(circle at 12% 8%, rgba(30,132,181,.08), transparent 24rem),
@@ -1353,6 +1373,19 @@
         var(--secondary);
       border-top: 1px solid var(--divider);
       border-bottom: 1px solid var(--divider);
+    }
+
+    .faq-head {
+      grid-template-columns: 1fr;
+      gap: .75rem;
+      max-width: 1080px;
+    }
+
+    .faq-head .faq-intro {
+      max-width: 760px;
+      margin: .42rem 0 0;
+      font-size: clamp(1rem, 1.16vw, 1.12rem);
+      line-height: 1.55;
     }
 
     .faq-list {
@@ -1946,8 +1979,8 @@
     }
 
     .hero .hero-title-accent {
-      color: #BFEFFF;
-      background: linear-gradient(90deg, var(--white) 0%, #C8F2FF 58%, #70C2E5 100%);
+      color: var(--accent-bright);
+      background: linear-gradient(90deg, #28A4D6 0%, #70C2E5 46%, #1E84B5 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -2059,17 +2092,19 @@
 
     .hero .glass-form {
       color: var(--primary);
-      border-color: rgba(255,255,255,.48);
-      background: linear-gradient(145deg, rgba(239,249,253,.74), rgba(174,215,230,.5));
-      box-shadow: 0 30px 86px rgba(0, 0, 0, .24), 0 0 0 1px rgba(255,255,255,.16), inset 0 1px 0 rgba(255,255,255,.66);
-      -webkit-backdrop-filter: blur(24px) saturate(165%);
-      backdrop-filter: blur(24px) saturate(165%);
+      border-color: rgba(255,255,255,.68);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.9), rgba(255,255,255,.76)),
+        rgba(255,255,255,.74);
+      box-shadow: 0 30px 86px rgba(0, 0, 0, .2), 0 0 0 1px rgba(255,255,255,.24), inset 0 1px 0 rgba(255,255,255,.82);
+      -webkit-backdrop-filter: blur(24px) saturate(135%);
+      backdrop-filter: blur(24px) saturate(135%);
     }
 
     .hero .glass-form::before {
       background:
-        linear-gradient(125deg, rgba(255,255,255,.34) 0%, transparent 44%),
-        linear-gradient(135deg, rgba(255,255,255,.1), rgba(30,132,181,.18) 52%, rgba(255,255,255,.12));
+        linear-gradient(125deg, rgba(255,255,255,.5) 0%, transparent 46%),
+        linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.06) 52%, rgba(255,255,255,.2));
     }
 
     .progress {
@@ -3325,9 +3360,8 @@
 
     <section class="soft" id="digitale" aria-labelledby="digital-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head digital-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Implantologia avanzata</p>
             <h2 id="digital-title">Perché l'Implantologia Digitale Computer-Guidata cambia l'esperienza del paziente</h2>
           </div>
           <p>Un protocollo progettato per aumentare precisione, ridurre invasività quando possibile e rendere più chiari tempi e fasi del trattamento.</p>
@@ -3383,12 +3417,12 @@
 
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head faq-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> FAQ implantologia</p>
-            <h2 id="faq-title">Domande Frequenti sull'Implantologia</h2>
+            <h2 id="faq-title">Domande Frequenti sugli Impianti Dentali</h2>
+            <p class="faq-intro">Risposte chiare per chi sta valutando un percorso con impianti dentali e vuole arrivare alla prima visita con aspettative realistiche.</p>
           </div>
-          <p>Risposte utili per chi sta valutando un percorso implantologico e vuole arrivare alla prima visita con più consapevolezza.</p>
         </div>
         <div class="faq-list reveal delay-1">
           <details>
