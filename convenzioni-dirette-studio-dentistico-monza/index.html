@@ -15,9 +15,25 @@
   <meta property="og:description" content="Scopri le convenzioni dirette disponibili presso lo Studio Dentistico Sorriso & Salute a Monza.">
   <meta property="og:image" content="/assets/convenzioni/fisde-convenzione-dentista-monza.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <script>
+    window.__loaderStart = performance.now();
+    document.documentElement.classList.add("loader-active");
+  </script>
   <link rel="stylesheet" href="/assets/convenzioni.css">
 </head>
 <body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-logo">
+      <span class="loader-mark">
+        <img src="/assets/loader-tooth.png" width="300" height="353" alt="">
+      </span>
+      <span class="loader-wordmark">
+        <span>STUDIO DENTISTICO</span>
+        <strong>SORRISO &amp; SALUTE</strong>
+      </span>
+    </div>
+  </div>
+
   <a class="skip" href="#contenuto">Salta al contenuto</a>
   <div class="topbar">
     <div class="wrap">
@@ -156,5 +172,32 @@
       </div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const loader = document.querySelector("#pageLoader");
+      const loaderMinDuration = 900;
+      let loaderHidden = false;
+
+      const hideLoader = () => {
+        if (!loader || loaderHidden) return;
+        loaderHidden = true;
+        loader.classList.add("loader-hidden");
+        document.documentElement.classList.remove("loader-active");
+        window.setTimeout(() => loader.remove(), 420);
+      };
+
+      const scheduleLoaderHide = () => {
+        const startedAt = window.__loaderStart || performance.now();
+        const elapsed = performance.now() - startedAt;
+        window.setTimeout(hideLoader, Math.max(0, loaderMinDuration - elapsed));
+      };
+
+      if (document.readyState === "complete") {
+        scheduleLoaderHide();
+      } else {
+        window.addEventListener("load", scheduleLoaderHide, { once: true });
+      }
+    })();
+  </script>
 </body>
 </html>
