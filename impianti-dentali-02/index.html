@@ -6,12 +6,17 @@
   <title>Impianti dentali a Monza | Sorriso & Salute</title>
   <meta name="description" content="Impianti dentali a Monza con oltre 20 anni di esperienza odontoiatrica. Richiedi una valutazione con modulo multistep.">
   <link rel="icon" href="/assets/favicon.png">
+  <script>
+    window.__loaderStart = performance.now();
+    document.documentElement.classList.add("loader-active");
+  </script>
   <style>
     :root {
       --ink: #173246;
       --muted: #5f7787;
-      --primary: #1d5875;
+      --primary: #0E384C;
       --primary-2: #3f92c6;
+      --accent: #1E84B5;
       --line: rgba(74, 141, 176, .24);
       --soft: #eaf7fc;
       --card: rgba(255, 255, 255, .82);
@@ -65,16 +70,21 @@
       margin-inline: auto;
     }
 
+    html.loader-active,
+    html.loader-active body {
+      overflow: hidden;
+    }
+
     .page-loader {
       position: fixed;
       inset: 0;
-      z-index: 999;
+      z-index: 9999;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(circle at 50% 42%, rgba(63, 146, 198, .14), transparent 34%),
-        linear-gradient(180deg, #f8fcfe 0%, #eef8fc 100%);
-      transition: opacity .36s ease, visibility .36s ease;
+      background: var(--accent);
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .38s ease, visibility .38s ease;
     }
 
     .page-loader.loader-hidden {
@@ -86,43 +96,125 @@
     .loader-logo {
       display: grid;
       justify-items: center;
-      gap: .85rem;
-      color: var(--primary);
-      text-align: center;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      gap: clamp(.75rem, 1.4vw, 1rem);
+      filter: drop-shadow(0 18px 34px rgba(9, 40, 56, .18));
+      animation: loader-pop .9s cubic-bezier(.2, .8, .2, 1) both;
     }
 
     .loader-mark {
-      display: grid;
-      place-items: center;
-      width: 86px;
-      height: 86px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .84);
-      box-shadow: 0 18px 44px rgba(23, 50, 70, .16);
+      position: relative;
+      width: clamp(96px, 13vw, 150px);
+      aspect-ratio: 300 / 353;
     }
 
     .loader-mark img {
-      width: 48px;
-      height: auto;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .loader-wordmark span,
-    .loader-wordmark strong {
-      display: block;
-      line-height: 1.08;
+    .loader-mark::before {
+      content: "";
+      position: absolute;
+      left: 22.9%;
+      top: 29.7%;
+      z-index: 2;
+      width: 16%;
+      height: 17.6%;
+      border-radius: 999px;
+      background: var(--accent);
+      animation: loader-eye-cover .92s ease-in-out .08s both;
+    }
+
+    .loader-mark::after {
+      content: "";
+      position: absolute;
+      left: 25.1%;
+      top: 37.2%;
+      z-index: 3;
+      width: 12.8%;
+      height: clamp(4px, .48vw, 6px);
+      background: var(--white);
+      border-radius: 999px;
+      transform: scaleX(0) rotate(-8deg);
+      transform-origin: center;
+      animation: loader-wink-line .92s ease-in-out .08s both;
+    }
+
+    .loader-wordmark {
+      display: grid;
+      justify-items: center;
+      color: var(--white);
+      line-height: .92;
+      letter-spacing: 0;
+      text-align: center;
     }
 
     .loader-wordmark span {
-      color: #5b7a8d;
-      font-size: .78rem;
+      font-size: clamp(.82rem, 1.65vw, 1.1rem);
+      font-weight: 760;
     }
 
     .loader-wordmark strong {
-      color: var(--primary);
-      font-size: 1rem;
+      font-size: clamp(1.02rem, 2vw, 1.42rem);
+      font-weight: 950;
+    }
+
+    @keyframes loader-pop {
+      0% { opacity: 0; transform: scale(.82) translateY(8px); }
+      55% { opacity: 1; transform: scale(1.05) translateY(0); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes loader-eye-cover {
+      0%, 20%, 78%, 100% { transform: scale(.05); opacity: 0; }
+      38%, 62% { transform: scale(1.18); opacity: 1; }
+    }
+
+    @keyframes loader-wink-line {
+      0%, 20%, 78%, 100% { transform: scaleX(0) rotate(-8deg); opacity: 0; }
+      38%, 62% { transform: scaleX(1) rotate(-8deg); opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loader-logo,
+      .loader-mark::before,
+      .loader-mark::after {
+        animation: none;
+      }
+
+      .loader-mark::before,
+      .loader-mark::after {
+        opacity: 0;
+      }
+
+      .page-loader {
+        transition-duration: .12s;
+      }
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      width: 184px;
+      height: 45px;
+      min-width: 0;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .brand::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--primary);
+      -webkit-mask: url("/assets/logo-optimized.png") center / contain no-repeat;
+      mask: url("/assets/logo-optimized.png") center / contain no-repeat;
     }
 
     .site-header {
@@ -140,17 +232,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 184px;
-      height: auto;
     }
 
     .btn {
@@ -766,8 +847,9 @@
         min-height: 70px;
       }
 
-      .brand img {
-        width: 172px;
+      .brand {
+        width: 160px;
+        height: 39px;
       }
 
       .site-header .btn {
@@ -849,9 +931,7 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/" aria-label="Studio Dentistico Sorriso e Salute">
-        <img src="/assets/logo-optimized.png" width="412" height="130" alt="Studio Dentistico Sorriso & Salute">
-      </a>
+      <a class="brand" href="/" aria-label="Studio Dentistico Sorriso & Salute"></a>
       <a class="btn btn-primary" href="tel:+390392022489" aria-label="Chiama lo studio">Chiama</a>
     </div>
   </header>
@@ -1036,19 +1116,22 @@
   <script>
     (() => {
       const loader = document.querySelector("#pageLoader");
-      const loaderMinDuration = 700;
+      const loaderMinDuration = 900;
       let loaderHidden = false;
 
       const hideLoader = () => {
         if (!loader || loaderHidden) return;
         loaderHidden = true;
         loader.classList.add("loader-hidden");
+        document.documentElement.classList.remove("loader-active");
+        window.dispatchEvent(new CustomEvent("sorriso:loader-hidden"));
         window.setTimeout(() => loader.remove(), 420);
       };
 
       const scheduleLoaderHide = () => {
-        const startedAt = performance.now();
-        window.setTimeout(hideLoader, Math.max(0, loaderMinDuration - (performance.now() - startedAt)));
+        const startedAt = window.__loaderStart || performance.now();
+        const elapsed = performance.now() - startedAt;
+        window.setTimeout(hideLoader, Math.max(0, loaderMinDuration - elapsed));
       };
 
       if (document.readyState === "complete") {
