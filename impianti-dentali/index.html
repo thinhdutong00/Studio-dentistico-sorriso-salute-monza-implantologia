@@ -1272,9 +1272,9 @@
 
     .when-layout {
       display: grid;
-      grid-template-columns: minmax(220px, .25fr) minmax(0, .75fr);
-      align-items: center;
-      column-gap: clamp(1.8rem, 3.8vw, 3.6rem);
+      grid-template-columns: minmax(340px, .28fr) minmax(0, .72fr);
+      align-items: start;
+      column-gap: clamp(1.6rem, 3vw, 3rem);
     }
 
     .when-content {
@@ -1286,12 +1286,13 @@
     }
 
     .when-head h2 {
-      max-width: 920px;
+      max-width: 1040px;
+      font-size: clamp(2.55rem, 2.45vw, 3.1rem);
     }
 
     .when-head-media {
       width: 100%;
-      max-width: 320px;
+      max-width: 360px;
       margin: 0;
       overflow: hidden;
       border: 1px solid rgba(30,132,181,.16);
@@ -1307,6 +1308,11 @@
       object-fit: cover;
     }
 
+    .when-content .section-cta {
+      justify-content: center;
+      margin-inline: auto;
+    }
+
     .solution-grid.when-cards {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: .85rem;
@@ -1315,10 +1321,6 @@
     .solution-grid.when-cards .info-card {
       padding: 1rem 1.1rem;
       min-height: auto;
-    }
-
-    .desktop-title-break {
-      display: inline;
     }
 
     .section-head p,
@@ -2634,9 +2636,6 @@
         align-content: start;
       }
 
-      .desktop-title-break {
-        display: block;
-      }
     }
 
     @media (max-width: 980px) {
