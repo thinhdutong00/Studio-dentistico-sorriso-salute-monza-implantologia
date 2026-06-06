@@ -560,6 +560,18 @@
       gap: .75rem;
     }
 
+    .section-cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .75rem;
+      margin-top: 1.45rem;
+    }
+
+    .section-cta .btn {
+      min-height: 50px;
+    }
+
     .hero-mobile-label {
       display: none;
     }
@@ -2341,6 +2353,16 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(255,255,255,.08);
     }
 
+    .band .section-cta .btn-primary {
+      --btn-bg: var(--white);
+      --btn-fg: var(--primary);
+      --btn-border: var(--white);
+      --btn-empty-fg: var(--white);
+      --btn-empty-border: var(--white);
+      --btn-shadow: 0 18px 38px rgba(0, 0, 0, .18);
+      --btn-hover-shadow: 0 14px 30px rgba(0, 0, 0, .14);
+    }
+
     .phase {
       background: linear-gradient(150deg, rgba(255,255,255,.16), rgba(255,255,255,.07));
       border-color: rgba(255,255,255,.24);
@@ -3638,6 +3660,9 @@
           <p class="eyebrow"><span class="dot"></span> Prima diagnosi</p>
           <h2 id="problem-title">Prima di parlare di impianti, serve capire perché quei denti mancano o non sono più stabili</h2>
           <p class="problem-copy">La perdita di uno o più denti può modificare masticazione, equilibrio dei denti vicini, qualità dell'osso e sicurezza nel parlare o sorridere. Per questo la valutazione implantologica non parte da una promessa, ma da una diagnosi: salute generale, gengive, osso disponibile, abitudini e obiettivo protesico vengono letti insieme prima di proporre un piano.</p>
+          <div class="section-cta">
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Avvia una valutazione implantologica</a>
+          </div>
         </div>
         <figure class="problem-media reveal delay-1" data-implant-render>
           <div class="implant-stage before-after-compare" role="img" aria-label="Confronto automatico tra arcata con dente mancante e arcata riabilitata con impianto dentale">
@@ -3677,6 +3702,9 @@
             <p class="muted">Casi complessi richiedono diagnosi prudente. La valutazione serve a capire cosa è realistico, quali rischi considerare e quali passaggi preparatori potrebbero essere necessari.</p>
           </article>
         </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
+        </div>
       </div>
     </section>
 
@@ -3704,6 +3732,9 @@
             <h3>Decisione informata</h3>
             <p class="muted">Prima di procedere vengono chiariti benefici attesi, limiti, fasi, alternative e controlli. La scelta terapeutica resta personalizzata e viene confermata solo dopo valutazione clinica.</p>
           </article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi una diagnosi implantologica</a>
         </div>
       </div>
     </section>
@@ -3733,6 +3764,9 @@
             <h3>Trattamento e mantenimento</h3>
             <p class="muted">Inserimento dell'impianto quando indicato, controlli di guarigione, protesizzazione e programma di igiene e monitoraggio per proteggere il risultato nel tempo.</p>
           </article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Chiarisci il percorso più adatto</a>
         </div>
       </div>
     </section>
