@@ -1770,8 +1770,158 @@
     }
 
     body.modal-open .whatsapp-prompt,
-    body.mobile-menu-open .whatsapp-prompt {
+    body.mobile-menu-open .whatsapp-prompt,
+    body.intro-popup-open .whatsapp-prompt {
       display: none;
+    }
+
+    body.intro-popup-open .mobile-cta {
+      display: none;
+    }
+
+    .intro-popup {
+      inset: 0;
+      width: 100vw;
+      max-width: none;
+      height: 100vh;
+      height: 100dvh;
+      max-height: none;
+      margin: 0;
+      padding: clamp(1rem, 3vw, 2rem);
+      border: 0;
+      background: transparent;
+      color: var(--primary);
+      overflow: hidden;
+    }
+
+    .intro-popup::backdrop {
+      background: rgba(9, 40, 56, .28);
+      -webkit-backdrop-filter: blur(10px) saturate(130%);
+      backdrop-filter: blur(10px) saturate(130%);
+    }
+
+    .intro-popup-shell {
+      position: relative;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      width: min(760px, 100%);
+      max-height: min(720px, calc(100dvh - clamp(2rem, 6vw, 4rem)));
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid rgba(30, 132, 181, .2);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 30px 90px rgba(9, 40, 56, .24), inset 0 1px 0 rgba(255,255,255,.86);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      backdrop-filter: blur(18px) saturate(150%);
+    }
+
+    .intro-popup-body {
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: clamp(1.35rem, 4vw, 2.4rem) clamp(1.15rem, 4vw, 2.4rem) 1.3rem;
+    }
+
+    .intro-popup-close {
+      position: absolute;
+      top: .9rem;
+      right: .9rem;
+      z-index: 2;
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(14, 56, 76, .14);
+      border-radius: var(--radius-control);
+      background: rgba(249, 252, 255, .86);
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 1.45rem;
+      line-height: 1;
+      box-shadow: 0 10px 24px rgba(14, 56, 76, .08);
+    }
+
+    .intro-popup-close:hover,
+    .intro-popup-close:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .intro-popup-kicker {
+      margin: 0 3.1rem .8rem 0;
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .intro-popup h2 {
+      max-width: 680px;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.04;
+    }
+
+    .intro-popup p {
+      color: var(--body-strong);
+      font-size: clamp(1rem, 1.35vw, 1.12rem);
+      line-height: 1.62;
+    }
+
+    .intro-popup-list {
+      display: grid;
+      gap: .72rem;
+      margin: 1.15rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .intro-popup-list li {
+      display: flex;
+      gap: .68rem;
+      align-items: flex-start;
+      color: var(--primary);
+      font-weight: 820;
+      line-height: 1.38;
+    }
+
+    .intro-popup-list li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: .62rem;
+      height: .62rem;
+      margin-top: .42rem;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(30,132,181,.12);
+    }
+
+    .intro-popup-proof {
+      margin: 1.25rem 0 0;
+      padding: 1rem 1.05rem;
+      border: 1px solid rgba(30,132,181,.18);
+      border-radius: var(--radius-control);
+      background: rgba(232, 245, 251, .72);
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .intro-popup-actions {
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      padding: 1rem clamp(1.15rem, 4vw, 2.4rem) calc(1rem + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(14, 56, 76, .1);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 -18px 38px rgba(255,255,255,.72);
+    }
+
+    .intro-popup-actions .btn {
+      width: 100%;
+      min-height: 54px;
     }
 
     .booking-modal {
@@ -2030,8 +2180,7 @@
 
     @keyframes heroAccentShine {
       0% { background-position: -160% 0, 0 0; }
-      68% { background-position: 72% 0, 0 0; }
-      100% { background-position: 190% 0, 0 0; }
+      100% { background-position: 165% 0, 0 0; }
     }
 
     .hero .cta-row .btn-primary {
@@ -3147,10 +3296,12 @@
       }
       .hero .hero-title-accent {
         animation: none !important;
-        background: linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
+        color: var(--accent-bright);
+        background: none;
         -webkit-background-clip: text;
         background-clip: text;
-        filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
+        -webkit-text-fill-color: currentColor;
+        filter: none;
       }
       .loader-logo,
       .loader-mark,
@@ -3822,6 +3973,28 @@
     </div>
   </div>
 
+  <dialog class="intro-popup" id="intro-popup" aria-labelledby="introPopupTitle" aria-describedby="introPopupText">
+    <div class="intro-popup-shell">
+      <button class="intro-popup-close" type="button" aria-label="Chiudi introduzione" data-close-intro-popup>×</button>
+      <div class="intro-popup-body">
+        <p class="intro-popup-kicker">Studio Dentistico Sorriso &amp; Salute</p>
+        <h2 id="introPopupTitle">Da oltre 20 anni ci prendiamo cura del sorriso dei pazienti a Monza</h2>
+        <p id="introPopupText">Sorriso &amp; Salute è uno studio odontoiatrico a Monza che offre percorsi di prevenzione, cura e riabilitazione dentale, con particolare attenzione alla chirurgia orale, all'implantologia e alle soluzioni protesiche.</p>
+        <p>Per i pazienti con uno o più denti mancanti, il percorso implantare viene valutato attraverso diagnosi, pianificazione del caso e scelta della soluzione più indicata in base alla situazione clinica individuale.</p>
+        <ul class="intro-popup-list">
+          <li>Implantologia e chirurgia orale</li>
+          <li>Protesi su impianti e riabilitazioni dentali</li>
+          <li>Diagnosi digitale e pianificazione personalizzata</li>
+          <li>Percorsi di cura per adulti e famiglie</li>
+        </ul>
+        <p class="intro-popup-proof"><strong>Oltre 20 anni di esperienza odontoiatrica a Monza</strong></p>
+      </div>
+      <div class="intro-popup-actions">
+        <button class="btn btn-primary" type="button" data-intro-popup-cta>Richiedi una valutazione ora</button>
+      </div>
+    </div>
+  </dialog>
+
   <dialog class="booking-modal" id="prenota-popup" aria-label="Richiedi una valutazione implantologica">
     <div class="modal-screen">
       <div class="modal-topbar">
@@ -3847,6 +4020,7 @@
         loaderHidden = true;
         loader.classList.add("loader-hidden");
         document.documentElement.classList.remove("loader-active");
+        window.dispatchEvent(new CustomEvent("sorriso:loader-hidden"));
         window.setTimeout(() => loader.remove(), 420);
       };
 
@@ -3870,6 +4044,9 @@
       const whatsappPromptClose = document.querySelector("[data-whatsapp-prompt-close]");
       const whatsappPromptDelay = 30000;
       const whatsappPromptStorageKey = "sorriso-whatsapp-prompt-dismissed";
+      const introPopup = document.querySelector("#intro-popup");
+      const introPopupClose = document.querySelector("[data-close-intro-popup]");
+      const introPopupCta = document.querySelector("[data-intro-popup-cta]");
 
       const setMobileMenu = (isOpen) => {
         if (!menuToggle || !mobileMenu) return;
@@ -3975,6 +4152,38 @@
       const modalClose = document.querySelector("[data-close-booking]");
       let modalController = null;
       let lastModalTrigger = null;
+
+      const closeIntroPopup = () => {
+        if (!introPopup) return;
+        if (introPopup.open && typeof introPopup.close === "function") {
+          introPopup.close();
+        } else {
+          introPopup.removeAttribute("open");
+          document.body.classList.remove("intro-popup-open");
+        }
+      };
+
+      const openIntroPopup = () => {
+        if (!introPopup || introPopup.open) return;
+        if (document.body.classList.contains("modal-open")) return;
+        if (typeof introPopup.showModal === "function") {
+          introPopup.showModal();
+        } else {
+          introPopup.setAttribute("open", "");
+        }
+        document.body.classList.add("intro-popup-open");
+        requestAnimationFrame(() => introPopupClose?.focus({ preventScroll: true }));
+      };
+
+      const scheduleIntroPopup = () => {
+        if (!introPopup) return;
+        const show = () => window.setTimeout(openIntroPopup, 180);
+        if (loaderHidden || !document.documentElement.classList.contains("loader-active")) {
+          show();
+          return;
+        }
+        window.addEventListener("sorriso:loader-hidden", show, { once: true });
+      };
 
       const createModalForm = () => {
         const modalForm = sourceForm.cloneNode(true);
@@ -4357,6 +4566,7 @@
       };
 
       const openBookingModal = (trigger) => {
+        closeIntroPopup();
         lastModalTrigger = trigger;
         modalController.reset();
         bookingModal.querySelector(".modal-card")?.scrollTo({ top: 0 });
@@ -4382,6 +4592,21 @@
       const modalForm = createModalForm();
       initBookingForm(sourceForm, "form hero");
       modalController = initBookingForm(modalForm, "pop-up");
+      scheduleIntroPopup();
+
+      introPopupClose?.addEventListener("click", closeIntroPopup);
+      introPopupCta?.addEventListener("click", () => openBookingModal(introPopupCta));
+      introPopup?.addEventListener("click", (event) => {
+        if (event.target === introPopup) closeIntroPopup();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && introPopup?.open) {
+          closeIntroPopup();
+        }
+      });
+      introPopup?.addEventListener("close", () => {
+        document.body.classList.remove("intro-popup-open");
+      });
 
       document.querySelectorAll("[data-open-booking]").forEach((trigger) => {
         trigger.addEventListener("click", (event) => {
