@@ -1270,19 +1270,28 @@
       margin-top: 0;
     }
 
-    .when-head {
-      grid-template-columns: minmax(0, 1fr) minmax(360px, .52fr);
+    .when-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, .42fr) minmax(0, .58fr);
       align-items: center;
       column-gap: clamp(2rem, 5vw, 4.8rem);
     }
 
-    .when-head-aside {
-      justify-content: flex-start;
+    .when-content {
+      min-width: 0;
+    }
+
+    .when-head {
+      margin-bottom: 1.45rem;
+    }
+
+    .when-head h2 {
+      max-width: 780px;
     }
 
     .when-head-media {
       width: 100%;
-      max-width: 430px;
+      max-width: 390px;
       margin: 0;
       overflow: hidden;
       border: 1px solid rgba(30,132,181,.16);
@@ -1293,9 +1302,19 @@
 
     .when-head-media img {
       width: 100%;
-      aspect-ratio: 744 / 608;
+      aspect-ratio: 457 / 650;
       height: auto;
       object-fit: cover;
+    }
+
+    .when-cards {
+      grid-template-columns: 1fr;
+      gap: .85rem;
+    }
+
+    .when-cards .info-card {
+      padding: 1rem 1.1rem;
+      min-height: auto;
     }
 
     .desktop-title-break {
@@ -2673,6 +2692,14 @@
         column-gap: 2rem;
       }
 
+      .when-layout {
+        display: block;
+      }
+
+      .when-head-media {
+        display: none;
+      }
+
       .path-head-aside {
         padding-top: 0;
       }
@@ -3809,36 +3836,36 @@
 
     <section id="quando" aria-labelledby="when-title">
       <div class="wrap">
-        <div class="section-head section-head-balanced when-head reveal">
-          <div>
+        <div class="when-layout">
+          <figure class="when-head-media reveal" aria-label="Medico dello Studio Dentistico Sorriso & Salute in studio">
+            <img src="/assets/implantologo-valutazione-monza.jpg" width="457" height="650" loading="lazy" decoding="async" alt="Medico dello Studio Dentistico Sorriso & Salute in corridoio clinico">
+          </figure>
+          <div class="when-content">
+            <div class="when-head reveal">
             <p class="eyebrow"><span class="dot"></span> Quando richiedere una valutazione</p>
             <h2 id="when-title">Situazioni in cui una visita implantologica può aiutarti a <span class="desktop-title-break">decidere con più chiarezza</span></h2>
+            </div>
+            <div class="solution-grid when-cards">
+              <article class="info-card reveal">
+                <b>1</b>
+                <h3>Uno o più denti mancanti</h3>
+                <p class="muted">Quando la masticazione cambia o i denti vicini iniziano a spostarsi, una valutazione permette di capire tempi e opzioni per sostituire gli elementi mancanti.</p>
+              </article>
+              <article class="info-card reveal delay-1">
+                <b>2</b>
+                <h3>Dentiera mobile o instabile</h3>
+                <p class="muted">Se una protesi si muove, crea insicurezza o limita alcuni alimenti, lo studio può valutare se esistono soluzioni implantari di supporto o alternative più adatte.</p>
+              </article>
+              <article class="info-card reveal delay-2">
+                <b>3</b>
+                <h3>Poco osso, parodontite o seconda opinione</h3>
+                <p class="muted">Casi complessi richiedono diagnosi prudente. La valutazione serve a capire cosa è realistico, quali rischi considerare e quali passaggi preparatori potrebbero essere necessari.</p>
+              </article>
+            </div>
+            <div class="section-cta when-mobile-cta reveal">
+              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
+            </div>
           </div>
-          <div class="section-head-aside when-head-aside">
-            <figure class="when-head-media" aria-label="Medico dello Studio Dentistico Sorriso & Salute in studio">
-              <img src="/assets/implantologo-valutazione-monza.jpg" width="744" height="608" loading="lazy" decoding="async" alt="Medico dello Studio Dentistico Sorriso & Salute in corridoio clinico">
-            </figure>
-          </div>
-        </div>
-        <div class="solution-grid">
-          <article class="info-card reveal">
-            <b>1</b>
-            <h3>Uno o più denti mancanti</h3>
-            <p class="muted">Quando la masticazione cambia o i denti vicini iniziano a spostarsi, una valutazione permette di capire tempi e opzioni per sostituire gli elementi mancanti.</p>
-          </article>
-          <article class="info-card reveal delay-1">
-            <b>2</b>
-            <h3>Dentiera mobile o instabile</h3>
-            <p class="muted">Se una protesi si muove, crea insicurezza o limita alcuni alimenti, lo studio può valutare se esistono soluzioni implantari di supporto o alternative più adatte.</p>
-          </article>
-          <article class="info-card reveal delay-2">
-            <b>3</b>
-            <h3>Poco osso, parodontite o seconda opinione</h3>
-            <p class="muted">Casi complessi richiedono diagnosi prudente. La valutazione serve a capire cosa è realistico, quali rischi considerare e quali passaggi preparatori potrebbero essere necessari.</p>
-          </article>
-        </div>
-        <div class="section-cta when-mobile-cta reveal">
-          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
         </div>
       </div>
     </section>
