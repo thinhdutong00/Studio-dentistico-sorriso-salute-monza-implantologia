@@ -593,9 +593,12 @@
       margin-top: 1.9rem;
     }
 
-    .path-mobile-cta,
-    .when-mobile-cta {
+    .path-mobile-cta {
       display: none;
+    }
+
+    .when-mobile-cta {
+      display: flex;
     }
 
     .hero-mobile-label {
@@ -1265,6 +1268,32 @@
 
     .path-head-aside .section-cta {
       margin-top: 0;
+    }
+
+    .when-head {
+      align-items: start;
+    }
+
+    .when-head-aside {
+      justify-content: flex-start;
+    }
+
+    .when-head-media {
+      width: 100%;
+      max-width: 430px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(30,132,181,.16);
+      border-radius: var(--radius-card);
+      background: var(--secondary);
+      box-shadow: 0 24px 58px rgba(14, 56, 76, .1);
+    }
+
+    .when-head-media img {
+      width: 100%;
+      aspect-ratio: 820 / 526;
+      height: auto;
+      object-fit: cover;
     }
 
     .section-head p,
@@ -3770,15 +3799,15 @@
 
     <section id="quando" aria-labelledby="when-title">
       <div class="wrap">
-        <div class="section-head section-head-balanced reveal">
+        <div class="section-head section-head-balanced when-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> Quando richiedere una valutazione</p>
             <h2 id="when-title">Situazioni in cui una visita implantologica può aiutarti a decidere con più chiarezza</h2>
           </div>
-          <div class="section-head-aside">
-            <div class="section-cta when-desktop-cta">
-              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
-            </div>
+          <div class="section-head-aside when-head-aside">
+            <figure class="when-head-media" aria-label="Medico dello Studio Dentistico Sorriso & Salute in studio">
+              <img src="/assets/implantologo-valutazione-monza.jpg" width="820" height="526" loading="lazy" decoding="async" alt="Medico dello Studio Dentistico Sorriso & Salute in corridoio clinico">
+            </figure>
           </div>
         </div>
         <div class="solution-grid">
