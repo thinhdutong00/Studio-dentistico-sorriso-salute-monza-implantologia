@@ -2142,45 +2142,13 @@
 
     .hero .hero-title-accent {
       color: var(--accent-bright);
-      background:
-        linear-gradient(105deg, transparent 0%, transparent 34%, rgba(255,255,255,.16) 39%, rgba(255,255,255,.92) 45%, rgba(210,250,255,.98) 49%, rgba(255,255,255,.68) 53%, rgba(40,164,214,.22) 59%, transparent 67%, transparent 100%),
-        linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
-      background-size: 190% 100%, 100% 100%;
-      background-position: -160% 0, 0 0;
-      background-repeat: no-repeat;
-      background-blend-mode: screen, normal;
+      background: none;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
-    }
-
-    html:not(.loader-active).reveal-ready .reveal.is-visible .hero-title-accent {
-      animation: heroAccentAppear .54s cubic-bezier(.22,1,.36,1) .12s both, heroAccentShine 1.75s cubic-bezier(.22,1,.36,1) .32s both;
-    }
-
-    @keyframes heroAccentAppear {
-      0% {
-        opacity: 0;
-        transform: translateX(-.1em);
-        filter: blur(2px) brightness(1.22) drop-shadow(0 0 14px rgba(155,231,255,.28));
-      }
-      62% {
-        opacity: 1;
-        filter: blur(.3px) brightness(1.08) drop-shadow(0 0 14px rgba(155,231,255,.22));
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-        filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
-      }
-    }
-
-    @keyframes heroAccentShine {
-      0% { background-position: -160% 0, 0 0; }
-      100% { background-position: 165% 0, 0 0; }
+      -webkit-text-fill-color: currentColor;
+      filter: none;
     }
 
     .hero .cta-row .btn-primary {
