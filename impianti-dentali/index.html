@@ -1271,7 +1271,9 @@
     }
 
     .when-head {
-      align-items: start;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, .52fr);
+      align-items: center;
+      column-gap: clamp(2rem, 5vw, 4.8rem);
     }
 
     .when-head-aside {
@@ -1291,9 +1293,13 @@
 
     .when-head-media img {
       width: 100%;
-      aspect-ratio: 820 / 526;
+      aspect-ratio: 744 / 608;
       height: auto;
       object-fit: cover;
+    }
+
+    .desktop-title-break {
+      display: inline;
     }
 
     .section-head p,
@@ -2608,6 +2614,10 @@
       .hero .form-step.is-active {
         align-content: start;
       }
+
+      .desktop-title-break {
+        display: block;
+      }
     }
 
     @media (max-width: 980px) {
@@ -3802,11 +3812,11 @@
         <div class="section-head section-head-balanced when-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> Quando richiedere una valutazione</p>
-            <h2 id="when-title">Situazioni in cui una visita implantologica può aiutarti a<br>decidere con più chiarezza</h2>
+            <h2 id="when-title">Situazioni in cui una visita implantologica può aiutarti a <span class="desktop-title-break">decidere con più chiarezza</span></h2>
           </div>
           <div class="section-head-aside when-head-aside">
             <figure class="when-head-media" aria-label="Medico dello Studio Dentistico Sorriso & Salute in studio">
-              <img src="/assets/implantologo-valutazione-monza.jpg" width="820" height="526" loading="lazy" decoding="async" alt="Medico dello Studio Dentistico Sorriso & Salute in corridoio clinico">
+              <img src="/assets/implantologo-valutazione-monza.jpg" width="744" height="608" loading="lazy" decoding="async" alt="Medico dello Studio Dentistico Sorriso & Salute in corridoio clinico">
             </figure>
           </div>
         </div>
