@@ -1272,9 +1272,9 @@
 
     .when-layout {
       display: grid;
-      grid-template-columns: minmax(280px, .42fr) minmax(0, .58fr);
+      grid-template-columns: minmax(220px, .25fr) minmax(0, .75fr);
       align-items: center;
-      column-gap: clamp(2rem, 5vw, 4.8rem);
+      column-gap: clamp(1.8rem, 3.8vw, 3.6rem);
     }
 
     .when-content {
@@ -1286,12 +1286,12 @@
     }
 
     .when-head h2 {
-      max-width: 780px;
+      max-width: 920px;
     }
 
     .when-head-media {
       width: 100%;
-      max-width: 390px;
+      max-width: 320px;
       margin: 0;
       overflow: hidden;
       border: 1px solid rgba(30,132,181,.16);
@@ -1307,12 +1307,12 @@
       object-fit: cover;
     }
 
-    .when-cards {
-      grid-template-columns: 1fr;
+    .solution-grid.when-cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: .85rem;
     }
 
-    .when-cards .info-card {
+    .solution-grid.when-cards .info-card {
       padding: 1rem 1.1rem;
       min-height: auto;
     }
@@ -2698,6 +2698,10 @@
 
       .when-head-media {
         display: none;
+      }
+
+      .solution-grid.when-cards {
+        grid-template-columns: 1fr;
       }
 
       .path-head-aside {
