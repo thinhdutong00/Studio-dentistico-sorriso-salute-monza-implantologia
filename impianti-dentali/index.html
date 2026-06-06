@@ -574,11 +574,21 @@
     }
 
     .problem-grid .section-cta,
-    .path-head-aside .section-cta {
+    .section-head-aside .section-cta {
       justify-content: flex-start;
     }
 
-    .path-mobile-cta {
+    .section-head-aside .section-cta {
+      width: 100%;
+      margin-top: 1.05rem;
+    }
+
+    .section-head-aside .btn {
+      width: 100%;
+    }
+
+    .path-mobile-cta,
+    .when-mobile-cta {
       display: none;
     }
 
@@ -1211,6 +1221,24 @@
       gap: 2rem;
       align-items: end;
       margin-bottom: 2rem;
+    }
+
+    .section-head-balanced {
+      align-items: stretch;
+    }
+
+    .section-head-balanced > div:first-child,
+    .section-head-aside {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-head-aside {
+      justify-content: space-between;
+    }
+
+    .section-head-aside p {
+      margin-bottom: 0;
     }
 
     .section-head p,
@@ -2571,11 +2599,13 @@
         grid-template-rows: none;
       }
 
-      .path-desktop-cta {
+      .path-desktop-cta,
+      .when-desktop-cta {
         display: none;
       }
 
-      .path-mobile-cta {
+      .path-mobile-cta,
+      .when-mobile-cta {
         display: flex;
       }
 
@@ -3706,12 +3736,17 @@
 
     <section id="quando" aria-labelledby="when-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head section-head-balanced reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> Quando richiedere una valutazione</p>
             <h2 id="when-title">Situazioni in cui una visita implantologica può aiutarti a decidere con più chiarezza</h2>
           </div>
-          <p>Il quiz iniziale non sostituisce la diagnosi, ma aiuta lo studio a capire quale problema vuoi affrontare per primo.</p>
+          <div class="section-head-aside">
+            <p>Il quiz iniziale non sostituisce la diagnosi, ma aiuta lo studio a capire quale problema vuoi affrontare per primo.</p>
+            <div class="section-cta when-desktop-cta">
+              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
+            </div>
+          </div>
         </div>
         <div class="solution-grid">
           <article class="info-card reveal">
@@ -3730,7 +3765,7 @@
             <p class="muted">Casi complessi richiedono diagnosi prudente. La valutazione serve a capire cosa è realistico, quali rischi considerare e quali passaggi preparatori potrebbero essere necessari.</p>
           </article>
         </div>
-        <div class="section-cta reveal">
+        <div class="section-cta when-mobile-cta reveal">
           <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Capisci se una visita può aiutarti</a>
         </div>
       </div>
@@ -3769,12 +3804,12 @@
 
     <section class="band" id="percorso" aria-labelledby="path-title">
       <div class="wrap">
-        <div class="section-head path-head reveal">
+        <div class="section-head section-head-balanced path-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> Modalità della visita</p>
             <h2 id="path-title">Un percorso clinico pensato per ridurre incertezza e improvvisazione</h2>
           </div>
-          <div class="path-head-aside">
+          <div class="section-head-aside path-head-aside">
             <p>Il paziente deve sapere cosa viene valutato, perché una soluzione è indicata e come verrà controllata nel tempo.</p>
             <div class="section-cta path-desktop-cta">
               <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Chiarisci il percorso più adatto</a>
@@ -3960,7 +3995,7 @@
           <div class="footer-social" aria-label="Canali social">
             <a href="https://www.facebook.com/sorrisomonza/">Facebook</a>
             <a href="https://www.instagram.com/__studio_sorriso_e_salute__/">Instagram</a>
-            <a href="https://wa.me/+393294724884/">WhatsApp</a>
+            <a href="https://wa.me/393892490181">WhatsApp</a>
             <a href="https://m.me/sorrisoesalute">Messenger</a>
           </div>
         </div>
@@ -3988,7 +4023,8 @@
         </div>
       </div>
       <div class="footer-legal">
-        <span>Autorizzazione Sanitaria: dato da inserire.</span>
+        <span>Autorizzazione sanitaria n. 2014/11</span>
+        <span>Pubblicità conforme art. 1 della legge di bilancio 2019 (30/12/2018 n. 145)</span>
         <span>Le informazioni contenute in questo sito hanno carattere puramente informativo e non sostituiscono in alcun modo il consulto medico professionale.</span>
         <span>© SorrisoeSalute 2025 Tutti i diritti sono riservati.</span>
       </div>
