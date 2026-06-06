@@ -564,12 +564,22 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: .75rem;
       margin-top: 1.45rem;
     }
 
     .section-cta .btn {
       min-height: 50px;
+    }
+
+    .problem-grid .section-cta,
+    .path-head-aside .section-cta {
+      justify-content: flex-start;
+    }
+
+    .path-mobile-cta {
+      display: none;
     }
 
     .hero-mobile-label {
@@ -2219,6 +2229,16 @@
       transform: scaleX(1);
     }
 
+    .btn-whatsapp {
+      --btn-bg: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      --btn-fg: var(--white);
+      --btn-border: #25D366;
+      --btn-empty-fg: #128C7E;
+      --btn-empty-border: #25D366;
+      --btn-shadow: 0 16px 34px rgba(37, 211, 102, .24);
+      --btn-hover-shadow: 0 14px 30px rgba(18, 140, 126, .18);
+    }
+
     .proof-item,
     .info-card,
     .phase,
@@ -2549,6 +2569,14 @@
       .faq-list {
         grid-auto-flow: row;
         grid-template-rows: none;
+      }
+
+      .path-desktop-cta {
+        display: none;
+      }
+
+      .path-mobile-cta {
+        display: flex;
       }
 
       .micro-proof {
@@ -3741,12 +3769,17 @@
 
     <section class="band" id="percorso" aria-labelledby="path-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head path-head reveal">
           <div>
             <p class="eyebrow"><span class="dot"></span> Modalità della visita</p>
             <h2 id="path-title">Un percorso clinico pensato per ridurre incertezza e improvvisazione</h2>
           </div>
-          <p>Il paziente deve sapere cosa viene valutato, perché una soluzione è indicata e come verrà controllata nel tempo.</p>
+          <div class="path-head-aside">
+            <p>Il paziente deve sapere cosa viene valutato, perché una soluzione è indicata e come verrà controllata nel tempo.</p>
+            <div class="section-cta path-desktop-cta">
+              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Chiarisci il percorso più adatto</a>
+            </div>
+          </div>
         </div>
         <div class="phases">
           <article class="phase reveal">
@@ -3765,7 +3798,7 @@
             <p class="muted">Inserimento dell'impianto quando indicato, controlli di guarigione, protesizzazione e programma di igiene e monitoraggio per proteggere il risultato nel tempo.</p>
           </article>
         </div>
-        <div class="section-cta reveal">
+        <div class="section-cta path-mobile-cta reveal">
           <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Chiarisci il percorso più adatto</a>
         </div>
       </div>
@@ -3805,6 +3838,9 @@
             <summary>Quanto dura un impianto dentale nel tempo?</summary>
             <p>Un impianto può durare molti anni se mantenuto con igiene accurata e controlli periodici. Stabilità e durata dipendono da salute generale, fumo, bruxismo, tessuti e manutenzione.</p>
           </details>
+        </div>
+        <div class="section-cta faq-whatsapp-cta reveal delay-2">
+          <a class="btn btn-whatsapp" href="https://wa.me/393892490181?text=Buongiorno%2C%20vorrei%20ricevere%20pi%C3%B9%20informazioni%20sugli%20impianti%20dentali." target="_blank" rel="noopener">Chiedi informazioni su WhatsApp</a>
         </div>
       </div>
     </section>
