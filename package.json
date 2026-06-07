@@ -1,0 +1,14 @@
+{
+  "name": "sorriso-salute-monza-implantologia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/fix-html-routes.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.4.4"
+  }
+}

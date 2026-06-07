@@ -6,11 +6,11 @@
   <title>Impianti dentali a Monza | Sorriso & Salute</title>
   <meta name="description" content="Impianti dentali a Monza con oltre 20 anni di esperienza odontoiatrica. Richiedi una valutazione con modulo multistep.">
   <link rel="icon" href="/assets/favicon.png">
-  <script>
+  <script is:inline>
     window.__loaderStart = performance.now();
     document.documentElement.classList.add("loader-active");
   </script>
-  <style>
+  <style is:global is:inline>
     :root {
       --ink: #173246;
       --muted: #5f7787;
@@ -947,7 +947,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/" aria-label="Studio Dentistico Sorriso & Salute"></a>
-      <a class="btn btn-primary" href="tel:+390392022489" aria-label="Chiama lo studio">Chiama</a>
+      <a class="btn btn-primary" href="#valutazione" data-focus-form>Valutazione</a>
     </div>
   </header>
 
@@ -956,69 +956,67 @@
       <div class="wrap landing-stack">
         <div class="intro-content">
           <p class="kicker">Studio Dentistico Sorriso &amp; Salute</p>
-          <h1 id="hero-title">Impianti dentali a Monza con oltre 20 anni di esperienza odontoiatrica</h1>
-          <p>Da oltre 20 anni, <strong>Sorriso &amp; Salute</strong> segue percorsi di implantologia, chirurgia orale e protesi su impianti a Monza.</p>
-          <p>Ogni caso viene valutato con diagnosi digitale, pianificazione personalizzata e indicazione clinica prima del trattamento.</p>
+          <h1 id="hero-title">Impianti dentali a Monza</h1>
+          <p>Da oltre 20 anni, <strong>Sorriso &amp; Salute</strong> valuta percorsi implantari a Monza.</p>
+          <p>Ogni caso parte da diagnosi digitale e indicazione clinica.</p>
           <ul class="service-list">
-            <li><strong>Impianti dentali</strong> per sostituire uno o più denti mancanti</li>
-            <li><strong>Protesi su impianti</strong> per recuperare stabilità nella masticazione</li>
-            <li><strong>Chirurgia orale</strong> quando necessaria al percorso implantare</li>
-            <li><strong>Diagnosi digitale</strong> per valutare osso, gengive e soluzione protesica</li>
+            <li><strong>Impianti</strong> per uno o più denti mancanti</li>
+            <li><strong>Protesi su impianti</strong> per più stabilità</li>
+            <li><strong>Diagnosi digitale</strong> per valutare osso e gengive</li>
           </ul>
-          <p class="proof-box">Oltre 20 anni a Monza. Un percorso implantare valutato sul tuo caso.</p>
+          <p class="proof-box">Un percorso valutato sul tuo caso.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#valutazione" data-focus-form>Richiedi una valutazione ora</a>
-            <a class="btn btn-ghost" href="https://wa.me/393892490181">Scrivici su WhatsApp</a>
+            <a class="btn btn-primary" href="#valutazione" data-focus-form>Richiedi valutazione</a>
           </div>
         </div>
 
         <form class="glass-form" id="valutazione" novalidate>
           <div class="form-head">
-            <h2>Richiedi una valutazione implantologica</h2>
-            <p>Rispondi alle domande principali: lo studio userà queste informazioni per ricontattarti e confermare la valutazione.</p>
+            <h2>Richiedi una valutazione</h2>
+            <p>Rispondi a poche domande: lo studio ti ricontatterà.</p>
           </div>
           <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"></div>
 
           <div class="form-step is-active" data-step="1">
             <p class="quiz-kicker">Inquadramento clinico</p>
             <h3 class="quiz-title">Da quale problema vuoi partire?</h3>
-            <p class="quiz-copy">Seleziona la situazione più vicina alla tua: servirà allo studio per preparare meglio il primo contatto.</p>
+            <p class="quiz-copy">Scegli la situazione più vicina alla tua.</p>
             <div class="quiz-options" data-field="problema">
-              <button class="choice-btn" type="button" data-value="Mi manca un dente singolo"><strong>Mi manca un dente singolo</strong><span>Vorrei sostituirlo con una soluzione fissa.</span></button>
-              <button class="choice-btn" type="button" data-value="Mi mancano più denti"><strong>Mi mancano più denti</strong><span>Ho difficoltà a masticare o sorridere con naturalezza.</span></button>
-              <button class="choice-btn" type="button" data-value="Dentiera mobile o protesi instabile"><strong>Dentiera mobile o protesi instabile</strong><span>Cerco più stabilità e comfort quotidiano.</span></button>
-              <button class="choice-btn" type="button" data-value="Ho già impianti o una situazione da rivalutare"><strong>Ho già impianti o una situazione da rivalutare</strong><span>Vorrei un controllo o una seconda opinione.</span></button>
+              <button class="choice-btn" type="button" data-value="Mi manca un dente singolo"><strong>Mi manca un dente singolo</strong></button>
+              <button class="choice-btn" type="button" data-value="Mi mancano più denti"><strong>Mi mancano più denti</strong></button>
+              <button class="choice-btn" type="button" data-value="Dentiera mobile o protesi instabile"><strong>Protesi instabile</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho già impianti o una situazione da rivalutare"><strong>Voglio una seconda opinione</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="2">
             <p class="quiz-kicker">Obiettivo desiderato</p>
-            <h3 class="quiz-title">Quale risultato vuoi chiarire?</h3>
-            <p class="quiz-copy">Questa risposta aiuta a distinguere priorità funzionali, estetiche, pratiche e informative.</p>
+            <h3 class="quiz-title">Qual è il tuo obiettivo?</h3>
+            <p class="quiz-copy">Aiuta lo studio a capire la priorità.</p>
             <div class="quiz-options" data-field="obiettivo">
-              <button class="choice-btn" type="button" data-value="Tornare a masticare con più sicurezza"><strong>Tornare a masticare con più sicurezza</strong><span>Voglio capire quali opzioni possono migliorare la funzione.</span></button>
-              <button class="choice-btn" type="button" data-value="Capire se posso avere denti fissi"><strong>Capire se posso avere denti fissi</strong><span>Mi interessa una soluzione stabile, se clinicamente indicata.</span></button>
-              <button class="choice-btn" type="button" data-value="Stabilizzare o sostituire la dentiera mobile"><strong>Stabilizzare o sostituire la dentiera mobile</strong><span>Vorrei più comfort nella vita quotidiana.</span></button>
-              <button class="choice-btn" type="button" data-value="Ricevere un piano chiaro prima di decidere"><strong>Ricevere un piano chiaro prima di decidere</strong><span>Voglio conoscere fasi, tempi, alternative e manutenzione.</span></button>
+              <button class="choice-btn" type="button" data-value="Tornare a masticare con più sicurezza"><strong>Masticare meglio</strong></button>
+              <button class="choice-btn" type="button" data-value="Capire se posso avere denti fissi"><strong>Avere denti fissi</strong></button>
+              <button class="choice-btn" type="button" data-value="Stabilizzare o sostituire la dentiera mobile"><strong>Stabilizzare la dentiera</strong></button>
+              <button class="choice-btn" type="button" data-value="Ricevere un piano chiaro prima di decidere"><strong>Ricevere un piano chiaro</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="3">
             <p class="quiz-kicker">Situazione clinica</p>
             <h3 class="quiz-title">C'è qualcosa da segnalare subito?</h3>
-            <p class="quiz-copy">Non è una diagnosi: serve solo a orientare il confronto iniziale con lo studio.</p>
+            <p class="quiz-copy">Serve solo a orientare il primo contatto.</p>
             <div class="quiz-options" data-field="situazione">
-              <button class="choice-btn" type="button" data-value="Ho denti mobili o denti da valutare"><strong>Denti mobili o da valutare</strong><span>Mi hanno parlato di estrazioni o di una situazione complessa.</span></button>
-              <button class="choice-btn" type="button" data-value="Ho gengive infiammate o parodontite diagnosticata o sospetta"><strong>Gengive infiammate o parodontite</strong><span>Vorrei capire come incide sulla possibilità di impianti.</span></button>
-              <button class="choice-btn" type="button" data-value="Mi hanno detto che ho poco osso"><strong>Poco osso o caso complesso</strong><span>Desidero una valutazione con diagnostica 3D.</span></button>
-              <button class="choice-btn" type="button" data-value="Ho timore dell'intervento e voglio tempi chiari"><strong>Timore dell'intervento</strong><span>Vorrei spiegazioni su anestesia, fasi e recupero.</span></button>
+              <button class="choice-btn" type="button" data-value="Ho denti mobili o denti da valutare"><strong>Denti mobili o da valutare</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho gengive infiammate o parodontite diagnosticata o sospetta"><strong>Gengive infiammate</strong></button>
+              <button class="choice-btn" type="button" data-value="Mi hanno detto che ho poco osso"><strong>Poco osso</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho timore dell'intervento e voglio tempi chiari"><strong>Timore dell'intervento</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="4">
             <p class="quiz-kicker">Preferenza appuntamento</p>
             <h3 class="quiz-title">Scegli una data per la prima valutazione</h3>
-            <p class="muted">Il calendario mostra i giorni lavorativi disponibili nei prossimi 3 mesi.</p>
+            <p class="muted">Scegli un giorno indicativo.</p>
             <div class="calendar-head">
               <p class="calendar-title" data-calendar-title></p>
               <div class="calendar-nav" aria-label="Navigazione calendario">
@@ -1032,14 +1030,14 @@
           <div class="form-step" data-step="5">
             <p class="quiz-kicker">Orario preferito</p>
             <h3 class="quiz-title">Scegli una fascia oraria</h3>
-            <p class="muted">Gli slot sono indicativi: lo studio ti ricontatterà per confermare l'appuntamento.</p>
+            <p class="muted">Lo studio confermerà l'orario.</p>
             <div class="slot-grid" data-slot-grid aria-label="Orari selezionabili"></div>
           </div>
 
           <div class="form-step" data-step="6">
             <p class="quiz-kicker">Dati di contatto</p>
             <h3 class="quiz-title">Lascia i tuoi recapiti</h3>
-            <p class="muted">Useremo questi dati solo per ricontattarti e confermare la valutazione richiesta.</p>
+            <p class="muted">Servono per ricontattarti.</p>
             <div class="field-grid">
               <label>Nome e cognome
                 <input name="nomeCompleto" autocomplete="name" required>
@@ -1052,14 +1050,14 @@
               </label>
             </div>
             <label>Note/Messaggio
-              <textarea name="messaggio" placeholder="Aggiungi dettagli utili: denti mancanti, esami già fatti, farmaci, esigenze particolari o preferenze"></textarea>
+              <textarea name="messaggio" placeholder="Aggiungi dettagli utili"></textarea>
             </label>
           </div>
 
           <div class="form-step" data-step="7">
             <p class="quiz-kicker">Riepilogo richiesta</p>
-            <h3 class="quiz-title">Conferma il quadro da inviare allo studio</h3>
-            <p class="quiz-copy">La mail includerà problema, obiettivo, quadro segnalato, appuntamento preferito, contatti e note.</p>
+            <h3 class="quiz-title">Controlla la richiesta</h3>
+            <p class="quiz-copy">Invieremo il riepilogo allo studio.</p>
             <div class="summary-box" data-summary-box aria-live="polite"></div>
           </div>
 
@@ -1124,11 +1122,10 @@
   </footer>
 
   <div class="mobile-cta" aria-label="Azioni rapide mobile">
-    <a class="btn btn-ghost" href="tel:+390392022489" aria-label="Chiama lo studio">Chiama Ora</a>
     <a class="btn btn-primary" href="#valutazione" data-focus-form>Valutazione</a>
   </div>
 
-  <script>
+  <script is:inline>
     (() => {
       const loader = document.querySelector("#pageLoader");
       const loaderMinDuration = 900;

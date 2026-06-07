@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Implantologia Dentale Avanzata a Monza | Sorriso & Salute</title>
-  <meta name="description" content="Implantologia dentale avanzata a Monza con tecnologie digitali computer-guidate, pianificazione 3D e tecnica flapless nei casi idonei. Richiedi una valutazione clinica preliminare.">
+  <title>Impianti Dentali a Monza | Valutazione Implantologica | Sorriso &amp; Salute</title>
+  <meta name="description" content="Impianti dentali a Monza con valutazione clinica, diagnostica 3D e pianificazione digitale. Prenota un consulto informativo per capire possibilita, tempi e alternative.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#0E384C">
-  <link rel="canonical" href="https://studio-dentistico-sorriso-salute-monza.vercel.app/">
+  <link rel="canonical" href="https://studio-dentistico-sorriso-salute-monza.vercel.app/impianti-dentali/">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
-  <meta property="og:title" content="Implantologia Dentale Avanzata a Monza | Sorriso & Salute">
-  <meta property="og:description" content="Pianificazione digitale computer-guidata, diagnostica 3D e chirurgia mininvasiva quando indicata per ripristinare la funzionalità del sorriso.">
+  <meta property="og:title" content="Impianti Dentali a Monza | Sorriso &amp; Salute">
+  <meta property="og:description" content="Valutazione implantologica con diagnosi, pianificazione 3D e comunicazione chiara su tempi, idoneita e alternative terapeutiche.">
   <meta property="og:image" content="/assets/implantologia.avif">
   <meta name="twitter:card" content="summary_large_image">
-  <script>
+  <script is:inline>
     window.__loaderStart = performance.now();
     document.documentElement.classList.add("reveal-ready", "loader-active");
   </script>
-  <style>
+  <style is:global is:inline>
     :root {
       color-scheme: light;
       --primary: #0E384C;
@@ -560,6 +560,47 @@
       gap: .75rem;
     }
 
+    .section-cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      margin-top: 1.45rem;
+    }
+
+    .section-cta .btn {
+      min-height: 50px;
+    }
+
+    .problem-grid .section-cta,
+    .section-head-aside .section-cta {
+      justify-content: flex-start;
+    }
+
+    .section-head-aside .section-cta {
+      width: 100%;
+      margin-top: 1.05rem;
+    }
+
+    .section-head-aside .btn {
+      width: 100%;
+    }
+
+    .solution-grid + .section-cta,
+    .phases + .section-cta,
+    .faq-list + .section-cta {
+      margin-top: 1.9rem;
+    }
+
+    .path-mobile-cta {
+      display: none;
+    }
+
+    .when-mobile-cta {
+      display: flex;
+    }
+
     .hero-mobile-label {
       display: none;
     }
@@ -873,6 +914,7 @@
     .choice-btn {
       position: relative;
       display: grid;
+      align-content: center;
       gap: .12rem;
       width: 100%;
       min-height: 62px;
@@ -948,22 +990,10 @@
     .choice-btn strong {
       display: block;
       min-width: 0;
-      font-size: 1rem;
+      font-size: 1.08rem;
       line-height: 1.12;
       overflow-wrap: anywhere;
     }
-
-    .choice-btn span {
-      display: block;
-      min-width: 0;
-      color: var(--text);
-      font-size: .82rem;
-      font-weight: 720;
-      line-height: 1.25;
-      overflow-wrap: anywhere;
-    }
-
-    .choice-btn[aria-pressed="true"] span { color: var(--body-strong); }
 
     label {
       display: grid;
@@ -1189,6 +1219,97 @@
       gap: 2rem;
       align-items: end;
       margin-bottom: 2rem;
+    }
+
+    .section-head-balanced {
+      align-items: stretch;
+    }
+
+    .section-head-balanced > div:first-child,
+    .section-head-aside {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-head-aside {
+      justify-content: space-between;
+    }
+
+    .section-head-aside p {
+      margin-bottom: 0;
+    }
+
+    .path-head {
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, .5fr);
+      align-items: start;
+      column-gap: clamp(2rem, 5vw, 4.8rem);
+    }
+
+    .path-head h2 {
+      max-width: 860px;
+    }
+
+    .path-head-aside {
+      justify-content: flex-start;
+      gap: .85rem;
+      padding-top: 2rem;
+    }
+
+    .path-head-aside .section-cta {
+      margin-top: 0;
+    }
+
+    .when-layout {
+      display: grid;
+      grid-template-columns: minmax(340px, .28fr) minmax(0, .72fr);
+      align-items: start;
+      column-gap: clamp(1.6rem, 3vw, 3rem);
+    }
+
+    .when-content {
+      min-width: 0;
+    }
+
+    .when-head {
+      margin-bottom: 1.45rem;
+    }
+
+    .when-head h2 {
+      max-width: 1040px;
+      font-size: clamp(2.55rem, 2.45vw, 3.1rem);
+    }
+
+    .when-head-media {
+      width: 100%;
+      max-width: 360px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(30,132,181,.16);
+      border-radius: var(--radius-card);
+      background: var(--secondary);
+      box-shadow: 0 24px 58px rgba(14, 56, 76, .1);
+    }
+
+    .when-head-media img {
+      width: 100%;
+      aspect-ratio: 457 / 650;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .when-content .section-cta {
+      justify-content: center;
+      margin-inline: auto;
+    }
+
+    .solution-grid.when-cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .85rem;
+    }
+
+    .solution-grid.when-cards .info-card {
+      padding: 1rem 1.1rem;
+      min-height: auto;
     }
 
     .section-head p,
@@ -1770,8 +1891,157 @@
     }
 
     body.modal-open .whatsapp-prompt,
-    body.mobile-menu-open .whatsapp-prompt {
+    body.mobile-menu-open .whatsapp-prompt,
+    body.intro-popup-open .whatsapp-prompt {
       display: none;
+    }
+
+    body.intro-popup-open .mobile-cta {
+      display: none;
+    }
+
+    .intro-popup {
+      inset: 0;
+      width: 100vw;
+      max-width: none;
+      height: 100vh;
+      height: 100dvh;
+      max-height: none;
+      margin: 0;
+      padding: clamp(1rem, 3vw, 2rem);
+      border: 0;
+      background: transparent;
+      color: var(--primary);
+      overflow: hidden;
+    }
+
+    .intro-popup::backdrop {
+      background: rgba(9, 40, 56, .28);
+      -webkit-backdrop-filter: blur(10px) saturate(130%);
+      backdrop-filter: blur(10px) saturate(130%);
+    }
+
+    .intro-popup-shell {
+      position: relative;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      width: min(760px, 100%);
+      max-height: min(720px, calc(100dvh - clamp(2rem, 6vw, 4rem)));
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid rgba(30, 132, 181, .2);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 30px 90px rgba(9, 40, 56, .24), inset 0 1px 0 rgba(255,255,255,.86);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      backdrop-filter: blur(18px) saturate(150%);
+    }
+
+    .intro-popup-body {
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: clamp(1.35rem, 4vw, 2.4rem) clamp(1.15rem, 4vw, 2.4rem) 1.3rem;
+    }
+
+    .intro-popup-close {
+      position: absolute;
+      top: .9rem;
+      right: .9rem;
+      z-index: 2;
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(14, 56, 76, .14);
+      border-radius: var(--radius-control);
+      background: rgba(249, 252, 255, .86);
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 1.45rem;
+      line-height: 1;
+      box-shadow: 0 10px 24px rgba(14, 56, 76, .08);
+    }
+
+    .intro-popup-close:hover,
+    .intro-popup-close:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .intro-popup-kicker {
+      margin: 0 3.1rem .8rem 0;
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .intro-popup h2 {
+      max-width: 680px;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.04;
+    }
+
+    .intro-popup p {
+      color: var(--body-strong);
+      font-size: clamp(1rem, 1.35vw, 1.12rem);
+      line-height: 1.62;
+    }
+
+    .intro-popup-list {
+      display: grid;
+      gap: .72rem;
+      margin: 1.15rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .intro-popup-list li {
+      display: flex;
+      gap: .68rem;
+      align-items: flex-start;
+      color: var(--primary);
+      font-weight: 820;
+      line-height: 1.38;
+    }
+
+    .intro-popup-list li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: .62rem;
+      height: .62rem;
+      margin-top: .42rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .intro-popup-proof {
+      margin: 1.25rem 0 0;
+      padding: 1rem 1.05rem;
+      border: 1px solid rgba(30,132,181,.18);
+      border-radius: var(--radius-control);
+      background: rgba(232, 245, 251, .72);
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .intro-popup-actions {
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      padding: 1rem clamp(1.15rem, 4vw, 2.4rem) calc(1rem + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(14, 56, 76, .1);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 -18px 38px rgba(255,255,255,.72);
+    }
+
+    .intro-popup-actions .btn {
+      width: 100%;
+      min-height: 54px;
     }
 
     .booking-modal {
@@ -1992,46 +2262,13 @@
 
     .hero .hero-title-accent {
       color: var(--accent-bright);
-      background:
-        linear-gradient(105deg, transparent 0%, transparent 34%, rgba(255,255,255,.16) 39%, rgba(255,255,255,.92) 45%, rgba(210,250,255,.98) 49%, rgba(255,255,255,.68) 53%, rgba(40,164,214,.22) 59%, transparent 67%, transparent 100%),
-        linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
-      background-size: 190% 100%, 100% 100%;
-      background-position: -160% 0, 0 0;
-      background-repeat: no-repeat;
-      background-blend-mode: screen, normal;
+      background: none;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
-    }
-
-    html:not(.loader-active).reveal-ready .reveal.is-visible .hero-title-accent {
-      animation: heroAccentAppear .54s cubic-bezier(.22,1,.36,1) .12s both, heroAccentShine 1.75s cubic-bezier(.22,1,.36,1) .32s both;
-    }
-
-    @keyframes heroAccentAppear {
-      0% {
-        opacity: 0;
-        transform: translateX(-.1em);
-        filter: blur(2px) brightness(1.22) drop-shadow(0 0 14px rgba(155,231,255,.28));
-      }
-      62% {
-        opacity: 1;
-        filter: blur(.3px) brightness(1.08) drop-shadow(0 0 14px rgba(155,231,255,.22));
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-        filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
-      }
-    }
-
-    @keyframes heroAccentShine {
-      0% { background-position: -160% 0, 0 0; }
-      68% { background-position: 72% 0, 0 0; }
-      100% { background-position: 190% 0, 0 0; }
+      -webkit-text-fill-color: currentColor;
+      filter: none;
     }
 
     .hero .cta-row .btn-primary {
@@ -2225,6 +2462,16 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(255,255,255,.08);
     }
 
+    .band .section-cta .btn-primary {
+      --btn-bg: var(--white);
+      --btn-fg: var(--primary);
+      --btn-border: var(--white);
+      --btn-empty-fg: var(--white);
+      --btn-empty-border: var(--white);
+      --btn-shadow: 0 18px 38px rgba(0, 0, 0, .18);
+      --btn-hover-shadow: 0 14px 30px rgba(0, 0, 0, .14);
+    }
+
     .phase {
       background: linear-gradient(150deg, rgba(255,255,255,.16), rgba(255,255,255,.07));
       border-color: rgba(255,255,255,.24);
@@ -2367,6 +2614,7 @@
       .hero .form-step.is-active {
         align-content: start;
       }
+
     }
 
     @media (max-width: 980px) {
@@ -2413,6 +2661,36 @@
         grid-template-rows: none;
       }
 
+      .path-desktop-cta,
+      .when-desktop-cta {
+        display: none;
+      }
+
+      .path-head {
+        column-gap: 2rem;
+      }
+
+      .when-layout {
+        display: block;
+      }
+
+      .when-head-media {
+        display: none;
+      }
+
+      .solution-grid.when-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .path-head-aside {
+        padding-top: 0;
+      }
+
+      .path-mobile-cta,
+      .when-mobile-cta {
+        display: flex;
+      }
+
       .micro-proof {
         grid-template-columns: 1fr;
       }
@@ -2430,6 +2708,7 @@
     @media (max-width: 620px) {
       .wrap { width: min(100% - 24px, 1140px); }
       .topbar { display: none; }
+      .intro-popup-desktop-copy { display: none; }
       .nav { min-height: 70px; }
       .hero {
         padding-bottom: 0;
@@ -2616,11 +2895,7 @@
         height: 13px;
       }
       .choice-btn strong {
-        font-size: .92rem;
-      }
-      .choice-btn span {
-        font-size: .78rem;
-        line-height: 1.26;
+        font-size: 1rem;
       }
       input,
       textarea {
@@ -2756,12 +3031,8 @@
         height: 14px;
       }
       .modal-card .choice-btn strong {
-        font-size: .98rem;
+        font-size: 1.04rem;
         line-height: 1.12;
-      }
-      .modal-card .choice-btn span {
-        font-size: .84rem;
-        line-height: 1.26;
       }
       .hero .glass-form,
       .modal-card .glass-form {
@@ -2854,14 +3125,8 @@
       }
       .choice-btn strong,
       .modal-card .choice-btn strong {
-        font-size: clamp(.98rem, 4.4vw, 1.14rem);
+        font-size: 1.08rem;
         line-height: 1.1;
-      }
-      .choice-btn span,
-      .modal-card .choice-btn span {
-        display: block;
-        font-size: clamp(.8rem, 3.4vw, .9rem);
-        line-height: 1.22;
       }
       label {
         gap: .28rem;
@@ -2948,6 +3213,99 @@
       }
     }
 
+    @media (max-width: 620px) {
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .wrap {
+        width: min(calc(100% - 24px), 366px);
+      }
+
+      .hero {
+        overflow: hidden;
+      }
+
+      .hero .wrap,
+      .hero .wrap > .reveal,
+      .hero h1,
+      .hero .lead,
+      .hero .cta-row,
+      .review-carousel {
+        width: min(calc(100vw - 24px), 366px);
+        max-width: min(calc(100vw - 24px), 366px);
+      }
+
+      .hero h1 {
+        font-size: clamp(1.82rem, 8vw, 1.96rem);
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+      }
+
+      .hero .hero-title-accent {
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
+      .hero .lead {
+        max-width: 100%;
+      }
+
+      .review-carousel,
+      .review-viewport,
+      .review-content-area,
+      .review-track-window,
+      .review-track,
+      .review-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      .review-viewport,
+      .review-track-window {
+        overflow: hidden;
+      }
+
+      .review-carousel-head,
+      .review-score,
+      .review-score-main {
+        min-width: 0;
+      }
+
+      .review-carousel-head {
+        align-items: flex-start;
+      }
+
+      .review-score {
+        justify-items: start;
+      }
+
+      .review-score-main {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .review-stars,
+      .review-score-label {
+        white-space: normal;
+      }
+
+      .mobile-cta {
+        width: 100vw;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+
+      .mobile-cta .btn {
+        min-width: 0;
+        overflow: hidden;
+        white-space: normal;
+      }
+    }
+
     @media (max-width: 620px) and (max-height: 720px) {
       .glass-form {
         padding: .9rem;
@@ -2982,22 +3340,12 @@
         width: 13px;
         height: 13px;
       }
-      .choice-btn span {
-        display: block;
-        font-size: .78rem;
-        line-height: 1.2;
-      }
       .modal-card .choice-btn {
         min-height: 66px;
         padding: .74rem 3.7rem .74rem .95rem;
       }
       .modal-card .choice-btn strong {
-        font-size: 1rem;
-      }
-      .modal-card .choice-btn span {
-        display: block;
-        font-size: .8rem;
-        line-height: 1.2;
+        font-size: 1.04rem;
       }
       .modal-card .choice-btn::before {
         right: .82rem;
@@ -3054,10 +3402,12 @@
       }
       .hero .hero-title-accent {
         animation: none !important;
-        background: linear-gradient(90deg, var(--accent), var(--accent-bright) 56%, #145A78);
+        color: var(--accent-bright);
+        background: none;
         -webkit-background-clip: text;
         background-clip: text;
-        filter: drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 10px 22px rgba(30,132,181,.18));
+        -webkit-text-fill-color: currentColor;
+        filter: none;
       }
       .loader-logo,
       .loader-mark,
@@ -3083,7 +3433,7 @@
       }
     }
   </style>
-  <script type="application/ld+json">
+  <script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -3091,7 +3441,7 @@
         "@type": "Dentist",
         "@id": "https://studio-dentistico-sorriso-salute-monza.vercel.app/#dentist",
         "name": "Studio Dentistico Sorriso & Salute",
-        "url": "https://studio-dentistico-sorriso-salute-monza.vercel.app/",
+        "url": "https://studio-dentistico-sorriso-salute-monza.vercel.app/impianti-dentali/",
         "image": "https://studio-dentistico-sorriso-salute-monza.vercel.app/assets/implantologia.avif",
         "logo": "https://studio-dentistico-sorriso-salute-monza.vercel.app/assets/logo.png",
         "telephone": "+390392022489",
@@ -3114,47 +3464,54 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Implantologia dentale computer-guidata",
-                "serviceType": "Pianificazione digitale e sostituzione degli elementi dentali mancanti con impianti"
+                "name": "Impianti dentali a Monza",
+                "serviceType": "Valutazione implantologica, diagnostica 3D e pianificazione digitale per sostituire elementi dentali mancanti"
               }
             }
           ]
         }
       },
       {
+        "@type": "MedicalWebPage",
+        "@id": "https://studio-dentistico-sorriso-salute-monza.vercel.app/impianti-dentali/#webpage",
+        "url": "https://studio-dentistico-sorriso-salute-monza.vercel.app/impianti-dentali/",
+        "name": "Impianti dentali a Monza",
+        "description": "Pagina informativa per richiedere una valutazione implantologica presso lo Studio Dentistico Sorriso & Salute a Monza.",
+        "about": {
+          "@type": "MedicalProcedure",
+          "name": "Implantologia dentale",
+          "bodyLocation": "Bocca"
+        },
+        "provider": {
+          "@id": "https://studio-dentistico-sorriso-salute-monza.vercel.app/#dentist"
+        }
+      },
+      {
         "@type": "FAQPage",
-        "@id": "https://studio-dentistico-sorriso-salute-monza.vercel.app/#faq",
+        "@id": "https://studio-dentistico-sorriso-salute-monza.vercel.app/impianti-dentali/#faq",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "L'intervento di implantologia è doloroso?",
+            "name": "Come capisco se posso fare un impianto dentale?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "L'intervento viene eseguito in anestesia locale. Nei giorni successivi, grazie alle tecniche mininvasive computer-guidate quando indicate, fastidio e gonfiore possono essere ridotti e gestiti con le indicazioni del clinico."
+              "text": "Serve una valutazione clinica con anamnesi, visita e diagnostica radiografica. La decisione dipende da salute generale, quantita e qualita dell'osso, gengive, abitudini come il fumo e obiettivi protesici."
             }
           },
           {
             "@type": "Question",
-            "name": "Esiste il rischio di rigetto dell'impianto dentale?",
+            "name": "La chirurgia guidata e indicata per tutti?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "In medicina non si parla di rigetto perché il titanio è biocompatibile. Può esistere una mancata osteointegrazione, rischio che viene valutato e ridotto attraverso diagnosi, pianificazione e protocolli clinici."
+              "text": "No. La chirurgia guidata puo essere utile in molti casi, ma deve essere confermata dopo diagnosi 3D e pianificazione clinica. Quando non e indicata, vengono spiegate alternative e motivazioni."
             }
           },
           {
             "@type": "Question",
-            "name": "Chiunque può sottoporsi a implantologia computer-guidata?",
+            "name": "Quanto tempo serve per avere denti fissi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La tecnica è applicabile nella maggior parte dei pazienti adulti, ma richiede quantità d'osso sufficiente e buono stato di salute generale. La prima valutazione serve a verificare requisiti, rischi e alternative."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo serve per avere un dente fisso?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dipende dalla situazione clinica. In alcuni casi si può valutare una soluzione provvisoria o un carico immediato, mentre in altri è necessario attendere i tempi biologici di guarigione e osteointegrazione."
+              "text": "I tempi cambiano in base al caso. In alcune situazioni si puo valutare una protesi provvisoria o un carico immediato; in altre e necessario rispettare i tempi biologici di guarigione e osteointegrazione."
             }
           },
           {
@@ -3162,15 +3519,23 @@
             "name": "Cosa succede se ho poco osso?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La carenza di osso non esclude automaticamente l'implantologia. La diagnostica 3D permette di valutare volume, qualità ossea e possibili alternative, inclusi eventuali protocolli di rigenerazione quando indicati."
+              "text": "La carenza di osso non esclude automaticamente l'implantologia. La diagnostica 3D permette di valutare volume, qualita ossea e possibili alternative, inclusi eventuali percorsi di rigenerazione quando indicati."
             }
           },
           {
             "@type": "Question",
-            "name": "Quanto dura un impianto dentale?",
+            "name": "L'intervento e doloroso?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Un impianto può durare molti anni se viene mantenuto con igiene accurata e controlli periodici. Durata e stabilità dipendono da salute generale, fumo, bruxismo, qualità dei tessuti e manutenzione nel tempo."
+              "text": "L'intervento viene eseguito con anestesia locale. Fastidio, gonfiore e recupero dipendono dal tipo di procedura e vengono gestiti con indicazioni personalizzate del clinico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto dura un impianto dentale nel tempo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un impianto puo durare molti anni se mantenuto con igiene accurata e controlli periodici. Stabilita e durata dipendono da salute generale, fumo, bruxismo, tessuti e manutenzione."
             }
           }
         ]
@@ -3195,19 +3560,19 @@
   <a class="skip" href="#main">Salta al contenuto</a>
   <div class="topbar" aria-label="Contatti rapidi">
     <div class="wrap">
-      <span>Studio Dentistico Sorriso & Salute · Monza, Via Gaslini 1</span>
+      <span>Studio Dentistico Sorriso &amp; Salute · Monza, Via Gaslini 1</span>
       <span><a href="tel:+390392022489">039 2022489</a> · <a href="https://wa.me/393892490181">WhatsApp 389 2490181</a></span>
     </div>
   </div>
 
   <header>
     <nav class="nav wrap" aria-label="Navigazione principale">
-      <a class="brand" href="#top" aria-label="Studio Dentistico Sorriso & Salute"></a>
+      <a class="brand" href="#top" aria-label="Studio Dentistico Sorriso &amp; Salute"></a>
       <div class="navlinks">
         <a href="#approccio">Approccio</a>
-        <a href="#digitale">Digitale</a>
+        <a href="#quando">Quando</a>
+        <a href="#digitale">Diagnosi</a>
         <a href="#percorso">Percorso</a>
-        <a href="#equipe">Equipe</a>
         <a href="#faq">FAQ</a>
       </div>
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="mobileMenu" data-menu-toggle>
@@ -3215,9 +3580,9 @@
         <span></span>
         <span></span>
       </button>
-      <a class="btn btn-primary" href="tel:+390392022489" aria-label="Chiama lo studio">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 3.2 4.9 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.2 21.6 2.4 13.8 2.4 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4 .1.4 0 .8-.3 1.1l-2.1 2.3Z" fill="currentColor"/></svg>
-        Chiama
+      <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2.2v3.1M17 2.2v3.1M4.2 9.1h15.6M6.2 4h11.6c1.3 0 2.4 1.1 2.4 2.4v12.2c0 1.3-1.1 2.4-2.4 2.4H6.2c-1.3 0-2.4-1.1-2.4-2.4V6.4C3.8 5.1 4.9 4 6.2 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8.4 15.1 2.2 2.2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Prenota
       </a>
     </nav>
     <div class="mobile-menu" id="mobileMenu" hidden>
@@ -3225,19 +3590,15 @@
         <div class="mobile-menu-links">
           <a href="#top">Home</a>
           <a href="#approccio">Approccio</a>
-          <a href="#digitale">Digitale</a>
+          <a href="#quando">Quando</a>
+          <a href="#digitale">Diagnosi</a>
           <a href="#percorso">Percorso</a>
-          <a href="#equipe">Equipe</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="mobile-menu-actions">
-          <a class="btn btn-ghost" href="tel:+390392022489" aria-label="Chiama lo studio">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 3.2 4.9 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.2 21.6 2.4 13.8 2.4 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4 .1.4 0 .8-.3 1.1l-2.1 2.3Z" fill="currentColor"/></svg>
-            Chiama Studio
-          </a>
           <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2.2v3.1M17 2.2v3.1M4.2 9.1h15.6M6.2 4h11.6c1.3 0 2.4 1.1 2.4 2.4v12.2c0 1.3-1.1 2.4-2.4 2.4H6.2c-1.3 0-2.4-1.1-2.4-2.4V6.4C3.8 5.1 4.9 4 6.2 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8.4 15.1 2.2 2.2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Prenota Visita
+            Prenota
           </a>
         </div>
       </nav>
@@ -3248,11 +3609,10 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="reveal">
-          <h1 id="hero-title">Implantologia Dentale Avanzata a Monza: <span class="hero-title-accent">Ripristina la Funzionalità del Sorriso</span></h1>
-          <p class="lead">Tecnologie digitali computer-guidate per il reinserimento di elementi dentali fissi, riducendo l'invasività chirurgica e ottimizzando i tempi di guarigione nei casi clinicamente idonei.</p>
+          <h1 id="hero-title">Impianti dentali a Monza: <span class="hero-title-accent">valuta denti fissi con diagnosi 3D</span></h1>
+          <p class="lead">Per denti mancanti, protesi instabili o casi complessi: visita, diagnostica digitale e piano chiaro.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi una Valutazione Clinica</span><span class="hero-mobile-label">Richiedi valutazione clinica</span></a>
-            <a class="btn btn-ghost" href="https://wa.me/393892490181">Scrivici su Whatsapp</a>
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi valutazione</span><span class="hero-mobile-label">Valutazione</span></a>
           </div>
           <div class="review-carousel" data-review-carousel data-interval="5200" aria-label="Recensioni dei pazienti su implantologia">
             <div class="review-viewport">
@@ -3270,7 +3630,7 @@
                 <div class="review-track-window">
                   <div class="review-track" data-review-track>
                     <article class="review-card" aria-label="Recensione di Marialuisa Mariani">
-                      <blockquote><p>Trattamento di impianti dentali: intervento impeccabile e risultato finale perfetto. Studio moderno, personale gentile e medico professionale.</p></blockquote>
+                      <blockquote><p>Trattamento di impianti dentali seguito con grande attenzione. Studio moderno, personale gentile e medico professionale.</p></blockquote>
                       <div class="review-meta"><span class="review-avatar" aria-hidden="true">MM</span><cite>Marialuisa Mariani</cite></div>
                     </article>
                     <article class="review-card" aria-label="Recensione di Giuseppe Consolandi">
@@ -3278,11 +3638,11 @@
                       <div class="review-meta"><span class="review-avatar" aria-hidden="true">GC</span><cite>Giuseppe Consolandi</cite></div>
                     </article>
                     <article class="review-card" aria-label="Recensione di Alex Oggiano">
-                      <blockquote><p>Ho effettuato un intervento con impianti: tutto perfetto. Bravi e attenti, ne è valsa la pena.</p></blockquote>
+                      <blockquote><p>Ho effettuato un intervento con impianti: bravi, attenti e presenti durante il percorso.</p></blockquote>
                       <div class="review-meta"><span class="review-avatar" aria-hidden="true">AO</span><cite>Alex Oggiano</cite></div>
                     </article>
                     <article class="review-card" aria-label="Recensione di Raffaele D'Angelo">
-                      <blockquote><p>Consigliato a chi teme interventi invasivi: fanno in modo che il paziente non senta assolutamente nulla.</p></blockquote>
+                      <blockquote><p>Consigliato a chi teme interventi invasivi: mi hanno spiegato ogni passaggio e fatto sentire seguito con attenzione.</p></blockquote>
                       <div class="review-meta"><span class="review-avatar" aria-hidden="true">RD</span><cite>Raffaele D'Angelo</cite></div>
                     </article>
                     <article class="review-card" aria-label="Recensione di Luca Giovanetti">
@@ -3307,39 +3667,51 @@
         <form class="glass-form reveal delay-1" id="valutazione" novalidate>
           <div class="form-head">
             <div>
-              <h2>Prenota una valutazione implantologica</h2>
+              <h2>Richiedi una valutazione</h2>
             </div>
           </div>
-          <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"></div>
+          <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"></div>
 
           <div class="form-step is-active" data-step="1">
             <p class="quiz-kicker">Inquadramento clinico</p>
-            <h3 class="quiz-title">Qual è il problema principale?</h3>
-            <p class="quiz-copy">Seleziona la situazione che descrive meglio il motivo della prima valutazione.</p>
+            <h3 class="quiz-title">Da quale problema vuoi partire?</h3>
+            <p class="quiz-copy">Scegli la situazione più vicina alla tua.</p>
             <div class="quiz-options" data-field="problema">
-              <button class="choice-btn" type="button" data-value="Mi manca un dente singolo"><strong>Mi manca un dente singolo</strong><span>Vorrei sostituirlo con una soluzione fissa.</span></button>
-              <button class="choice-btn" type="button" data-value="Mi mancano più denti"><strong>Mi mancano più denti</strong><span>Ho difficoltà a masticare o sorridere con naturalezza.</span></button>
-              <button class="choice-btn" type="button" data-value="Dentiera mobile o protesi instabile"><strong>Dentiera mobile o protesi instabile</strong><span>Cerco più stabilità e comfort quotidiano.</span></button>
-              <button class="choice-btn" type="button" data-value="Ho già impianti o una situazione da rivalutare"><strong>Ho già impianti o una situazione da rivalutare</strong><span>Vorrei un controllo o una seconda opinione.</span></button>
+              <button class="choice-btn" type="button" data-value="Mi manca un dente singolo"><strong>Mi manca un dente singolo</strong></button>
+              <button class="choice-btn" type="button" data-value="Mi mancano più denti"><strong>Mi mancano più denti</strong></button>
+              <button class="choice-btn" type="button" data-value="Dentiera mobile o protesi instabile"><strong>Dentiera mobile o protesi instabile</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho già impianti o una situazione da rivalutare"><strong>Ho già impianti o una situazione da rivalutare</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="2">
             <p class="quiz-kicker">Obiettivo desiderato</p>
-            <h3 class="quiz-title">Cosa vuoi ottenere davvero?</h3>
-            <p class="quiz-copy">Questa risposta chiarisce la priorità: funzione, estetica, stabilità o tempi.</p>
+            <h3 class="quiz-title">Qual è il tuo obiettivo?</h3>
+            <p class="quiz-copy">Aiuta lo studio a capire la priorità.</p>
             <div class="quiz-options" data-field="obiettivo">
-              <button class="choice-btn" type="button" data-value="Masticare meglio e senza fastidi"><strong>Masticare meglio e senza fastidi</strong><span>Voglio tornare a mangiare con più sicurezza.</span></button>
-              <button class="choice-btn" type="button" data-value="Avere denti fissi e un sorriso naturale"><strong>Avere denti fissi e un sorriso naturale</strong><span>Mi interessa molto anche il risultato estetico.</span></button>
-              <button class="choice-btn" type="button" data-value="Evitare o stabilizzare la dentiera mobile"><strong>Evitare o stabilizzare la dentiera mobile</strong><span>Vorrei una soluzione più stabile nella vita quotidiana.</span></button>
-              <button class="choice-btn" type="button" data-value="Capire se posso fare carico immediato"><strong>Capire se posso fare carico immediato</strong><span>Vorrei sapere se posso ridurre i tempi del percorso.</span></button>
+              <button class="choice-btn" type="button" data-value="Tornare a masticare con più sicurezza"><strong>Tornare a masticare con più sicurezza</strong></button>
+              <button class="choice-btn" type="button" data-value="Capire se posso avere denti fissi"><strong>Capire se posso avere denti fissi</strong></button>
+              <button class="choice-btn" type="button" data-value="Stabilizzare o sostituire la dentiera mobile"><strong>Stabilizzare o sostituire la dentiera mobile</strong></button>
+              <button class="choice-btn" type="button" data-value="Ricevere un piano chiaro prima di decidere"><strong>Ricevere un piano chiaro prima di decidere</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="3">
+            <p class="quiz-kicker">Situazione clinica</p>
+            <h3 class="quiz-title">C'è qualcosa da segnalare subito?</h3>
+            <p class="quiz-copy">Serve solo a orientare il primo contatto.</p>
+            <div class="quiz-options" data-field="situazione">
+              <button class="choice-btn" type="button" data-value="Ho denti mobili o denti da valutare"><strong>Denti mobili o da valutare</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho gengive infiammate o parodontite diagnosticata o sospetta"><strong>Gengive infiammate o parodontite</strong></button>
+              <button class="choice-btn" type="button" data-value="Mi hanno detto che ho poco osso"><strong>Poco osso o caso complesso</strong></button>
+              <button class="choice-btn" type="button" data-value="Ho timore dell'intervento e voglio tempi chiari"><strong>Timore dell'intervento</strong></button>
+            </div>
+          </div>
+
+          <div class="form-step" data-step="4">
             <p class="quiz-kicker">Preferenza appuntamento</p>
             <h3 class="quiz-title">Scegli una data per la prima valutazione</h3>
-            <p class="muted">Il calendario mostra i giorni lavorativi disponibili nei prossimi 3 mesi.</p>
+            <p class="muted">Scegli un giorno indicativo.</p>
             <div class="calendar-head">
               <p class="calendar-title" id="calendarTitle" data-calendar-title></p>
               <div class="calendar-nav" aria-label="Navigazione calendario">
@@ -3350,17 +3722,17 @@
             <div class="calendar-grid" id="calendarGrid" data-calendar-grid aria-label="Calendario selezionabile"></div>
           </div>
 
-          <div class="form-step" data-step="4">
+          <div class="form-step" data-step="5">
             <p class="quiz-kicker">Orario preferito</p>
             <h3 class="quiz-title">Scegli una fascia oraria</h3>
-            <p class="muted">Gli slot sono indicativi: lo studio ti ricontatterà per confermare l'appuntamento.</p>
+            <p class="muted">Lo studio confermerà l'orario.</p>
             <div class="slot-grid" id="slotGrid" data-slot-grid aria-label="Orari selezionabili"></div>
           </div>
 
-          <div class="form-step" data-step="5">
+          <div class="form-step" data-step="6">
             <p class="quiz-kicker">Dati di contatto</p>
             <h3 class="quiz-title">Lascia i tuoi recapiti</h3>
-            <p class="muted">Useremo questi dati solo per ricontattarti e confermare la valutazione richiesta.</p>
+            <p class="muted">Servono per ricontattarti.</p>
             <div class="field-grid">
               <label>Nome e cognome
                 <input id="nomeCompleto" name="nomeCompleto" autocomplete="name" required>
@@ -3373,14 +3745,14 @@
               </label>
             </div>
             <label>Note/Messaggio
-              <textarea id="messaggio" name="messaggio" placeholder="Aggiungi dettagli utili: denti mancanti, esami già fatti, farmaci, esigenze particolari o preferenze"></textarea>
+              <textarea id="messaggio" name="messaggio" placeholder="Aggiungi dettagli utili"></textarea>
             </label>
           </div>
 
-          <div class="form-step" data-step="6">
+          <div class="form-step" data-step="7">
             <p class="quiz-kicker">Riepilogo richiesta</p>
-            <h3 class="quiz-title">Conferma il quadro da inviare allo studio</h3>
-            <p class="quiz-copy">La mail includerà problema, obiettivo, appuntamento preferito, contatti e note.</p>
+            <h3 class="quiz-title">Controlla la richiesta</h3>
+            <p class="quiz-copy">Invieremo il riepilogo allo studio.</p>
             <div class="summary-box" id="summaryBox" data-summary-box aria-live="polite"></div>
           </div>
 
@@ -3397,9 +3769,12 @@
     <section id="approccio" aria-labelledby="problem-title">
       <div class="wrap problem-grid">
         <div class="reveal">
-          <p class="eyebrow"><span class="dot"></span> Prevenzione orale</p>
-          <h2 id="problem-title">La perdita dei denti naturali: oltre l'estetica, la salute funzionale</h2>
-          <p class="problem-copy">La mancanza di uno o più elementi dentali non è solo un disagio estetico. Nel tempo, influisce sulla corretta masticazione, sul posizionamento dei denti adiacenti e sul riassorbimento dell'osso mascellare. La moderna odontoiatria permette oggi di affrontare la sostituzione dei denti mancanti in modo radicalmente diverso rispetto al passato, ponendo al centro il comfort biologico del paziente.</p>
+          <p class="eyebrow">Prima diagnosi</p>
+          <h2 id="problem-title">Prima degli impianti serve capire il caso</h2>
+          <p class="problem-copy">Denti mancanti, protesi instabili o poco osso richiedono una valutazione completa. La visita chiarisce possibilità, limiti e alternative.</p>
+          <div class="section-cta">
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
+          </div>
         </div>
         <figure class="problem-media reveal delay-1" data-implant-render>
           <div class="implant-stage before-after-compare" role="img" aria-label="Confronto automatico tra arcata con dente mancante e arcata riabilitata con impianto dentale">
@@ -3413,59 +3788,105 @@
       </div>
     </section>
 
+    <section id="quando" aria-labelledby="when-title">
+      <div class="wrap">
+        <div class="when-layout">
+          <figure class="when-head-media reveal" aria-label="Sala operativa dello Studio Dentistico Sorriso & Salute">
+            <img src="/assets/studio-operativo-implantologia-monza.jpg" width="888" height="1086" loading="lazy" decoding="async" alt="Sala operativa dello Studio Dentistico Sorriso & Salute a Monza">
+          </figure>
+          <div class="when-content">
+            <div class="when-head reveal">
+            <p class="eyebrow">Quando richiederla</p>
+            <h2 id="when-title">Quando una visita può aiutarti</h2>
+            </div>
+            <div class="solution-grid when-cards">
+              <article class="info-card reveal">
+                <b>1</b>
+                <h3>Denti mancanti</h3>
+                <p class="muted">Per capire tempi e opzioni di sostituzione.</p>
+              </article>
+              <article class="info-card reveal delay-1">
+                <b>2</b>
+                <h3>Protesi instabile</h3>
+                <p class="muted">Per valutare più stabilità e comfort quotidiano.</p>
+              </article>
+              <article class="info-card reveal delay-2">
+                <b>3</b>
+                <h3>Casi complessi</h3>
+                <p class="muted">Per chiarire cosa è realistico e cosa va preparato prima.</p>
+              </article>
+            </div>
+            <div class="section-cta when-mobile-cta reveal">
+              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="soft" id="digitale" aria-labelledby="digital-title">
       <div class="wrap">
         <div class="section-head digital-head reveal">
           <div>
-            <h2 id="digital-title">Perché l'Implantologia Digitale Computer-Guidata cambia l'esperienza del paziente</h2>
+            <h2 id="digital-title">Diagnosi 3D e piano chiaro</h2>
           </div>
-          <p>Un protocollo progettato per aumentare precisione, ridurre invasività quando possibile e rendere più chiari tempi e fasi del trattamento.</p>
+          <p>Capisci se l'impianto è indicato, quali alternative esistono e quali tempi servono.</p>
         </div>
         <div class="solution-grid">
           <article class="info-card reveal">
             <b>1</b>
-            <h3>Diagnostica 3D e posizione pianificata</h3>
-            <p class="muted">TAC Cone Beam e scanner intraorale aiutano a leggere osso, gengiva e spazi disponibili. La valutazione permette di simulare la posizione dell'impianto prima dell'intervento, con più controllo su stabilità e strutture delicate.</p>
+            <h3>Anamnesi e diagnosi</h3>
+            <p class="muted">Raccolta di storia clinica, esami e aspettative.</p>
           </article>
           <article class="info-card reveal delay-1">
             <b>2</b>
-            <h3>Chirurgia guidata, quando indicata</h3>
-            <p class="muted">Se il caso clinico lo consente, la dima chirurgica guida l'inserimento dell'impianto con un accesso più mirato. Questo può ridurre incisioni, punti e fastidi post-operatori rispetto alle procedure tradizionali.</p>
+            <h3>Piano implantare</h3>
+            <p class="muted">Valutazione di posizione, masticazione e soluzione protesica.</p>
           </article>
           <article class="info-card reveal delay-2">
             <b>3</b>
-            <h3>Tempi più chiari e recupero monitorato</h3>
-            <p class="muted">La pianificazione digitale rende più prevedibili fasi, durata e controlli. Nei casi idonei può favorire interventi più rapidi e, quando possibile, una protesi provvisoria fissa nella stessa giornata.</p>
+            <h3>Decisione informata</h3>
+            <p class="muted">Benefici, limiti e alternative vengono spiegati prima di procedere.</p>
           </article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
         </div>
       </div>
     </section>
 
     <section class="band" id="percorso" aria-labelledby="path-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head section-head-balanced path-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Modalità della visita</p>
-            <h2 id="path-title">Il percorso clinico protocollato per il tuo impianto</h2>
+            <p class="eyebrow">Modalità della visita</p>
+            <h2 id="path-title">Un percorso senza sorprese</h2>
           </div>
-          <p>Trasparenza informativa, diagnosi e follow-up sono parte integrante del trattamento.</p>
+          <div class="section-head-aside path-head-aside">
+            <div class="section-cta path-desktop-cta">
+              <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
+            </div>
+          </div>
         </div>
         <div class="phases">
           <article class="phase reveal">
             <b>1</b>
-            <h3>Studio del Caso e Screening Sanitario</h3>
-            <p class="muted">Visita clinica approfondita, anamnesi medica e screening radiografico digitale direttamente in studio.</p>
+            <h3>Valutazione e idoneità</h3>
+            <p class="muted">Visita, anamnesi e lettura degli esami disponibili.</p>
           </article>
           <article class="phase reveal delay-1">
             <b>2</b>
-            <h3>Progettazione 3D</h3>
-            <p class="muted">Elaborazione del modello virtuale e realizzazione della guida personalizzata per l'inserimento mininvasivo.</p>
+            <h3>Pianificazione e preventivo</h3>
+            <p class="muted">Fasi, esami, opzioni e preventivo vengono chiariti.</p>
           </article>
           <article class="phase reveal delay-2">
             <b>3</b>
-            <h3>Seduta Chirurgica e Follow-up</h3>
-            <p class="muted">Posizionamento dell'impianto in anestesia locale ed esecuzione dei controlli periodici per monitorare l'osteointegrazione biologica a lungo termine.</p>
+            <h3>Trattamento e mantenimento</h3>
+            <p class="muted">Trattamento quando indicato e controlli nel tempo.</p>
           </article>
+        </div>
+        <div class="section-cta path-mobile-cta reveal">
+          <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
         </div>
       </div>
     </section>
@@ -3475,34 +3896,34 @@
         <div class="section-head faq-head reveal">
           <div>
             <p class="eyebrow faq-kicker">FAQ implantologia</p>
-            <h2 id="faq-title">Domande Frequenti sugli Impianti Dentali</h2>
-            <p class="faq-intro">Risposte chiare per chi sta valutando un percorso con impianti dentali e vuole arrivare alla prima visita con aspettative realistiche.</p>
+            <h2 id="faq-title">Domande frequenti</h2>
+            <p class="faq-intro">Risposte rapide prima della visita.</p>
           </div>
         </div>
         <div class="faq-list reveal delay-1">
           <details>
-            <summary>L'intervento di implantologia è doloroso?</summary>
-            <p>L'intervento viene eseguito in anestesia locale. Nei giorni successivi, grazie alle tecniche mininvasive computer-guidate come la Flapless quando indicata, il fastidio e il gonfiore sono ridotti e gestibili con gli analgesici consigliati dal clinico.</p>
+            <summary>Come capisco se posso fare un impianto dentale?</summary>
+            <p>Serve una visita con anamnesi ed esami. La decisione dipende da osso, gengive, salute generale e obiettivo protesico.</p>
           </details>
           <details>
-            <summary>Esiste il rischio di rigetto dell'impianto dentale?</summary>
-            <p>In medicina non si parla di rigetto poiché il titanio utilizzato è un materiale biocompatibile, che non innesca reazioni immunitarie. Esiste una minima percentuale di mancata stabilità biologica, cioè mancata osteointegrazione, che viene valutata e ridotta con pianificazione digitale preventiva e protocolli sterili.</p>
+            <summary>La chirurgia guidata è indicata per tutti?</summary>
+            <p>No. Va confermata dopo diagnosi 3D e pianificazione clinica.</p>
           </details>
           <details>
-            <summary>Chiunque può sottoporsi a implantologia computer-guidata?</summary>
-            <p>La tecnica è applicabile nella maggior parte dei pazienti adulti. Tuttavia, la presenza di una quantità d'osso sufficiente e un buono stato di salute generale, valutando patologie sistemiche o abitudini come il fumo, sono requisiti fondamentali analizzati durante la prima valutazione preliminare.</p>
-          </details>
-          <details>
-            <summary>Quanto tempo serve per avere un dente fisso?</summary>
-            <p>Dipende dalla situazione clinica. In alcuni casi si può valutare una soluzione provvisoria o un carico immediato, mentre in altri è necessario attendere i tempi biologici di guarigione e osteointegrazione prima della protesi definitiva.</p>
+            <summary>Quanto tempo serve per avere denti fissi?</summary>
+            <p>Dipende dal caso. A volte è possibile un provvisorio, altre volte servono tempi biologici più lunghi.</p>
           </details>
           <details>
             <summary>Cosa succede se ho poco osso?</summary>
-            <p>La carenza di osso non esclude automaticamente l'implantologia. La diagnostica 3D permette di valutare volume, qualità ossea e possibili alternative, inclusi eventuali protocolli di rigenerazione quando indicati.</p>
+            <p>Non sempre esclude gli impianti. La diagnostica 3D chiarisce volume osseo e alternative.</p>
           </details>
           <details>
-            <summary>Quanto dura un impianto dentale?</summary>
-            <p>Un impianto può durare molti anni se viene mantenuto con igiene accurata e controlli periodici. Durata e stabilità dipendono da salute generale, fumo, bruxismo, qualità dei tessuti e manutenzione nel tempo.</p>
+            <summary>L'intervento è doloroso?</summary>
+            <p>Si esegue con anestesia locale. Fastidio e recupero dipendono dal tipo di procedura.</p>
+          </details>
+          <details>
+            <summary>Quanto dura un impianto dentale nel tempo?</summary>
+            <p>Può durare molti anni con igiene, controlli e manutenzione costante.</p>
           </details>
         </div>
       </div>
@@ -3512,10 +3933,10 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Equipe</p>
-            <h2 id="staff-title">Un team odontoiatrico per valutare il tuo caso con precisione.</h2>
+            <p class="eyebrow">Equipe</p>
+            <h2 id="staff-title">Il team che valuta il tuo caso</h2>
           </div>
-          <p>Specialisti e figure di riferimento dello Studio Dentistico Sorriso & Salute, con esperienza clinica, aggiornamento continuo e attenzione al percorso personalizzato del paziente.</p>
+          <p>Professionisti dello studio seguono diagnosi, piano e controlli.</p>
         </div>
         <div class="staff-grid" aria-label="Equipe Sorriso e Salute">
           <article class="staff-card reveal">
@@ -3561,10 +3982,10 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Le nostre finanziarie</p>
-            <h2 id="finance-title">I nostri Servizi di Finanziamento personalizzati</h2>
+            <p class="eyebrow">Le nostre finanziarie</p>
+            <h2 id="finance-title">Pagamenti su misura</h2>
           </div>
-          <p>Il nostro Studio Odontoiatrico offre <strong>soluzioni di finanziamento personalizzate</strong> pensate per rendere le cure dentistiche più accessibili, senza rinunciare alla qualità dei trattamenti.</p>
+          <p>In studio puoi valutare soluzioni di pagamento legate al piano clinico.</p>
         </div>
         <div class="finance-grid" aria-label="Finanziarie disponibili presso Sorriso e Salute">
           <article class="finance-card reveal">
@@ -3573,7 +3994,7 @@
             </div>
             <div>
               <h3>Compass</h3>
-              <p>Possibilità di valutare piani di pagamento personalizzati per affrontare il percorso odontoiatrico con maggiore serenità.</p>
+              <p>Piani di pagamento valutabili in base al percorso.</p>
             </div>
           </article>
           <article class="finance-card reveal delay-1">
@@ -3582,7 +4003,7 @@
             </div>
             <div>
               <h3>HeyLight</h3>
-              <p>Soluzioni digitali per costruire modalità di pagamento chiare e sostenibili, da valutare in studio in base al piano clinico.</p>
+              <p>Soluzioni digitali da valutare con lo studio.</p>
             </div>
           </article>
         </div>
@@ -3592,16 +4013,15 @@
     <section class="closing-section" aria-labelledby="closing-title">
       <div class="wrap closing">
         <div class="reveal">
-          <p class="eyebrow"><span class="dot"></span> Consulto diagnostico</p>
-          <h2 id="closing-title">Richiedi un consulto informativo e diagnostico</h2>
-          <p class="lead">Ogni situazione clinica è unica e richiede un piano terapeutico personalizzato. Il nostro team di professionisti è a disposizione per valutare lo stato della tua salute orale e illustrarti le soluzioni tecnologiche più adatte al tuo caso, nel pieno rispetto dei tempi biologici del tuo organismo.</p>
+          <p class="eyebrow">Consulto diagnostico</p>
+          <h2 id="closing-title">Richiedi una valutazione</h2>
+          <p class="lead">Porta il tuo caso allo studio: ti spiegheremo possibilità, limiti e prossimi passi.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi una Valutazione Clinica Preliminare</a>
-            <a class="btn btn-ghost" href="tel:+390392022489">039 2022489</a>
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
           </div>
         </div>
         <aside class="contact-panel reveal delay-1" aria-label="Informazioni studio">
-          <h3>Studio Dentistico Sorriso & Salute</h3>
+          <h3>Studio Dentistico Sorriso &amp; Salute</h3>
           <p>Via Gaslini 1, 20090 Monza (MB)</p>
           <p><strong>Telefono:</strong> <a href="tel:+390392022489">039 2022489</a><br><strong>Email:</strong> <a href="mailto:info@sorrisoesalute.it">info@sorrisoesalute.it</a></p>
           <p><strong>Orari:</strong> Lun-Ven 9:00-12:30 / 14:00-19:00</p>
@@ -3613,12 +4033,12 @@
   <footer>
     <div class="wrap">
       <div class="footer-cta">
-        <h2>Un sorriso più sano non può aspettare, <br>Prenota ora!</h2>
-        <a class="btn btn-accent" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi appuntamento</a>
+        <h2>Vuoi capire se gli impianti dentali sono indicati per te?</h2>
+        <a class="btn btn-accent" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
       </div>
       <div class="footer-main">
         <div class="footer-brand">
-          <strong>Studio Dentistico Sorriso & Salute</strong>
+          <strong>Studio Dentistico Sorriso &amp; Salute</strong>
           <p>Cerchi un Dentista in Brianza?<br><a href="/convenzioni-dirette-studio-dentistico-monza/">Convenzioni Studio Dentistico Monza Dentista</a></p>
           <div class="footer-social" aria-label="Canali social">
             <a href="https://www.facebook.com/sorrisomonza/">Facebook</a>
@@ -3660,21 +4080,31 @@
   </footer>
 
   <div class="mobile-cta" aria-label="Azioni rapide mobile">
-    <a class="btn btn-ghost" href="tel:+390392022489" aria-label="Chiama lo studio">Chiama Ora</a>
-    <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Prenota Ora</a>
+    <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Valutazione</a>
   </div>
 
-  <div class="whatsapp-prompt" role="dialog" aria-labelledby="whatsappPromptTitle" aria-describedby="whatsappPromptText" data-whatsapp-prompt hidden>
-    <div class="whatsapp-prompt-card">
-      <button class="whatsapp-prompt-close" type="button" aria-label="Chiudi messaggio WhatsApp" data-whatsapp-prompt-close>×</button>
-      <p class="whatsapp-prompt-kicker">Hai una domanda?</p>
-      <h2 id="whatsappPromptTitle">Dubbi sul trattamento?</h2>
-      <p id="whatsappPromptText">Se hai domande su questo servizio, scrivici su WhatsApp: ti ascolteremo e ti aiuteremo a capire quale percorso può essere più adatto al tuo caso specifico.</p>
-      <a class="btn btn-primary" href="https://wa.me/393892490181?text=Buongiorno%2C%20vorrei%20ricevere%20informazioni%20sul%20servizio%20di%20implantologia." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+  <dialog class="intro-popup" id="intro-popup" aria-labelledby="introPopupTitle" aria-describedby="introPopupText">
+    <div class="intro-popup-shell">
+      <button class="intro-popup-close" type="button" aria-label="Chiudi introduzione" data-close-intro-popup>×</button>
+      <div class="intro-popup-body">
+        <p class="intro-popup-kicker">Studio Dentistico Sorriso &amp; Salute</p>
+        <h2 id="introPopupTitle">Impianti dentali a Monza</h2>
+        <p class="intro-popup-desktop-copy" id="introPopupText">Da oltre 20 anni, <strong>Sorriso &amp; Salute</strong> valuta percorsi implantari a Monza.</p>
+        <p>Ogni caso parte da diagnosi digitale e indicazione clinica.</p>
+        <ul class="intro-popup-list">
+          <li><strong>Impianti</strong> per uno o più denti mancanti</li>
+          <li><strong>Protesi su impianti</strong> per più stabilità</li>
+          <li><strong>Diagnosi digitale</strong> per valutare osso e gengive</li>
+        </ul>
+        <p class="intro-popup-proof"><strong>Un percorso valutato sul tuo caso.</strong></p>
+      </div>
+      <div class="intro-popup-actions">
+        <button class="btn btn-primary" type="button" data-intro-popup-cta>Richiedi valutazione</button>
+      </div>
     </div>
-  </div>
+  </dialog>
 
-  <dialog class="booking-modal" id="prenota-popup" aria-label="Prenota una valutazione implantologica">
+  <dialog class="booking-modal" id="prenota-popup" aria-label="Richiedi una valutazione implantologica">
     <div class="modal-screen">
       <div class="modal-topbar">
         <button class="modal-close" type="button" data-close-booking aria-label="Torna indietro e chiudi prenotazione">
@@ -3688,7 +4118,7 @@
     </div>
   </dialog>
 
-  <script>
+  <script is:inline>
     (() => {
       const loader = document.querySelector("#pageLoader");
       const loaderMinDuration = 900;
@@ -3699,6 +4129,7 @@
         loaderHidden = true;
         loader.classList.add("loader-hidden");
         document.documentElement.classList.remove("loader-active");
+        window.dispatchEvent(new CustomEvent("sorriso:loader-hidden"));
         window.setTimeout(() => loader.remove(), 420);
       };
 
@@ -3722,6 +4153,9 @@
       const whatsappPromptClose = document.querySelector("[data-whatsapp-prompt-close]");
       const whatsappPromptDelay = 30000;
       const whatsappPromptStorageKey = "sorriso-whatsapp-prompt-dismissed";
+      const introPopup = document.querySelector("#intro-popup");
+      const introPopupClose = document.querySelector("[data-close-intro-popup]");
+      const introPopupCta = document.querySelector("[data-intro-popup-cta]");
 
       const setMobileMenu = (isOpen) => {
         if (!menuToggle || !mobileMenu) return;
@@ -3806,7 +4240,7 @@
       });
       scheduleWhatsappPrompt();
 
-      const totalSteps = 6;
+      const totalSteps = 7;
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const maxDate = new Date(today);
@@ -3827,6 +4261,38 @@
       const modalClose = document.querySelector("[data-close-booking]");
       let modalController = null;
       let lastModalTrigger = null;
+
+      const closeIntroPopup = () => {
+        if (!introPopup) return;
+        if (introPopup.open && typeof introPopup.close === "function") {
+          introPopup.close();
+        } else {
+          introPopup.removeAttribute("open");
+          document.body.classList.remove("intro-popup-open");
+        }
+      };
+
+      const openIntroPopup = () => {
+        if (!introPopup || introPopup.open) return;
+        if (document.body.classList.contains("modal-open")) return;
+        if (typeof introPopup.showModal === "function") {
+          introPopup.showModal();
+        } else {
+          introPopup.setAttribute("open", "");
+        }
+        document.body.classList.add("intro-popup-open");
+        requestAnimationFrame(() => introPopupClose?.focus({ preventScroll: true }));
+      };
+
+      const scheduleIntroPopup = () => {
+        if (!introPopup) return;
+        const show = () => window.setTimeout(openIntroPopup, 180);
+        if (loaderHidden || !document.documentElement.classList.contains("loader-active")) {
+          show();
+          return;
+        }
+        window.addEventListener("sorriso:loader-hidden", show, { once: true });
+      };
 
       const createModalForm = () => {
         const modalForm = sourceForm.cloneNode(true);
@@ -3979,7 +4445,8 @@
         let displayedMonth = new Date(minMonth);
         const quiz = {
           problema: "",
-          obiettivo: ""
+          obiettivo: "",
+          situazione: ""
         };
 
         const setError = (message = "") => {
@@ -3996,6 +4463,7 @@
           summaryBox.innerHTML = `
             <span class="summary-line"><strong>Problema da risolvere</strong>${selected(quiz.problema)}</span>
             <span class="summary-line"><strong>Risultato desiderato</strong>${selected(quiz.obiettivo)}</span>
+            <span class="summary-line"><strong>Situazione segnalata</strong>${selected(quiz.situazione)}</span>
             <span class="summary-line"><strong>Preferenza appuntamento</strong>${selectedDateLabel || "Non indicata"} · ${selectedSlot || "Non indicato"}</span>
             <span class="summary-line"><strong>Contatto</strong>${fields.nomeCompleto.value || "-"} · ${fields.telefono.value || "-"} · ${fields.email.value || "-"}</span>
             <span class="summary-line"><strong>Note</strong>${fields.messaggio.value || "Nessuna nota inserita"}</span>
@@ -4008,7 +4476,7 @@
           progress?.style.setProperty("--progress", `${(step / totalSteps) * 100}%`);
           progress?.setAttribute("aria-valuenow", String(step));
           prevBtn.hidden = step === 1;
-          nextBtn.hidden = step !== 5;
+          nextBtn.hidden = step !== 6;
           submitBtn.hidden = step !== totalSteps;
           form.classList.toggle("is-prev-only", !prevBtn.hidden && nextBtn.hidden && submitBtn.hidden);
           setError();
@@ -4017,7 +4485,7 @@
         };
 
         const validateStep = () => {
-          if (currentStep <= 2) {
+          if (currentStep <= 3) {
             const activeStep = steps.find((item) => Number(item.dataset.step) === currentStep);
             const field = activeStep?.querySelector(".quiz-options")?.dataset.field;
             if (field && !quiz[field]) {
@@ -4025,15 +4493,15 @@
               return false;
             }
           }
-          if (currentStep === 3 && !selectedDate) {
+          if (currentStep === 4 && !selectedDate) {
             setError("Seleziona una data disponibile.");
             return false;
           }
-          if (currentStep === 4 && !selectedSlot) {
+          if (currentStep === 5 && !selectedSlot) {
             setError("Seleziona un orario preferito.");
             return false;
           }
-          if (currentStep === 5) {
+          if (currentStep === 6) {
             const required = [fields.nomeCompleto, fields.telefono, fields.email];
             const invalid = required.find((field) => !field.checkValidity());
             if (invalid) {
@@ -4092,7 +4560,7 @@
               button.setAttribute("aria-pressed", "true");
               updateSummary();
               setError();
-              setTimeout(() => showStep(4), 140);
+              setTimeout(() => showStep(5), 140);
             });
             calendarGrid.append(button);
           }
@@ -4112,7 +4580,7 @@
               button.setAttribute("aria-pressed", "true");
               updateSummary();
               setError();
-              setTimeout(() => showStep(5), 140);
+              setTimeout(() => showStep(6), 140);
             });
             slotGrid.append(button);
           });
@@ -4126,6 +4594,7 @@
           displayedMonth = new Date(minMonth);
           quiz.problema = "";
           quiz.obiettivo = "";
+          quiz.situazione = "";
           form.reset();
           form.querySelectorAll(".choice-btn, .slot-btn").forEach((button) => button.setAttribute("aria-pressed", "false"));
           buildCalendar();
@@ -4143,7 +4612,7 @@
               button.setAttribute("aria-pressed", "true");
               updateSummary();
               setError();
-              if (currentStep < 3) {
+              if (currentStep < 4) {
                 const nextStep = currentStep + 1;
                 setTimeout(() => showStep(nextStep), 140);
               }
@@ -4171,13 +4640,14 @@
             return;
           }
           if (!validateStep()) return;
-          const subject = `Richiesta valutazione implantologia - ${fields.nomeCompleto.value}`;
+          const subject = `Richiesta valutazione impianti dentali - ${fields.nomeCompleto.value}`;
           const body = [
-            "Nuova richiesta di valutazione implantologica",
+            "Nuova richiesta di valutazione per impianti dentali",
             "",
             "QUADRO PAZIENTE",
             `Problema principale: ${quiz.problema}`,
             `Obiettivo desiderato: ${quiz.obiettivo}`,
+            `Situazione segnalata: ${quiz.situazione}`,
             "",
             "PREFERENZA APPUNTAMENTO",
             `Data preferita: ${selectedDateLabel} (${selectedDate})`,
@@ -4191,7 +4661,7 @@
             "NOTE DEL PAZIENTE",
             fields.messaggio.value || "Nessuna nota inserita",
             "",
-            `Fonte: landing implantologia Sorriso & Salute Monza (${sourceLabel})`
+            `Fonte: landing impianti-dentali Sorriso & Salute Monza (${sourceLabel})`
           ].join("\n");
           window.location.href = `mailto:info@sorrisoesalute.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         });
@@ -4205,6 +4675,7 @@
       };
 
       const openBookingModal = (trigger) => {
+        closeIntroPopup();
         lastModalTrigger = trigger;
         modalController.reset();
         bookingModal.querySelector(".modal-card")?.scrollTo({ top: 0 });
@@ -4230,6 +4701,21 @@
       const modalForm = createModalForm();
       initBookingForm(sourceForm, "form hero");
       modalController = initBookingForm(modalForm, "pop-up");
+      scheduleIntroPopup();
+
+      introPopupClose?.addEventListener("click", closeIntroPopup);
+      introPopupCta?.addEventListener("click", () => openBookingModal(introPopupCta));
+      introPopup?.addEventListener("click", (event) => {
+        if (event.target === introPopup) closeIntroPopup();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && introPopup?.open) {
+          closeIntroPopup();
+        }
+      });
+      introPopup?.addEventListener("close", () => {
+        document.body.classList.remove("intro-popup-open");
+      });
 
       document.querySelectorAll("[data-open-booking]").forEach((trigger) => {
         trigger.addEventListener("click", (event) => {

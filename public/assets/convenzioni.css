@@ -307,6 +307,18 @@ h1 {
   gap: .75rem;
 }
 
+.switcher a {
+  color: var(--primary);
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+.switcher a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 .info-panel {
   padding: clamp(1.25rem, 2.8vw, 2rem);
   border: 1px solid rgba(30, 132, 181, .16);

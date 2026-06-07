@@ -15,11 +15,11 @@
   <meta property="og:description" content="Valutazione estetica del sorriso, mock-up e faccette dentali per armonizzare colore, forma e proporzioni dei denti anteriori.">
   <meta property="og:image" content="/assets/faccette-after.png">
   <meta name="twitter:card" content="summary_large_image">
-  <script>
+  <script is:inline>
     window.__loaderStart = performance.now();
     document.documentElement.classList.add("reveal-ready", "loader-active");
   </script>
-  <style>
+  <style is:global is:inline>
     :root {
       color-scheme: light;
       --primary: #0E384C;
@@ -2915,7 +2915,7 @@
       }
     }
   </style>
-  <script type="application/ld+json">
+  <script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -3023,9 +3023,9 @@
         <span></span>
         <span></span>
       </button>
-      <a class="btn btn-primary" href="tel:+390392022489" aria-label="Chiama lo studio">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 3.2 4.9 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.2 21.6 2.4 13.8 2.4 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4 .1.4 0 .8-.3 1.1l-2.1 2.3Z" fill="currentColor"/></svg>
-        Chiama
+      <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2.2v3.1M17 2.2v3.1M4.2 9.1h15.6M6.2 4h11.6c1.3 0 2.4 1.1 2.4 2.4v12.2c0 1.3-1.1 2.4-2.4 2.4H6.2c-1.3 0-2.4-1.1-2.4-2.4V6.4C3.8 5.1 4.9 4 6.2 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8.4 15.1 2.2 2.2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Prenota
       </a>
     </nav>
     <div class="mobile-menu" id="mobileMenu" hidden>
@@ -3039,13 +3039,9 @@
           <a href="#faq">FAQ</a>
         </div>
         <div class="mobile-menu-actions">
-          <a class="btn btn-ghost" href="tel:+390392022489" aria-label="Chiama lo studio">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 3.2 4.9 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.2 21.6 2.4 13.8 2.4 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4 .1.4 0 .8-.3 1.1l-2.1 2.3Z" fill="currentColor"/></svg>
-            Chiama Studio
-          </a>
           <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2.2v3.1M17 2.2v3.1M4.2 9.1h15.6M6.2 4h11.6c1.3 0 2.4 1.1 2.4 2.4v12.2c0 1.3-1.1 2.4-2.4 2.4H6.2c-1.3 0-2.4-1.1-2.4-2.4V6.4C3.8 5.1 4.9 4 6.2 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8.4 15.1 2.2 2.2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Prenota Visita
+            Prenota
           </a>
         </div>
       </nav>
@@ -3056,11 +3052,10 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="reveal">
-          <h1 id="hero-title">Faccette Dentali a Monza: <span class="hero-title-accent">Armonizza Colore, Forma e Proporzioni del Sorriso</span></h1>
-          <p class="lead">Un percorso estetico personalizzato per valorizzare i denti anteriori, correggere discromie, piccole irregolarità e proporzioni del sorriso con un risultato naturale e studiato sul tuo volto.</p>
+          <h1 id="hero-title">Faccette dentali a Monza: <span class="hero-title-accent">un sorriso più armonico</span></h1>
+          <p class="lead">Valutiamo colore, forma e proporzioni dei denti anteriori per un risultato naturale e adatto al tuo volto.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi una Valutazione Estetica</span><span class="hero-mobile-label">Richiedi valutazione estetica</span></a>
-            <a class="btn btn-ghost" href="https://wa.me/393892490181">Scrivici su Whatsapp</a>
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog"><span class="hero-desktop-label">Richiedi valutazione</span><span class="hero-mobile-label">Valutazione</span></a>
           </div>
           <div class="review-carousel" data-review-carousel data-interval="5200" aria-label="Recensioni dei pazienti su estetica del sorriso">
             <div class="review-viewport">
@@ -3115,39 +3110,39 @@
         <form class="glass-form reveal delay-1" id="valutazione" novalidate>
           <div class="form-head">
             <div>
-              <h2>Prenota una valutazione estetica</h2>
+              <h2>Richiedi una valutazione</h2>
             </div>
           </div>
           <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"></div>
 
           <div class="form-step is-active" data-step="1">
             <p class="quiz-kicker">Inquadramento estetico</p>
-            <h3 class="quiz-title">Cosa vorresti migliorare del sorriso?</h3>
-            <p class="quiz-copy">Seleziona la situazione che descrive meglio il motivo della valutazione.</p>
+            <h3 class="quiz-title">Cosa vuoi migliorare?</h3>
+            <p class="quiz-copy">Scegli la situazione più vicina.</p>
             <div class="quiz-options" data-field="problema">
-              <button class="choice-btn" type="button" data-value="Denti macchiati o discromici"><strong>Denti macchiati o discromici</strong><span>Vorrei un colore più uniforme e luminoso.</span></button>
-              <button class="choice-btn" type="button" data-value="Denti consumati o scheggiati"><strong>Denti consumati o scheggiati</strong><span>Vorrei recuperare armonia e contorni più regolari.</span></button>
-              <button class="choice-btn" type="button" data-value="Spazi o forma irregolare"><strong>Spazi o forma irregolare</strong><span>Mi interessa migliorare proporzioni e simmetria.</span></button>
-              <button class="choice-btn" type="button" data-value="Vorrei rifare il sorriso con faccette"><strong>Vorrei rifare il sorriso con faccette</strong><span>Desidero capire se sono adatte al mio caso.</span></button>
+              <button class="choice-btn" type="button" data-value="Denti macchiati o discromici"><strong>Colore dei denti</strong></button>
+              <button class="choice-btn" type="button" data-value="Denti consumati o scheggiati"><strong>Denti consumati</strong></button>
+              <button class="choice-btn" type="button" data-value="Spazi o forma irregolare"><strong>Spazi o forma</strong></button>
+              <button class="choice-btn" type="button" data-value="Vorrei rifare il sorriso con faccette"><strong>Capire se sono adatte</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="2">
             <p class="quiz-kicker">Obiettivo estetico</p>
-            <h3 class="quiz-title">Cosa vuoi ottenere davvero?</h3>
-            <p class="quiz-copy">Questa risposta chiarisce la priorità: colore, forma, proporzioni o naturalezza.</p>
+            <h3 class="quiz-title">Qual è l'obiettivo?</h3>
+            <p class="quiz-copy">Aiuta a orientare la valutazione.</p>
             <div class="quiz-options" data-field="obiettivo">
-              <button class="choice-btn" type="button" data-value="Un sorriso più bianco ma naturale"><strong>Un sorriso più bianco ma naturale</strong><span>Voglio evitare un effetto artificiale o troppo acceso.</span></button>
-              <button class="choice-btn" type="button" data-value="Correggere forma e proporzioni"><strong>Correggere forma e proporzioni</strong><span>Mi interessa un sorriso più equilibrato nel volto.</span></button>
-              <button class="choice-btn" type="button" data-value="Chiudere piccoli spazi"><strong>Chiudere piccoli spazi</strong><span>Vorrei ridurre diastemi o irregolarità anteriori.</span></button>
-              <button class="choice-btn" type="button" data-value="Capire se le faccette sono indicate"><strong>Capire se le faccette sono indicate</strong><span>Voglio una valutazione prima di decidere il trattamento.</span></button>
+              <button class="choice-btn" type="button" data-value="Un sorriso più bianco ma naturale"><strong>Colore naturale</strong></button>
+              <button class="choice-btn" type="button" data-value="Correggere forma e proporzioni"><strong>Forma più armonica</strong></button>
+              <button class="choice-btn" type="button" data-value="Chiudere piccoli spazi"><strong>Chiudere spazi</strong></button>
+              <button class="choice-btn" type="button" data-value="Capire se le faccette sono indicate"><strong>Valutare le faccette</strong></button>
             </div>
           </div>
 
           <div class="form-step" data-step="3">
             <p class="quiz-kicker">Preferenza appuntamento</p>
             <h3 class="quiz-title">Scegli una data per la prima valutazione</h3>
-            <p class="muted">Il calendario mostra i giorni lavorativi disponibili nei prossimi 3 mesi.</p>
+            <p class="muted">Scegli un giorno indicativo.</p>
             <div class="calendar-head">
               <p class="calendar-title" id="calendarTitle" data-calendar-title></p>
               <div class="calendar-nav" aria-label="Navigazione calendario">
@@ -3161,14 +3156,14 @@
           <div class="form-step" data-step="4">
             <p class="quiz-kicker">Orario preferito</p>
             <h3 class="quiz-title">Scegli una fascia oraria</h3>
-            <p class="muted">Gli slot sono indicativi: lo studio ti ricontatterà per confermare l'appuntamento.</p>
+            <p class="muted">Lo studio confermerà l'orario.</p>
             <div class="slot-grid" id="slotGrid" data-slot-grid aria-label="Orari selezionabili"></div>
           </div>
 
           <div class="form-step" data-step="5">
             <p class="quiz-kicker">Dati di contatto</p>
             <h3 class="quiz-title">Lascia i tuoi recapiti</h3>
-            <p class="muted">Useremo questi dati solo per ricontattarti e confermare la valutazione richiesta.</p>
+            <p class="muted">Servono per ricontattarti.</p>
             <div class="field-grid">
               <label>Nome e cognome
                 <input id="nomeCompleto" name="nomeCompleto" autocomplete="name" required>
@@ -3181,14 +3176,14 @@
               </label>
             </div>
             <label>Note/Messaggio
-              <textarea id="messaggio" name="messaggio" placeholder="Aggiungi dettagli utili: cosa vorresti migliorare, eventuali foto/esami già fatti, abitudini come bruxismo o preferenze estetiche"></textarea>
+              <textarea id="messaggio" name="messaggio" placeholder="Aggiungi dettagli utili"></textarea>
             </label>
           </div>
 
           <div class="form-step" data-step="6">
             <p class="quiz-kicker">Riepilogo richiesta</p>
-            <h3 class="quiz-title">Conferma il quadro da inviare allo studio</h3>
-            <p class="quiz-copy">La mail includerà aspetto da migliorare, obiettivo estetico, appuntamento preferito, contatti e note.</p>
+            <h3 class="quiz-title">Controlla la richiesta</h3>
+            <p class="quiz-copy">Invieremo il riepilogo allo studio.</p>
             <div class="summary-box" id="summaryBox" data-summary-box aria-live="polite"></div>
           </div>
 
@@ -3205,9 +3200,9 @@
     <section id="approccio" aria-labelledby="problem-title">
       <div class="wrap problem-grid">
         <div class="reveal">
-          <p class="eyebrow"><span class="dot"></span> Estetica del sorriso</p>
-          <h2 id="problem-title">Faccette dentali: un trattamento estetico per armonizzare il sorriso</h2>
-          <p class="problem-copy">Colore, forma, usura, piccole fratture o spazi tra i denti possono alterare la percezione del sorriso. Le faccette dentali permettono di intervenire sulla superficie visibile dei denti anteriori con un progetto estetico personalizzato, sempre dopo una valutazione clinica di gengive, smalto, occlusione e aspettative del paziente.</p>
+          <p class="eyebrow">Estetica del sorriso</p>
+          <h2 id="problem-title">Faccette dentali, quando servono davvero</h2>
+          <p class="problem-copy">Colore, forma, usura o piccoli spazi possono cambiare il sorriso. La valutazione chiarisce se le faccette sono indicate e quale risultato è realistico.</p>
         </div>
         <figure class="problem-media reveal delay-1" data-implant-render>
           <div class="implant-stage before-after-compare" role="img" aria-label="Confronto automatico tra sorriso prima e dopo un progetto estetico con faccette dentali">
@@ -3225,26 +3220,26 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Estetica avanzata</p>
-            <h2 id="digital-title">Perché la pianificazione estetica cambia l'esperienza con le faccette</h2>
+            <p class="eyebrow">Estetica avanzata</p>
+            <h2 id="digital-title">Un progetto estetico prima del trattamento</h2>
           </div>
-          <p>Un protocollo progettato per rendere più prevedibile il risultato, chiarire le fasi e rispettare l'equilibrio tra estetica, funzione e naturalezza.</p>
+          <p>Prima si valutano volto, denti e aspettative. Poi si decide il percorso.</p>
         </div>
         <div class="solution-grid">
           <article class="info-card reveal">
             <b>1</b>
-            <h3>Analisi estetica e progettazione del sorriso</h3>
-            <p class="muted">La valutazione considera volto, linea del sorriso, colore, proporzioni e gengive. Serve a capire se le faccette sono indicate e a costruire un progetto naturale, coerente con la persona.</p>
+            <h3>Analisi del sorriso</h3>
+            <p class="muted">Si valutano volto, colore, proporzioni, gengive e linea del sorriso.</p>
           </article>
           <article class="info-card reveal delay-1">
             <b>2</b>
-            <h3>Mock-up per visualizzare il risultato</h3>
-            <p class="muted">Quando indicato, il mock-up permette di osservare forma e proporzioni prima della fase definitiva. Aiuta a decidere con più consapevolezza e a rifinire il progetto estetico.</p>
+            <h3>Mock-up estetico</h3>
+            <p class="muted">Quando indicato, aiuta a vedere forma e proporzioni prima della fase definitiva.</p>
           </article>
           <article class="info-card reveal delay-2">
             <b>3</b>
-            <h3>Materiali estetici e adesione controllata</h3>
-            <p class="muted">Materiale, colore e spessori vengono scelti sul caso clinico. La cementazione adesiva controllata è decisiva per integrazione estetica, stabilità e comfort nel tempo.</p>
+            <h3>Materiali e adesione</h3>
+            <p class="muted">Colore, materiale e spessori vengono scelti sul caso clinico.</p>
           </article>
         </div>
       </div>
@@ -3254,26 +3249,26 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Modalità della visita</p>
-            <h2 id="path-title">Il percorso clinico per le tue faccette</h2>
+            <p class="eyebrow">Modalità della visita</p>
+            <h2 id="path-title">Il percorso per le faccette</h2>
           </div>
-          <p>Analisi, prova estetica e controlli sono parte integrante di un risultato naturale e coerente con il tuo sorriso.</p>
+          <p>Analisi, prova estetica e controlli aiutano a ottenere un risultato naturale.</p>
         </div>
         <div class="phases">
           <article class="phase reveal">
             <b>1</b>
-            <h3>Valutazione estetica e clinica</h3>
-            <p class="muted">Analisi di denti, gengive, occlusione, smalto, abitudini funzionali e obiettivi estetici del paziente.</p>
+            <h3>Valutazione</h3>
+            <p class="muted">Analisi di denti, gengive, smalto, occlusione e obiettivi.</p>
           </article>
           <article class="phase reveal delay-1">
             <b>2</b>
-            <h3>Progetto del sorriso e mock-up</h3>
-            <p class="muted">Definizione di colore, forma e proporzioni, con eventuale prova estetica per visualizzare il risultato atteso.</p>
+            <h3>Progetto</h3>
+            <p class="muted">Scelta di colore, forma e proporzioni, con eventuale prova estetica.</p>
           </article>
           <article class="phase reveal delay-2">
             <b>3</b>
-            <h3>Applicazione e controlli</h3>
-            <p class="muted">Preparazione quando necessaria, cementazione adesiva delle faccette e controlli per monitorare comfort, estetica e funzione.</p>
+            <h3>Applicazione</h3>
+            <p class="muted">Cementazione adesiva e controlli su comfort, estetica e funzione.</p>
           </article>
         </div>
       </div>
@@ -3283,23 +3278,23 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> FAQ faccette</p>
-            <h2 id="faq-title">Domande Frequenti sulle Faccette Dentali</h2>
+            <p class="eyebrow">FAQ faccette</p>
+            <h2 id="faq-title">Domande frequenti</h2>
           </div>
-          <p>Risposte utili per chi sta valutando un percorso estetico e vuole arrivare alla prima visita con più consapevolezza.</p>
+          <p>Risposte rapide prima della visita.</p>
         </div>
         <div class="faq-list reveal delay-1">
           <details>
             <summary>Le faccette dentali sono dolorose?</summary>
-            <p>Il trattamento è generalmente poco invasivo. L'eventuale preparazione dello smalto viene pianificata in modo controllato e il comfort del paziente viene valutato in ogni fase.</p>
+            <p>Di solito è poco invasivo. L'eventuale preparazione viene valutata e spiegata prima.</p>
           </details>
           <details>
             <summary>Quanto durano le faccette dentali?</summary>
-            <p>La durata dipende da materiale scelto, igiene orale, controlli periodici e abitudini come bruxismo o morsi traumatici. Durante la visita vengono spiegate manutenzione e indicazioni specifiche.</p>
+            <p>Dipende da materiale, igiene, controlli e abitudini come bruxismo o morsi traumatici.</p>
           </details>
           <details>
             <summary>Le faccette sono indicate per tutti?</summary>
-            <p>Non sempre. La prima valutazione serve a verificare smalto residuo, gengive, occlusione, colore di partenza e obiettivi estetici. In alcuni casi possono essere più adatti sbiancamento, ortodonzia o restauri conservativi.</p>
+            <p>Non sempre. La visita verifica smalto, gengive, occlusione e possibili alternative.</p>
           </details>
         </div>
       </div>
@@ -3309,10 +3304,10 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Equipe</p>
-            <h2 id="staff-title">Un team odontoiatrico per valutare il tuo caso con precisione.</h2>
+            <p class="eyebrow">Equipe</p>
+            <h2 id="staff-title">Il team che valuta il tuo caso</h2>
           </div>
-          <p>Specialisti e figure di riferimento dello Studio Dentistico Sorriso & Salute, con esperienza clinica, aggiornamento continuo e attenzione al percorso personalizzato del paziente.</p>
+          <p>Professionisti dello studio seguono diagnosi, progetto e controlli.</p>
         </div>
         <div class="staff-grid" aria-label="Equipe Sorriso e Salute">
           <article class="staff-card reveal">
@@ -3358,10 +3353,10 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow"><span class="dot"></span> Le nostre finanziarie</p>
-            <h2 id="finance-title">I nostri Servizi di Finanziamento personalizzati</h2>
+            <p class="eyebrow">Le nostre finanziarie</p>
+            <h2 id="finance-title">Pagamenti su misura</h2>
           </div>
-          <p>Il nostro Studio Odontoiatrico offre <strong>soluzioni di finanziamento personalizzate</strong> pensate per rendere le cure dentistiche più accessibili, senza rinunciare alla qualità dei trattamenti.</p>
+          <p>In studio puoi valutare soluzioni di pagamento legate al piano clinico.</p>
         </div>
         <div class="finance-grid" aria-label="Finanziarie disponibili presso Sorriso e Salute">
           <article class="finance-card reveal">
@@ -3370,7 +3365,7 @@
             </div>
             <div>
               <h3>Compass</h3>
-              <p>Possibilità di valutare piani di pagamento personalizzati per affrontare il percorso odontoiatrico con maggiore serenità.</p>
+              <p>Piani di pagamento valutabili in base al percorso.</p>
             </div>
           </article>
           <article class="finance-card reveal delay-1">
@@ -3379,7 +3374,7 @@
             </div>
             <div>
               <h3>HeyLight</h3>
-              <p>Soluzioni digitali per costruire modalità di pagamento chiare e sostenibili, da valutare in studio in base al piano clinico.</p>
+              <p>Soluzioni digitali da valutare con lo studio.</p>
             </div>
           </article>
         </div>
@@ -3389,12 +3384,11 @@
     <section class="closing-section" aria-labelledby="closing-title">
       <div class="wrap closing">
         <div class="reveal">
-          <p class="eyebrow"><span class="dot"></span> Consulto estetico</p>
-          <h2 id="closing-title">Richiedi una valutazione estetica del sorriso</h2>
-          <p class="lead">Ogni sorriso ha proporzioni, colore e caratteristiche uniche. Il nostro team è a disposizione per valutare se le faccette dentali sono indicate nel tuo caso e per illustrarti un percorso estetico coerente con il tuo volto e le tue aspettative.</p>
+          <p class="eyebrow">Consulto estetico</p>
+          <h2 id="closing-title">Richiedi una valutazione</h2>
+          <p class="lead">Porta il tuo caso allo studio: capiremo se le faccette sono indicate e quali alternative considerare.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi una Valutazione Estetica</a>
-            <a class="btn btn-ghost" href="tel:+390392022489">039 2022489</a>
+            <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi valutazione</a>
           </div>
         </div>
         <aside class="contact-panel reveal delay-1" aria-label="Informazioni studio">
@@ -3410,7 +3404,7 @@
   <footer>
     <div class="wrap">
       <div class="footer-cta">
-        <h2>Un sorriso più armonico non può aspettare, <br>Prenota ora!</h2>
+        <h2>Vuoi valutare le faccette?</h2>
         <a class="btn btn-accent" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Richiedi appuntamento</a>
       </div>
       <div class="footer-main">
@@ -3457,18 +3451,7 @@
   </footer>
 
   <div class="mobile-cta" aria-label="Azioni rapide mobile">
-    <a class="btn btn-ghost" href="tel:+390392022489" aria-label="Chiama lo studio">Chiama Ora</a>
-    <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Prenota Ora</a>
-  </div>
-
-  <div class="whatsapp-prompt" role="dialog" aria-labelledby="whatsappPromptTitle" aria-describedby="whatsappPromptText" data-whatsapp-prompt hidden>
-    <div class="whatsapp-prompt-card">
-      <button class="whatsapp-prompt-close" type="button" aria-label="Chiudi messaggio WhatsApp" data-whatsapp-prompt-close>×</button>
-      <p class="whatsapp-prompt-kicker">Hai una domanda?</p>
-      <h2 id="whatsappPromptTitle">Dubbi sul trattamento?</h2>
-      <p id="whatsappPromptText">Se hai domande sulle faccette dentali, scrivici su WhatsApp: ti ascolteremo e ti aiuteremo a capire quale percorso estetico può essere più adatto al tuo caso specifico.</p>
-      <a class="btn btn-primary" href="https://wa.me/393892490181?text=Buongiorno%2C%20vorrei%20ricevere%20informazioni%20sul%20servizio%20di%20faccette%20dentali." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
-    </div>
+    <a class="btn btn-primary" href="#prenota-popup" data-open-booking aria-haspopup="dialog">Valutazione</a>
   </div>
 
   <dialog class="booking-modal" id="prenota-popup" aria-label="Prenota una valutazione estetica per faccette">
@@ -3485,7 +3468,7 @@
     </div>
   </dialog>
 
-  <script>
+  <script is:inline>
     (() => {
       const loader = document.querySelector("#pageLoader");
       const loaderMinDuration = 900;
