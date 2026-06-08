@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Richiedi una valutazione | Sorriso & Salute Monza</title>
+  <meta name="description" content="Richiedi una valutazione implantologica allo Studio Dentistico Sorriso & Salute di Monza.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0E384C">
+  <link rel="canonical" href="https://studio-dentistico-sorriso-salute-monza.vercel.app/richiesta/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <style is:global is:inline>
+    :root {
+      color-scheme: light;
+      --primary: #0E384C;
+      --accent: #1E84B5;
+      --accent-bright: #28A4D6;
+      --accent-soft: #E5F1F8;
+      --text: #527282;
+      --body-strong: #365D6E;
+      --white: #FFFFFF;
+      --border: #DCEAF1;
+      --border-strong: #A9BAC4;
+      --surface: #F8FCFF;
+      --danger: #8A2C1A;
+      --radius: 14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      min-height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: var(--white);
+      color: var(--primary);
+      font-size: 16px;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .request-topbar {
+      min-height: 122px;
+      display: flex;
+      align-items: center;
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .topbar-inner {
+      width: min(100% - 40px, 1640px);
+      margin-inline: auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+      color: var(--white);
+      font-size: clamp(1.75rem, 2.1vw, 2.38rem);
+      font-weight: 760;
+      line-height: 1;
+      letter-spacing: 0;
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+    }
+
+    .request-shell {
+      width: min(890px, calc(100% - 48px));
+      margin-inline: auto;
+      padding-block: clamp(3.2rem, 8vh, 5.25rem) clamp(3.5rem, 8vh, 5.8rem);
+    }
+
+    .request-title {
+      margin: 0 0 1.05rem;
+      color: #05080B;
+      font-size: clamp(2.7rem, 5.1vw, 4.25rem);
+      font-weight: 920;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .request-form {
+      display: grid;
+      gap: .92rem;
+      width: 100%;
+    }
+
+    .request-form:focus {
+      outline: 0;
+    }
+
+    .progress {
+      --progress: 16.666%;
+      position: relative;
+      height: 10px;
+      margin-bottom: .18rem;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(30, 132, 181, .14);
+    }
+
+    .progress::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--progress);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+      transition: width .24s ease;
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.is-active {
+      display: grid;
+      gap: .95rem;
+      animation: step-enter .22s ease both;
+    }
+
+    @keyframes step-enter {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-kicker {
+      margin: 0 0 -.45rem;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .quiz-title {
+      margin: 0;
+      color: var(--primary);
+      font-size: clamp(1.56rem, 2.4vw, 2rem);
+      font-weight: 880;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    .quiz-copy,
+    .muted {
+      margin: -.15rem 0 .12rem;
+      color: var(--text);
+      font-size: 1.12rem;
+      font-weight: 520;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: .78rem;
+    }
+
+    .choice-btn {
+      position: relative;
+      display: grid;
+      width: 100%;
+      min-height: 74px;
+      padding: .92rem 4.35rem .92rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--primary);
+      cursor: pointer;
+      text-align: left;
+      transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease, background .16s ease;
+    }
+
+    .choice-btn::before,
+    .choice-btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      border-radius: 999px;
+      transform: translateY(-50%);
+      transition: border-color .16s ease, background .16s ease, box-shadow .16s ease, transform .16s ease, opacity .16s ease;
+    }
+
+    .choice-btn::before {
+      right: 1.2rem;
+      width: 34px;
+      height: 34px;
+      border: 4px solid var(--border-strong);
+      background: var(--white);
+    }
+
+    .choice-btn::after {
+      right: calc(1.2rem + 10px);
+      width: 14px;
+      height: 14px;
+      background: var(--white);
+      opacity: 0;
+      transform: translateY(-50%) scale(.55);
+    }
+
+    .choice-btn:hover,
+    .choice-btn:focus-visible {
+      border-color: rgba(30, 132, 181, .7);
+      box-shadow: 0 14px 32px rgba(30, 132, 181, .12);
+      transform: translateY(-1px);
+    }
+
+    .choice-btn:hover::before,
+    .choice-btn:focus-visible::before {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 5px rgba(30, 132, 181, .1);
+    }
+
+    .choice-btn[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(232, 245, 251, .92), var(--white));
+      box-shadow: 0 16px 34px rgba(30, 132, 181, .14);
+    }
+
+    .choice-btn[aria-pressed="true"]::before {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(30, 132, 181, .12);
+    }
+
+    .choice-btn[aria-pressed="true"]::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .choice-btn strong {
+      display: block;
+      min-width: 0;
+      font-size: 1.08rem;
+      font-weight: 860;
+      line-height: 1.18;
+      overflow-wrap: anywhere;
+    }
+
+    .calendar-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      padding: .78rem .9rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .calendar-title {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.08rem;
+      font-weight: 900;
+      text-transform: capitalize;
+    }
+
+    .calendar-nav {
+      display: flex;
+      gap: .5rem;
+    }
+
+    .calendar-nav button {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: 950;
+    }
+
+    .calendar-nav button:disabled {
+      cursor: not-allowed;
+      opacity: .38;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: .42rem;
+    }
+
+    .calendar-weekday {
+      color: var(--text);
+      font-size: .74rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .date-btn,
+    .slot-btn {
+      min-height: 48px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--primary);
+      cursor: pointer;
+      font-weight: 820;
+      transition: border-color .16s ease, background .16s ease, color .16s ease, box-shadow .16s ease;
+    }
+
+    .date-btn {
+      display: grid;
+      align-content: center;
+      gap: .05rem;
+      padding: .45rem .24rem;
+      text-align: center;
+    }
+
+    .date-btn small {
+      color: var(--text);
+      font-size: .72rem;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .date-btn:disabled {
+      cursor: not-allowed;
+      opacity: .28;
+      background: var(--surface);
+    }
+
+    .date-btn:not(:disabled):hover,
+    .slot-btn:hover,
+    .date-btn:focus-visible,
+    .slot-btn:focus-visible {
+      border-color: var(--accent);
+      box-shadow: 0 10px 24px rgba(30, 132, 181, .12);
+    }
+
+    .date-btn[aria-pressed="true"],
+    .slot-btn[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 12px 26px rgba(30, 132, 181, .18);
+    }
+
+    .date-btn[aria-pressed="true"] small {
+      color: #DDEDF4;
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .62rem;
+      max-height: 256px;
+      overflow: auto;
+      padding-right: .2rem;
+      overscroll-behavior: contain;
+    }
+
+    .slot-btn {
+      min-height: 48px;
+      padding: .68rem .45rem;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .82rem;
+    }
+
+    .field-grid label:first-child {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: grid;
+      gap: .35rem;
+      color: var(--primary);
+      font-weight: 850;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      min-height: 50px;
+      border: 1px solid rgba(14, 56, 76, .24);
+      border-radius: var(--radius);
+      padding: .78rem .9rem;
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    textarea {
+      min-height: 116px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(30, 132, 181, .28);
+      outline-offset: 2px;
+    }
+
+    .summary-box {
+      display: grid;
+      gap: .48rem;
+      padding: .95rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--body-strong);
+      font-weight: 700;
+    }
+
+    .summary-box strong {
+      color: var(--primary);
+    }
+
+    .summary-line {
+      display: grid;
+      gap: .08rem;
+      padding-bottom: .58rem;
+      border-bottom: 1px solid rgba(14, 56, 76, .08);
+    }
+
+    .summary-line:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .form-error {
+      min-height: 23px;
+      margin: -.08rem 0 0;
+      color: var(--danger);
+      font-size: .95rem;
+      font-weight: 820;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: stretch;
+      gap: .75rem;
+      margin-top: .2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      min-width: 0;
+      padding: .88rem 1.08rem;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--primary);
+      cursor: pointer;
+      font-weight: 900;
+      line-height: 1;
+      text-align: center;
+      text-decoration: none;
+      transition: color .16s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(14, 56, 76, .18);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    .btn-outline {
+      border-color: rgba(14, 56, 76, .28);
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      border-color: var(--accent);
+      box-shadow: 0 12px 26px rgba(30, 132, 181, .1);
+    }
+
+    .form-actions .btn {
+      flex: 1 1 0;
+    }
+
+    .request-form.is-prev-only .form-actions [data-prev-step] {
+      flex-basis: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: 760px) {
+      .request-topbar {
+        min-height: 88px;
+      }
+
+      .topbar-inner {
+        width: min(100% - 28px, 1640px);
+      }
+
+      .back-link {
+        gap: .45rem;
+        font-size: 1.45rem;
+      }
+
+      .back-link svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .request-shell {
+        width: min(100% - 32px, 890px);
+        padding-block: 2.4rem 3.2rem;
+      }
+
+      .request-title {
+        margin-bottom: .85rem;
+        font-size: clamp(2.25rem, 12vw, 3rem);
+      }
+
+      .progress {
+        height: 7px;
+      }
+
+      .form-step.is-active {
+        gap: .78rem;
+      }
+
+      .quiz-kicker {
+        font-size: .74rem;
+      }
+
+      .quiz-title {
+        font-size: clamp(1.36rem, 7vw, 1.7rem);
+      }
+
+      .quiz-copy,
+      .muted {
+        font-size: 1rem;
+        line-height: 1.38;
+      }
+
+      .choice-btn {
+        min-height: 68px;
+        padding: .8rem 3.8rem .8rem 1rem;
+      }
+
+      .choice-btn strong {
+        font-size: 1rem;
+      }
+
+      .choice-btn::before {
+        right: .85rem;
+        width: 31px;
+        height: 31px;
+      }
+
+      .choice-btn::after {
+        right: calc(.85rem + 9px);
+        width: 13px;
+        height: 13px;
+      }
+
+      .calendar-head {
+        padding: .68rem;
+      }
+
+      .calendar-grid {
+        gap: .28rem;
+      }
+
+      .date-btn {
+        min-height: 42px;
+        font-size: .88rem;
+      }
+
+      .date-btn small {
+        font-size: .62rem;
+      }
+
+      .slot-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-height: min(320px, 48svh);
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+        gap: .72rem;
+      }
+
+      .form-actions {
+        gap: .62rem;
+      }
+
+      .form-actions .btn {
+        min-height: 54px;
+        padding-inline: .85rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .slot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="request-topbar">
+    <div class="topbar-inner">
+      <a class="back-link" href="/" data-back-link>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15.5 4.5 8 12l7.5 7.5" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Indietro
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="request-shell" aria-labelledby="request-title">
+      <h1 class="request-title" id="request-title">Richiedi una valutazione</h1>
+
+      <form class="request-form" id="valutazione" novalidate>
+        <div class="progress" role="progressbar" aria-label="Avanzamento richiesta" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"></div>
+
+        <div class="form-step is-active" data-step="1">
+          <p class="quiz-kicker">Inquadramento clinico</p>
+          <h2 class="quiz-title">Qual è il problema principale?</h2>
+          <p class="quiz-copy">Scegli la situazione più vicina alla tua.</p>
+          <div class="quiz-options" data-field="problema">
+            <button class="choice-btn" type="button" data-value="Mi manca un dente singolo"><strong>Mi manca un dente singolo</strong></button>
+            <button class="choice-btn" type="button" data-value="Mi mancano più denti"><strong>Mi mancano più denti</strong></button>
+            <button class="choice-btn" type="button" data-value="Dentiera mobile o protesi instabile"><strong>Protesi instabile</strong></button>
+            <button class="choice-btn" type="button" data-value="Ho già impianti o una situazione da rivalutare"><strong>Voglio una seconda opinione</strong></button>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <p class="quiz-kicker">Obiettivo desiderato</p>
+          <h2 class="quiz-title">Qual è il tuo obiettivo?</h2>
+          <p class="quiz-copy">Aiuta lo studio a capire la priorità.</p>
+          <div class="quiz-options" data-field="obiettivo">
+            <button class="choice-btn" type="button" data-value="Masticare meglio e senza fastidi"><strong>Masticare meglio</strong></button>
+            <button class="choice-btn" type="button" data-value="Avere denti fissi e un sorriso naturale"><strong>Avere denti fissi</strong></button>
+            <button class="choice-btn" type="button" data-value="Evitare o stabilizzare la dentiera mobile"><strong>Stabilizzare la dentiera</strong></button>
+            <button class="choice-btn" type="button" data-value="Capire se posso fare carico immediato"><strong>Capire i tempi</strong></button>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <p class="quiz-kicker">Preferenza appuntamento</p>
+          <h2 class="quiz-title">Scegli una data per la prima valutazione</h2>
+          <p class="muted">Scegli un giorno indicativo.</p>
+          <div class="calendar-head">
+            <p class="calendar-title" data-calendar-title></p>
+            <div class="calendar-nav" aria-label="Navigazione calendario">
+              <button type="button" data-prev-month aria-label="Mese precedente">‹</button>
+              <button type="button" data-next-month aria-label="Mese successivo">›</button>
+            </div>
+          </div>
+          <div class="calendar-grid" data-calendar-grid aria-label="Calendario selezionabile"></div>
+        </div>
+
+        <div class="form-step" data-step="4">
+          <p class="quiz-kicker">Orario preferito</p>
+          <h2 class="quiz-title">Scegli una fascia oraria</h2>
+          <p class="muted">Lo studio confermerà l'orario.</p>
+          <div class="slot-grid" data-slot-grid aria-label="Orari selezionabili"></div>
+        </div>
+
+        <div class="form-step" data-step="5">
+          <p class="quiz-kicker">Dati di contatto</p>
+          <h2 class="quiz-title">Lascia i tuoi recapiti</h2>
+          <p class="muted">Servono per ricontattarti.</p>
+          <div class="field-grid">
+            <label>Nome e cognome
+              <input name="nomeCompleto" autocomplete="name" required>
+            </label>
+            <label>Telefono
+              <input name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+            </label>
+            <label>Email
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+          </div>
+          <label>Note/Messaggio
+            <textarea name="messaggio" placeholder="Aggiungi dettagli utili"></textarea>
+          </label>
+        </div>
+
+        <div class="form-step" data-step="6">
+          <p class="quiz-kicker">Riepilogo richiesta</p>
+          <h2 class="quiz-title">Controlla la richiesta</h2>
+          <p class="quiz-copy">Invieremo il riepilogo allo studio.</p>
+          <div class="summary-box" data-summary-box aria-live="polite"></div>
+        </div>
+
+        <p class="form-error" data-form-error aria-live="polite"></p>
+        <div class="form-actions">
+          <button class="btn btn-outline" type="button" data-prev-step hidden>Torna indietro</button>
+          <button class="btn btn-outline" type="button" data-next-step hidden>Continua</button>
+          <button class="btn btn-primary" type="submit" data-submit-step hidden>Invia richiesta</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script is:inline>
+    (() => {
+      const backLink = document.querySelector("[data-back-link]");
+      backLink?.addEventListener("click", (event) => {
+        if (window.history.length <= 1) return;
+        event.preventDefault();
+        window.history.back();
+      });
+
+      const form = document.querySelector("#valutazione");
+      if (!form) return;
+
+      const totalSteps = 6;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const maxDate = new Date(today);
+      maxDate.setMonth(maxDate.getMonth() + 3);
+      const minMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+      const maxMonth = new Date(maxDate.getFullYear(), maxDate.getMonth(), 1);
+
+      const monthFormatter = new Intl.DateTimeFormat("it-IT", { month: "long", year: "numeric" });
+      const dateFormatter = new Intl.DateTimeFormat("it-IT", { weekday: "long", day: "2-digit", month: "long" });
+      const isoDate = (date) => {
+        const offset = date.getTimezoneOffset() * 60000;
+        return new Date(date.getTime() - offset).toISOString().slice(0, 10);
+      };
+      const isSameMonth = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
+      const selected = (value) => value || "Non indicato";
+
+      const steps = [...form.querySelectorAll(".form-step")];
+      const progress = form.querySelector(".progress");
+      const prevBtn = form.querySelector("[data-prev-step]");
+      const nextBtn = form.querySelector("[data-next-step]");
+      const submitBtn = form.querySelector("[data-submit-step]");
+      const formError = form.querySelector("[data-form-error]");
+      const calendarGrid = form.querySelector("[data-calendar-grid]");
+      const calendarTitle = form.querySelector("[data-calendar-title]");
+      const prevMonthBtn = form.querySelector("[data-prev-month]");
+      const nextMonthBtn = form.querySelector("[data-next-month]");
+      const slotGrid = form.querySelector("[data-slot-grid]");
+      const summaryBox = form.querySelector("[data-summary-box]");
+      const fields = {
+        nomeCompleto: form.querySelector('[name="nomeCompleto"]'),
+        telefono: form.querySelector('[name="telefono"]'),
+        email: form.querySelector('[name="email"]'),
+        messaggio: form.querySelector('[name="messaggio"]')
+      };
+
+      let currentStep = 1;
+      let selectedDate = "";
+      let selectedDateLabel = "";
+      let selectedSlot = "";
+      let displayedMonth = new Date(minMonth);
+      const quiz = {
+        problema: "",
+        obiettivo: ""
+      };
+
+      const setError = (message = "") => {
+        formError.textContent = message;
+      };
+
+      const officeSlots = () => {
+        const ranges = [["09:00", "12:30"], ["14:00", "19:00"]];
+        const slots = [];
+        ranges.forEach(([start, end]) => {
+          const [startH, startM] = start.split(":").map(Number);
+          const [endH, endM] = end.split(":").map(Number);
+          const cursor = new Date(2000, 0, 1, startH, startM);
+          const limit = new Date(2000, 0, 1, endH, endM);
+          while (cursor <= limit) {
+            slots.push(cursor.toTimeString().slice(0, 5));
+            cursor.setMinutes(cursor.getMinutes() + 30);
+          }
+        });
+        return slots;
+      };
+
+      const updateSummary = () => {
+        summaryBox.innerHTML = `
+          <span class="summary-line"><strong>Problema da risolvere</strong>${selected(quiz.problema)}</span>
+          <span class="summary-line"><strong>Risultato desiderato</strong>${selected(quiz.obiettivo)}</span>
+          <span class="summary-line"><strong>Preferenza appuntamento</strong>${selectedDateLabel || "Non indicata"} · ${selectedSlot || "Non indicato"}</span>
+          <span class="summary-line"><strong>Contatto</strong>${fields.nomeCompleto.value || "-"} · ${fields.telefono.value || "-"} · ${fields.email.value || "-"}</span>
+          <span class="summary-line"><strong>Note</strong>${fields.messaggio.value || "Nessuna nota inserita"}</span>
+        `;
+      };
+
+      const showStep = (step) => {
+        currentStep = step;
+        steps.forEach((item) => item.classList.toggle("is-active", Number(item.dataset.step) === step));
+        progress.style.setProperty("--progress", `${(step / totalSteps) * 100}%`);
+        progress.setAttribute("aria-valuenow", String(step));
+        prevBtn.hidden = step === 1;
+        nextBtn.hidden = step !== 5;
+        submitBtn.hidden = step !== totalSteps;
+        form.classList.toggle("is-prev-only", !prevBtn.hidden && nextBtn.hidden && submitBtn.hidden);
+        setError();
+        updateSummary();
+        requestAnimationFrame(() => {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      };
+
+      const validateStep = () => {
+        if (currentStep <= 2) {
+          const activeStep = steps.find((item) => Number(item.dataset.step) === currentStep);
+          const field = activeStep?.querySelector(".quiz-options")?.dataset.field;
+          if (field && !quiz[field]) {
+            setError("Seleziona una risposta per continuare.");
+            return false;
+          }
+        }
+        if (currentStep === 3 && !selectedDate) {
+          setError("Seleziona una data disponibile.");
+          return false;
+        }
+        if (currentStep === 4 && !selectedSlot) {
+          setError("Seleziona un orario preferito.");
+          return false;
+        }
+        if (currentStep === 5) {
+          const required = [fields.nomeCompleto, fields.telefono, fields.email];
+          const invalid = required.find((field) => !field.checkValidity());
+          if (invalid) {
+            invalid.reportValidity();
+            setError("Completa i dati di contatto per preparare il riepilogo.");
+            return false;
+          }
+        }
+        return true;
+      };
+
+      const buildCalendar = () => {
+        calendarGrid.innerHTML = "";
+        calendarTitle.textContent = monthFormatter.format(displayedMonth);
+        prevMonthBtn.disabled = isSameMonth(displayedMonth, minMonth);
+        nextMonthBtn.disabled = isSameMonth(displayedMonth, maxMonth);
+
+        ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"].forEach((day) => {
+          const label = document.createElement("span");
+          label.className = "calendar-weekday";
+          label.textContent = day;
+          calendarGrid.append(label);
+        });
+
+        const firstDay = new Date(displayedMonth.getFullYear(), displayedMonth.getMonth(), 1);
+        const daysInMonth = new Date(displayedMonth.getFullYear(), displayedMonth.getMonth() + 1, 0).getDate();
+        const leadingBlanks = (firstDay.getDay() + 6) % 7;
+
+        for (let i = 0; i < leadingBlanks; i += 1) {
+          const blank = document.createElement("span");
+          blank.setAttribute("aria-hidden", "true");
+          calendarGrid.append(blank);
+        }
+
+        for (let dayNumber = 1; dayNumber <= daysInMonth; dayNumber += 1) {
+          const date = new Date(displayedMonth.getFullYear(), displayedMonth.getMonth(), dayNumber);
+          const day = date.getDay();
+          const isWeekend = day === 0 || day === 6;
+          const isOutOfRange = date < today || date > maxDate;
+          const value = isoDate(date);
+          const label = dateFormatter.format(date);
+          const labelParts = label.split(" ");
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "date-btn";
+          button.setAttribute("aria-pressed", "false");
+          button.disabled = isWeekend || isOutOfRange;
+          button.dataset.value = value;
+          button.dataset.label = label;
+          button.innerHTML = `<small>${labelParts[0].slice(0, 3)}</small><span>${dayNumber}</span>`;
+          if (selectedDate === value) button.setAttribute("aria-pressed", "true");
+          button.addEventListener("click", () => {
+            selectedDate = value;
+            selectedDateLabel = label;
+            form.querySelectorAll(".date-btn").forEach((btn) => btn.setAttribute("aria-pressed", "false"));
+            button.setAttribute("aria-pressed", "true");
+            updateSummary();
+            setError();
+            window.setTimeout(() => showStep(4), 140);
+          });
+          calendarGrid.append(button);
+        }
+      };
+
+      const buildSlots = () => {
+        slotGrid.innerHTML = "";
+        officeSlots().forEach((slot) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "slot-btn";
+          button.textContent = slot;
+          button.setAttribute("aria-pressed", "false");
+          button.addEventListener("click", () => {
+            selectedSlot = slot;
+            form.querySelectorAll(".slot-btn").forEach((btn) => btn.setAttribute("aria-pressed", "false"));
+            button.setAttribute("aria-pressed", "true");
+            updateSummary();
+            setError();
+            window.setTimeout(() => showStep(5), 140);
+          });
+          slotGrid.append(button);
+        });
+      };
+
+      form.querySelectorAll(".quiz-options").forEach((group) => {
+        const field = group.dataset.field;
+        group.querySelectorAll(".choice-btn").forEach((button) => {
+          button.setAttribute("aria-pressed", "false");
+          button.addEventListener("click", () => {
+            quiz[field] = button.dataset.value;
+            group.querySelectorAll(".choice-btn").forEach((btn) => btn.setAttribute("aria-pressed", "false"));
+            button.setAttribute("aria-pressed", "true");
+            updateSummary();
+            setError();
+            if (currentStep < 3) {
+              window.setTimeout(() => showStep(currentStep + 1), 140);
+            }
+          });
+        });
+      });
+
+      prevBtn.addEventListener("click", () => showStep(Math.max(1, currentStep - 1)));
+      nextBtn.addEventListener("click", () => {
+        if (validateStep()) showStep(Math.min(totalSteps, currentStep + 1));
+      });
+      prevMonthBtn.addEventListener("click", () => {
+        displayedMonth = new Date(displayedMonth.getFullYear(), displayedMonth.getMonth() - 1, 1);
+        buildCalendar();
+      });
+      nextMonthBtn.addEventListener("click", () => {
+        displayedMonth = new Date(displayedMonth.getFullYear(), displayedMonth.getMonth() + 1, 1);
+        buildCalendar();
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (currentStep !== totalSteps) {
+          if (validateStep()) showStep(Math.min(totalSteps, currentStep + 1));
+          return;
+        }
+        if (!validateStep()) return;
+        const subject = `Richiesta valutazione implantologia - ${fields.nomeCompleto.value}`;
+        const body = [
+          "Nuova richiesta di valutazione implantologica",
+          "",
+          "QUADRO PAZIENTE",
+          `Problema principale: ${quiz.problema}`,
+          `Obiettivo desiderato: ${quiz.obiettivo}`,
+          "",
+          "PREFERENZA APPUNTAMENTO",
+          `Data preferita: ${selectedDateLabel} (${selectedDate})`,
+          `Orario preferito: ${selectedSlot}`,
+          "",
+          "DATI DI CONTATTO",
+          `Nome e cognome: ${fields.nomeCompleto.value}`,
+          `Telefono: ${fields.telefono.value}`,
+          `Email: ${fields.email.value}`,
+          "",
+          "NOTE DEL PAZIENTE",
+          fields.messaggio.value || "Nessuna nota inserita",
+          "",
+          "Fonte: pagina richiesta implantologia Sorriso & Salute Monza"
+        ].join("\n");
+        window.location.href = `mailto:info@sorrisoesalute.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+
+      buildCalendar();
+      buildSlots();
+      updateSummary();
+      showStep(1);
+    })();
+  </script>
+</body>
+</html>
